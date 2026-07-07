@@ -30,6 +30,25 @@ class MoveEvent:
 
 
 def move_event(board: Board, pig_id: str) -> MoveEvent:
+    if board.collision_radius > 0:
+        blocker = board.first_blocker(pig_id)
+        if blocker is None:
+            return MoveEvent(
+                kind=MoveKind.EXIT,
+                board=board.move(pig_id),
+                pig_id=pig_id,
+                distance=board.exit_distance(pig_id),
+            )
+
+        blocking_pig, distance = blocker
+        return MoveEvent(
+            kind=MoveKind.ZERO if distance == 0 else MoveKind.HIT,
+            board=board.move(pig_id),
+            pig_id=pig_id,
+            distance=distance,
+            blocker_id=blocking_pig.id,
+        )
+
     pig = board.get(pig_id)
     dx, dy = pig.direction.vector
     pigs_by_cell = {candidate.cell: candidate for candidate in board.pigs if candidate.id != pig.id}
@@ -71,24 +90,22 @@ def immediate_blocker_graph(board: Board) -> dict[str, str]:
 
 def all_blockers_graph(board: Board) -> dict[str, tuple[str, ...]]:
     graph: dict[str, tuple[str, ...]] = {}
-    pigs_by_cell = {pig.cell: pig for pig in board.pigs}
 
     for pig in board.pigs:
-        dx, dy = pig.direction.vector
-        x, y = pig.x, pig.y
-        blockers: list[str] = []
-
-        while True:
-            x += dx
-            y += dy
-            if not board.contains(x, y):
-                break
-            blocker = pigs_by_cell.get((x, y))
-            if blocker is not None and blocker.id != pig.id:
-                blockers.append(blocker.id)
+        blockers = [
+            candidate
+            for candidate in board.pigs
+            if candidate.id != pig.id
+            and _cell_lies_on_forward_ray(
+                pig,
+                candidate.cell,
+                collision_radius=board.collision_radius,
+            )
+        ]
+        blockers.sort(key=lambda candidate: _forward_projection(pig, candidate.cell))
 
         if blockers:
-            graph[pig.id] = tuple(blockers)
+            graph[pig.id] = tuple(blocker.id for blocker in blockers)
 
     return graph
 
@@ -158,7 +175,11 @@ def can_never_be_stopper(board: Board, candidate: Pig) -> bool:
     for pig in board.pigs:
         if pig.id == candidate.id:
             continue
-        if _cell_lies_on_forward_ray(pig, candidate.cell):
+        if _cell_lies_on_forward_ray(
+            pig,
+            candidate.cell,
+            collision_radius=board.collision_radius,
+        ):
             return False
     return True
 
@@ -168,7 +189,12 @@ def stopper_values(board: Board) -> dict[str, int]:
         candidate.id: sum(
             1
             for pig in board.pigs
-            if pig.id != candidate.id and _cell_lies_on_forward_ray(pig, candidate.cell)
+            if pig.id != candidate.id
+            and _cell_lies_on_forward_ray(
+                pig,
+                candidate.cell,
+                collision_radius=board.collision_radius,
+            )
         )
         for candidate in board.pigs
     }
@@ -204,7 +230,12 @@ def static_zero_peel_residual(board: Board) -> Board:
     return current
 
 
-def _cell_lies_on_forward_ray(pig: Pig, cell: tuple[int, int]) -> bool:
+def _cell_lies_on_forward_ray(
+    pig: Pig,
+    cell: tuple[int, int],
+    *,
+    collision_radius: float = 0.0,
+) -> bool:
     target_x, target_y = cell
     dx, dy = pig.direction.vector
     rel_x = target_x - pig.x
@@ -212,6 +243,16 @@ def _cell_lies_on_forward_ray(pig: Pig, cell: tuple[int, int]) -> bool:
 
     if rel_x == 0 and rel_y == 0:
         return False
+
+    if collision_radius > 0:
+        projection = _forward_projection(pig, cell)
+        if projection <= 0:
+            return False
+        perpendicular_sq = max(
+            0.0,
+            rel_x * rel_x + rel_y * rel_y - projection * projection,
+        )
+        return perpendicular_sq**0.5 <= collision_radius
 
     steps: int | None = None
     if dx == 0:
@@ -235,3 +276,10 @@ def _cell_lies_on_forward_ray(pig: Pig, cell: tuple[int, int]) -> bool:
             return False
 
     return steps is not None and steps > 0
+
+
+def _forward_projection(pig: Pig, cell: tuple[int, int]) -> float:
+    target_x, target_y = cell
+    dx, dy = pig.direction.vector
+    length = (dx * dx + dy * dy) ** 0.5
+    return ((target_x - pig.x) * dx + (target_y - pig.y) * dy) / length

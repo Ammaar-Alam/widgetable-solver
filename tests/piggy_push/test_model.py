@@ -52,6 +52,23 @@ def test_clicking_diagonal_pig_moves_along_diagonal_until_blocked():
     assert next_board.get("b") == Pig("b", 3, 3, Direction.LEFT)
 
 
+def test_radius_board_blocks_pigs_near_diagonal_ray():
+    board = Board(
+        width=20,
+        height=20,
+        collision_radius=1.1,
+        pigs=(
+            Pig("a", 15, 10, Direction.DOWN_LEFT),
+            Pig("b", 13, 13, Direction.UP_LEFT),
+        ),
+    )
+
+    next_board = board.move("a")
+
+    assert next_board.get("a") == Pig("a", 14, 11, Direction.DOWN_LEFT)
+    assert next_board.get("b") == Pig("b", 13, 13, Direction.UP_LEFT)
+
+
 def test_state_key_is_independent_of_pig_order():
     left = Board(
         width=5,

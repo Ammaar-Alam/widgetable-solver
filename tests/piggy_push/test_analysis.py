@@ -48,6 +48,25 @@ def test_move_event_reports_exit_hit_and_zero_displacement():
     assert zero_event.distance == 0
 
 
+def test_move_event_uses_radius_for_vision_board_collisions():
+    board = Board(
+        width=20,
+        height=20,
+        collision_radius=1.1,
+        pigs=(
+            Pig("a", 15, 10, Direction.DOWN_LEFT),
+            Pig("b", 13, 13, Direction.UP_LEFT),
+        ),
+    )
+
+    event = move_event(board, "a")
+
+    assert event.kind is MoveKind.HIT
+    assert event.blocker_id == "b"
+    assert event.distance == 1
+    assert event.board.get("a") == Pig("a", 14, 11, Direction.DOWN_LEFT)
+
+
 def test_immediate_blocker_graph_and_counts():
     board = Board(
         width=5,

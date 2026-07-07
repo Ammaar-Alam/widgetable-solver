@@ -21,8 +21,8 @@ from widgetable_solver.platform.iphone import capture_iphone, save_capture
 from widgetable_solver.platform.mouse import Clicker
 
 
-DEFAULT_GRID_WIDTH = 20
-DEFAULT_GRID_HEIGHT = 28
+DEFAULT_GRID_WIDTH = 40
+DEFAULT_GRID_HEIGHT = 56
 
 
 @dataclass(frozen=True, slots=True)
@@ -82,6 +82,7 @@ def analyze_image(
         width=grid_width,
         height=grid_height,
         image_shape=image.shape,
+        crop=crop,
         min_confidence=min_confidence,
     )
     solution = solve(board, strategy=strategy)
@@ -132,7 +133,13 @@ def run_once(
     window, image = capture_iphone(position=True)
     crop = FieldCrop.from_image_shape(image.shape)
     detections = detect_pigs(image, crop=crop)
-    board = quantize_detections(detections, width=grid_width, height=grid_height, image_shape=image.shape)
+    board = quantize_detections(
+        detections,
+        width=grid_width,
+        height=grid_height,
+        image_shape=image.shape,
+        crop=crop,
+    )
     solution = solve(board, strategy=strategy)
 
     if overlay is not None:
@@ -162,6 +169,7 @@ def run_once(
             width=grid_width,
             height=grid_height,
             image_shape=image.shape,
+            crop=crop,
         )
         if board.is_cleared():
             solution = ()

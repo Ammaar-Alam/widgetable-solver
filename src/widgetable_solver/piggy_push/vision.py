@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 from pathlib import Path
+from statistics import median
 
 import cv2
 import numpy as np
@@ -19,6 +21,8 @@ class FieldCrop:
     @classmethod
     def from_image_shape(cls, shape: tuple[int, ...]) -> FieldCrop:
         height, width = shape[:2]
+        if height < width * 1.8:
+            return cls(left=0, top=0, right=width, bottom=height)
         return cls(left=0, top=int(height * 0.30), right=width, bottom=int(height * 0.84))
 
     def apply(self, image: np.ndarray) -> np.ndarray:
@@ -40,25 +44,39 @@ def quantize_detections(
     width: int,
     height: int,
     image_shape: tuple[int, ...],
+    crop: FieldCrop | None = None,
     min_confidence: float = 0.5,
 ) -> Board:
     image_height, image_width = image_shape[:2]
+    left = crop.left if crop else 0
+    top = crop.top if crop else 0
+    quant_width = (crop.right - crop.left) if crop else image_width
+    quant_height = (crop.bottom - crop.top) if crop else image_height
     pigs: list[Pig] = []
     occupied: set[tuple[int, int]] = set()
+    accepted_detections = _accepted_detections(detections, min_confidence=min_confidence)
 
-    for detection in detections:
-        if detection.confidence < min_confidence:
-            continue
-
-        x = min(width - 1, max(0, int(detection.center[0] / image_width * width)))
-        y = min(height - 1, max(0, int(detection.center[1] / image_height * height)))
+    for detection in accepted_detections:
+        x = min(width - 1, max(0, int((detection.center[0] - left) / quant_width * width)))
+        y = min(height - 1, max(0, int((detection.center[1] - top) / quant_height * height)))
         if (x, y) in occupied:
             continue
 
         occupied.add((x, y))
         pigs.append(Pig(detection.id, x, y, detection.direction))
 
-    return Board(width=width, height=height, pigs=tuple(pigs))
+    return Board(
+        width=width,
+        height=height,
+        pigs=tuple(pigs),
+        collision_radius=_collision_radius(
+            accepted_detections,
+            width=width,
+            height=height,
+            image_shape=image_shape,
+            crop=crop,
+        ),
+    )
 
 
 def detect_pigs(image: np.ndarray, *, crop: FieldCrop | None = None) -> tuple[Detection, ...]:
@@ -98,6 +116,12 @@ def detect_pigs(image: np.ndarray, *, crop: FieldCrop | None = None) -> tuple[De
         if axis_a < axis_b:
             axis_a, axis_b = axis_b, axis_a
             angle += 90.0
+        angle = _oriented_angle_from_head(
+            field,
+            (float(center_x), float(center_y)),
+            float(axis_a),
+            angle,
+        )
 
         detections.append(
             Detection(
@@ -198,12 +222,120 @@ def _fit_ellipse(contour: np.ndarray):
     return cv2.fitEllipse(contour)
 
 
+def _accepted_detections(
+    detections: tuple[Detection, ...],
+    *,
+    min_confidence: float,
+) -> tuple[Detection, ...]:
+    high_confidence = tuple(
+        detection for detection in detections if detection.confidence >= min_confidence
+    )
+    if not high_confidence:
+        return high_confidence
+
+    typical_radius = median(detection.radius for detection in high_confidence)
+    rescue_floor = max(0.35, min_confidence - 0.12)
+    rescued = tuple(
+        detection
+        for detection in detections
+        if rescue_floor <= detection.confidence < min_confidence
+        and detection.radius >= typical_radius * 0.75
+    )
+    return tuple(
+        sorted(
+            high_confidence + rescued,
+            key=lambda detection: (detection.center[1], detection.center[0], detection.id),
+        )
+    )
+
+
+def _collision_radius(
+    detections: tuple[Detection, ...],
+    *,
+    width: int,
+    height: int,
+    image_shape: tuple[int, ...],
+    crop: FieldCrop | None = None,
+) -> float:
+    if not detections:
+        return 0.0
+
+    image_height, image_width = image_shape[:2]
+    quant_width = (crop.right - crop.left) if crop else image_width
+    quant_height = (crop.bottom - crop.top) if crop else image_height
+    cell_size = min(quant_width / width, quant_height / height)
+    if cell_size <= 0:
+        return 0.0
+
+    radius = median(detection.radius for detection in detections) / cell_size * 1.6
+    return max(0.65, min(1.5, float(radius)))
+
+
 def _direction_from_angle(angle: float) -> Direction:
-    normalized = angle % 180.0
-    if normalized < 22.5 or normalized >= 157.5:
+    normalized = angle % 360.0
+    if normalized < 22.5 or normalized >= 337.5:
         return Direction.RIGHT
     if normalized < 67.5:
         return Direction.DOWN_RIGHT
     if normalized < 112.5:
         return Direction.DOWN
-    return Direction.DOWN_LEFT
+    if normalized < 157.5:
+        return Direction.DOWN_LEFT
+    if normalized < 202.5:
+        return Direction.LEFT
+    if normalized < 247.5:
+        return Direction.UP_LEFT
+    if normalized < 292.5:
+        return Direction.UP
+    return Direction.UP_RIGHT
+
+
+def _oriented_angle_from_head(
+    image: np.ndarray,
+    center: tuple[float, float],
+    major_axis: float,
+    angle: float,
+) -> float:
+    radians = math.radians(angle)
+    unit_x = math.cos(radians)
+    unit_y = math.sin(radians)
+    sample_distance = max(8.0, major_axis * 0.28)
+    sample_radius = max(6.0, major_axis * 0.13)
+    center_x, center_y = center
+
+    positive_score = _dark_detail_score(
+        image,
+        (center_x + unit_x * sample_distance, center_y + unit_y * sample_distance),
+        sample_radius,
+    )
+    negative_score = _dark_detail_score(
+        image,
+        (center_x - unit_x * sample_distance, center_y - unit_y * sample_distance),
+        sample_radius,
+    )
+
+    if negative_score > positive_score:
+        return angle + 180.0
+    return angle
+
+
+def _dark_detail_score(
+    image: np.ndarray,
+    center: tuple[float, float],
+    radius: float,
+) -> float:
+    image_height, image_width = image.shape[:2]
+    center_x, center_y = center
+    x0 = max(0, int(center_x - radius))
+    x1 = min(image_width, int(center_x + radius) + 1)
+    y0 = max(0, int(center_y - radius))
+    y1 = min(image_height, int(center_y + radius) + 1)
+    if x0 >= x1 or y0 >= y1:
+        return 0.0
+
+    patch = image[y0:y1, x0:x1]
+    gray = cv2.cvtColor(patch, cv2.COLOR_BGR2GRAY)
+    yy, xx = np.ogrid[y0:y1, x0:x1]
+    circle = (xx - center_x) ** 2 + (yy - center_y) ** 2 <= radius * radius
+    dark = gray < 95
+    return float(np.sum(dark & circle))

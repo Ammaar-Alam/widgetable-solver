@@ -18,6 +18,15 @@ def test_field_crop_constrains_to_image_bounds():
     assert 780 <= crop.bottom <= 900
 
 
+def test_field_crop_keeps_cropped_board_images_full_frame():
+    crop = FieldCrop.from_image_shape((1408, 1584, 3))
+
+    assert crop.left == 0
+    assert crop.top == 0
+    assert crop.right == 1584
+    assert crop.bottom == 1408
+
+
 def test_quantize_detections_maps_centers_to_cells():
     detections = (
         Detection(id="p0", center=(100.0, 120.0), direction=Direction.RIGHT, radius=28.0, confidence=0.9),
@@ -32,6 +41,25 @@ def test_quantize_detections_maps_centers_to_cells():
     assert board.get("p1").cell == (2, 1)
 
 
+def test_quantize_detections_can_use_field_crop_coordinates():
+    detections = (
+        Detection(id="p0", center=(150.0, 250.0), direction=Direction.RIGHT, radius=28.0, confidence=0.9),
+        Detection(id="p1", center=(350.0, 450.0), direction=Direction.LEFT, radius=28.0, confidence=0.9),
+    )
+    crop = FieldCrop(left=100, top=200, right=500, bottom=600)
+
+    board = quantize_detections(
+        detections,
+        width=4,
+        height=4,
+        image_shape=(800, 800, 3),
+        crop=crop,
+    )
+
+    assert board.get("p0").cell == (0, 0)
+    assert board.get("p1").cell == (2, 2)
+
+
 def test_low_confidence_detection_is_rejected():
     detections = (
         Detection(id="p0", center=(100.0, 120.0), direction=Direction.RIGHT, radius=28.0, confidence=0.2),
@@ -40,6 +68,18 @@ def test_low_confidence_detection_is_rejected():
     board = quantize_detections(detections, width=4, height=4, image_shape=(400, 400, 3), min_confidence=0.5)
 
     assert board.pigs == ()
+
+
+def test_low_confidence_full_size_detection_is_rescued():
+    detections = (
+        Detection(id="strong", center=(300.0, 300.0), direction=Direction.RIGHT, radius=40.0, confidence=0.9),
+        Detection(id="rescued", center=(700.0, 300.0), direction=Direction.LEFT, radius=38.0, confidence=0.42),
+        Detection(id="fragment", center=(500.0, 300.0), direction=Direction.DOWN, radius=16.0, confidence=0.42),
+    )
+
+    board = quantize_detections(detections, width=20, height=20, image_shape=(1000, 1000, 3))
+
+    assert {pig.id for pig in board.pigs} == {"strong", "rescued"}
 
 
 def test_finer_grid_keeps_close_distinct_pigs():
@@ -58,6 +98,8 @@ def test_finer_grid_keeps_close_distinct_pigs():
 def test_direction_from_angle_preserves_diagonal_axes():
     assert _direction_from_angle(44.0) is Direction.DOWN_RIGHT
     assert _direction_from_angle(134.0) is Direction.DOWN_LEFT
+    assert _direction_from_angle(224.0) is Direction.UP_LEFT
+    assert _direction_from_angle(316.0) is Direction.UP_RIGHT
 
 
 def test_overlay_labels_prefer_planned_move_numbers():
