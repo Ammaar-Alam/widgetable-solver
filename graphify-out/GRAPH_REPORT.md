@@ -1,16 +1,16 @@
 # Graph Report - widgetable-solver  (2026-07-06)
 
 ## Corpus Check
-- 20 files · ~594,078 words
+- 22 files · ~595,366 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 217 nodes · 315 edges · 16 communities (13 shown, 3 thin omitted)
-- Extraction: 77% EXTRACTED · 23% INFERRED · 0% AMBIGUOUS · INFERRED: 74 edges (avg confidence: 0.72)
+- 245 nodes · 408 edges · 16 communities (13 shown, 3 thin omitted)
+- Extraction: 69% EXTRACTED · 31% INFERRED · 0% AMBIGUOUS · INFERRED: 125 edges (avg confidence: 0.74)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `20b55ef4`
+- Built from commit: `54d0a393`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,28 +33,28 @@
 - [[_COMMUNITY_Community 15|Community 15]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Board` - 26 edges
-2. `Pig` - 19 edges
-3. `Solver` - 13 edges
+1. `Board` - 36 edges
+2. `Pig` - 29 edges
+3. `Solver` - 17 edges
 4. `Widgetable Solver Piggy Push Design` - 12 edges
-5. `ImageSolveResult` - 9 edges
-6. `Detection` - 9 edges
-7. `7. Heuristics and reductions` - 9 edges
-8. `Widgetable Solver Piggy Push Implementation Plan` - 9 edges
-9. `Task 1: Repository Foundation` - 9 edges
-10. `_run_piggy()` - 8 edges
+5. `move_event()` - 10 edges
+6. `ImageSolveResult` - 9 edges
+7. `Detection` - 9 edges
+8. `7. Heuristics and reductions` - 9 edges
+9. `Widgetable Solver Piggy Push Implementation Plan` - 9 edges
+10. `Task 1: Repository Foundation` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `test_board_from_payload_builds_model()` --calls--> `board_from_payload()`  [INFERRED]
-  tests/piggy_push/test_runner.py → src/widgetable_solver/piggy_push/runner.py
-- `test_solve_payload_returns_solution_list()` --calls--> `solve_payload()`  [INFERRED]
-  tests/piggy_push/test_runner.py → src/widgetable_solver/piggy_push/runner.py
-- `test_solve_payload_honors_move_limit()` --calls--> `solve_payload()`  [INFERRED]
-  tests/piggy_push/test_runner.py → src/widgetable_solver/piggy_push/runner.py
-- `test_overlay_labels_prefer_planned_move_numbers()` --calls--> `overlay_labels()`  [INFERRED]
-  tests/piggy_push/test_vision.py → src/widgetable_solver/piggy_push/vision.py
-- `test_run_command_defaults_to_dry_run()` --calls--> `build_parser()`  [INFERRED]
-  tests/test_cli.py → src/widgetable_solver/cli.py
+- `test_all_blockers_graph_reports_every_collinear_blocker_before_exit()` --calls--> `all_blockers_graph()`  [INFERRED]
+  tests/piggy_push/test_analysis.py → src/widgetable_solver/piggy_push/analysis.py
+- `test_move_event_reports_exit_hit_and_zero_displacement()` --calls--> `move_event()`  [INFERRED]
+  tests/piggy_push/test_analysis.py → src/widgetable_solver/piggy_push/analysis.py
+- `test_immediate_blocker_graph_and_counts()` --calls--> `immediate_blocker_graph()`  [INFERRED]
+  tests/piggy_push/test_analysis.py → src/widgetable_solver/piggy_push/analysis.py
+- `test_immediate_blocker_graph_and_counts()` --calls--> `blocker_counts()`  [INFERRED]
+  tests/piggy_push/test_analysis.py → src/widgetable_solver/piggy_push/analysis.py
+- `test_all_blockers_graph_reports_every_collinear_blocker_before_exit()` --calls--> `immediate_blocker_graph()`  [INFERRED]
+  tests/piggy_push/test_analysis.py → src/widgetable_solver/piggy_push/analysis.py
 
 ## Communities (16 total, 3 thin omitted)
 
@@ -63,12 +63,12 @@ Cohesion: 0.08
 Nodes (25): code:toml ([build-system]), code:python (from __future__ import annotations), code:python (from widgetable_solver.piggy_push.model import Board, Direct), code:python (from __future__ import annotations), code:python (import numpy as np), code:python (from __future__ import annotations), code:bash (git init), code:bash (gh repo create widgetable-solver --private --source . --remo) (+17 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.12
-Nodes (16): Enum, Board, from_iterable(), Pig, Transition, test_clicking_blocked_pig_stops_before_blocker(), test_clicking_diagonal_pig_moves_along_diagonal_until_blocked(), test_clicking_unblocked_pig_removes_it_from_board() (+8 more)
+Cohesion: 0.09
+Nodes (27): Enum, MoveEvent, MoveKind, Board, from_iterable(), Pig, SearchStats, stats() (+19 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.15
-Nodes (21): Direction, analyze_image(), board_from_payload(), capture_once(), ImageSolveResult, load_state(), run_once(), solve_image() (+13 more)
+Cohesion: 0.12
+Nodes (28): Direction, analyze_image(), board_from_payload(), capture_once(), ImageSolveResult, load_state(), run_once(), solve_image() (+20 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.24
@@ -79,16 +79,16 @@ Cohesion: 0.15
 Nodes (12): Architecture, CLI, Data Flow, Goal, Live Automation, Movement Rule, Repository Hygiene, Scope (+4 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.22
-Nodes (10): test_direction_from_angle_preserves_diagonal_axes(), test_low_confidence_detection_is_rejected(), test_overlay_labels_prefer_planned_move_numbers(), test_quantize_detections_maps_centers_to_cells(), detect_pigs(), Detection, _direction_from_angle(), FieldCrop (+2 more)
+Cohesion: 0.67
+Nodes (3): test_run_command_defaults_to_dry_run(), test_run_command_requires_explicit_live_flag(), build_parser()
 
 ### Community 6 - "Community 6"
 Cohesion: 0.06
 Nodes (30): 10.1 Board bounds, 10.2 Pig center detection, 10.3 Heading estimation, 10.4 Collision shape approximation, 10.5 Transition validation from observed frames, 10.6 Solvable-state extraction, 10. Screenshot-to-state extraction, 11. Known results vs novel proposals (+22 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.27
-Nodes (4): SearchStats, solve(), Solver, stats()
+Cohesion: 0.17
+Nodes (16): all_blockers_graph(), blocker_counts(), can_never_be_stopper(), _cell_lies_on_forward_ray(), cycle_members(), exit_ids(), immediate_blocker_graph(), move_event() (+8 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.25
@@ -118,17 +118,17 @@ Nodes (8): 3.1 Continuous geometric model, 3.2 Legal actions, 3.3 Collision rayc
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Board` connect `Community 1` to `Community 2`, `Community 5`, `Community 7`?**
-  _High betweenness centrality (0.079) - this node is a cross-community bridge._
-- **Why does `Pig` connect `Community 1` to `Community 2`, `Community 5`, `Community 7`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+- **Why does `Board` connect `Community 1` to `Community 2`, `Community 7`?**
+  _High betweenness centrality (0.095) - this node is a cross-community bridge._
+- **Why does `Pig` connect `Community 1` to `Community 2`, `Community 7`?**
+  _High betweenness centrality (0.066) - this node is a cross-community bridge._
 - **Why does `Solver` connect `Community 7` to `Community 1`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
-- **Are the 17 inferred relationships involving `Board` (e.g. with `ImageSolveResult` and `SearchStats`) actually correct?**
-  _`Board` has 17 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 17 inferred relationships involving `Pig` (e.g. with `ImageSolveResult` and `SearchStats`) actually correct?**
-  _`Pig` has 17 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `Solver` (e.g. with `Board` and `Pig`) actually correct?**
-  _`Solver` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 6 inferred relationships involving `ImageSolveResult` (e.g. with `Board` and `Direction`) actually correct?**
-  _`ImageSolveResult` has 6 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+- **Are the 27 inferred relationships involving `Board` (e.g. with `ImageSolveResult` and `MoveKind`) actually correct?**
+  _`Board` has 27 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 27 inferred relationships involving `Pig` (e.g. with `ImageSolveResult` and `MoveKind`) actually correct?**
+  _`Pig` has 27 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 5 inferred relationships involving `Solver` (e.g. with `MoveKind` and `Board`) actually correct?**
+  _`Solver` has 5 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 4 inferred relationships involving `move_event()` (e.g. with `test_move_event_reports_exit_hit_and_zero_displacement()` and `test_safe_exit_ids_excludes_potential_future_stoppers()`) actually correct?**
+  _`move_event()` has 4 INFERRED edges - model-reasoned connections that need verification._

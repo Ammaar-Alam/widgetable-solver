@@ -28,7 +28,7 @@ Live mode is explicit. Dry-run mode captures, detects, solves, and writes overla
 
 ## Piggy Push Status
 
-The board model and PAWS-Exact solver are deterministic and covered by tests. PAWS-Exact implements the collision-cost search from `docs/algorithm.md`: exit taps cost 0, collision/setup taps cost 1, and optional `move_limit` values become collision budgets. The first OpenCV detector can analyze the saved screenshots and write overlays, but live clicking should only be used after the overlay matches the visible board. Uncertain or duplicated detections should be treated as calibration data for the next detector pass.
+The board model and PAWS-Exact solver are deterministic and covered by tests. PAWS-Exact implements the collision-cost search from `docs/algorithm.md`: exit taps cost 0, collision/setup taps cost 1, and optional `move_limit` values become collision budgets. The solver also uses immediate/all-blocker analysis, SCC cycle detection, static zero-peel lower bounds, provably safe exit peeling, stopper-value scoring, and displacement-aware move ordering. The first OpenCV detector can analyze the saved screenshots and write overlays, but live clicking should only be used after the overlay matches the visible board. Uncertain or duplicated detections should be treated as calibration data for the next detector pass.
 
 State files use integer grid cells:
 

@@ -1,5 +1,5 @@
 from widgetable_solver.piggy_push.model import Board, Direction, Pig
-from widgetable_solver.piggy_push.solver import solve
+from widgetable_solver.piggy_push.solver import Solver, solve
 
 
 def test_solver_clears_single_pig():
@@ -78,6 +78,58 @@ def test_solver_respects_move_limit_as_collision_budget():
 
     assert solve(board, move_limit=5) is None
     assert solve(board, move_limit=6) is not None
+
+
+def test_solver_prioritizes_safe_exits_before_useful_stoppers():
+    board = Board(
+        width=5,
+        height=5,
+        pigs=(
+            Pig("safe", 4, 0, Direction.RIGHT),
+            Pig("stopper", 3, 2, Direction.RIGHT),
+            Pig("uses_stopper", 0, 2, Direction.RIGHT),
+        ),
+    )
+
+    ordered_ids = tuple(pig.id for pig in Solver().ordered_candidates(board))
+
+    assert ordered_ids.index("safe") < ordered_ids.index("stopper")
+
+
+def test_solver_front_loads_provably_safe_exits():
+    board = Board(
+        width=5,
+        height=5,
+        pigs=(
+            Pig("safe", 4, 0, Direction.RIGHT),
+            Pig("stopper", 3, 2, Direction.RIGHT),
+            Pig("uses_stopper", 0, 2, Direction.RIGHT),
+        ),
+    )
+
+    solution = solve(board)
+
+    assert solution is not None
+    assert solution[0] == "safe"
+    assert _clears(board, solution)
+
+
+def test_solver_prioritizes_collision_moves_inside_blocker_cycles():
+    board = Board(
+        width=7,
+        height=7,
+        pigs=(
+            Pig("a", 2, 2, Direction.RIGHT),
+            Pig("b", 4, 2, Direction.DOWN),
+            Pig("c", 4, 4, Direction.LEFT),
+            Pig("d", 2, 4, Direction.UP),
+            Pig("tail", 0, 2, Direction.RIGHT),
+        ),
+    )
+
+    ordered_ids = tuple(pig.id for pig in Solver().ordered_candidates(board))
+
+    assert ordered_ids.index("a") < ordered_ids.index("tail")
 
 
 def _collision_tap_count(board: Board, solution: tuple[str, ...]) -> int:

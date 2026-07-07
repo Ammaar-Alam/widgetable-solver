@@ -4,6 +4,17 @@ from dataclasses import dataclass
 from heapq import heappop, heappush
 from itertools import count
 
+from widgetable_solver.piggy_push.analysis import (
+    MoveKind,
+    blocker_counts,
+    cycle_members,
+    exit_ids,
+    immediate_blocker_graph,
+    move_event,
+    safe_exit_ids,
+    static_zero_peel_residual,
+    stopper_values,
+)
 from widgetable_solver.piggy_push.model import Board, Pig
 
 
@@ -22,6 +33,8 @@ class SearchStats:
 class Transition:
     board: Board
     collision_cost: int
+    blocker_id: str | None = None
+    distance: int = 0
 
     @property
     def exits(self) -> bool:
@@ -64,18 +77,19 @@ class Solver:
 
         sequence = count()
         queue: list[tuple[int, int, int, int, Board, tuple[str, ...]]] = []
-        start_key = board.state_key()
+        start_board, start_macro = self._safe_peel_closure(board)
+        start_key = start_board.state_key()
         best_cost: dict[StateKey, int] = {start_key: 0}
 
         heappush(
             queue,
             (
-                self._priority(board, 0),
+                self._priority(start_board, 0),
                 0,
-                len(board.pigs),
+                len(start_board.pigs),
                 next(sequence),
-                board,
-                (),
+                start_board,
+                start_macro,
             ),
         )
 
@@ -93,7 +107,7 @@ class Solver:
             self.explored_states += 1
             any_transition = False
 
-            for pig in self._ordered_candidates(current):
+            for pig in self.ordered_candidates(current):
                 transition = self._transition(current, pig)
                 if transition is None:
                     continue
@@ -103,7 +117,8 @@ class Solver:
                 if collision_budget is not None and next_collision_cost > collision_budget:
                     continue
 
-                next_key = transition.board.state_key()
+                next_board, safe_macro = self._safe_peel_closure(transition.board)
+                next_key = next_board.state_key()
                 if next_collision_cost >= best_cost.get(next_key, 10**12):
                     continue
 
@@ -112,12 +127,12 @@ class Solver:
                 heappush(
                     queue,
                     (
-                        self._priority(transition.board, next_collision_cost),
+                        self._priority(next_board, next_collision_cost),
                         next_collision_cost,
-                        len(transition.board.pigs),
+                        len(next_board.pigs),
                         next(sequence),
-                        transition.board,
-                        path + (pig.id,),
+                        next_board,
+                        path + (pig.id,) + safe_macro,
                     ),
                 )
 
@@ -127,40 +142,101 @@ class Solver:
         return None
 
     def _transition(self, board: Board, pig: Pig) -> Transition | None:
-        next_board = board.move(pig.id)
-        if next_board == board:
+        event = move_event(board, pig.id)
+        if event.kind is MoveKind.ZERO:
             return None
-        collision_cost = 0 if len(next_board.pigs) < len(board.pigs) else 1
-        return Transition(board=next_board, collision_cost=collision_cost)
+        return Transition(
+            board=event.board,
+            collision_cost=event.collision_cost,
+            blocker_id=event.blocker_id,
+            distance=event.distance,
+        )
 
     def _priority(self, board: Board, collision_cost: int) -> int:
         return collision_cost + self._admissible_extra_lower_bound(board)
 
     def _admissible_extra_lower_bound(self, board: Board) -> int:
-        if board.is_cleared() or self._static_zero_peel_clears(board):
+        if static_zero_peel_residual(board).is_cleared():
             return 0
         return 1
 
-    def _static_zero_peel_clears(self, board: Board) -> bool:
+    def _safe_peel_closure(self, board: Board) -> tuple[Board, tuple[str, ...]]:
         current = board
-        changed = True
-        while changed and not current.is_cleared():
-            changed = False
-            for pig in self._ordered_candidates(current):
-                transition = self._transition(current, pig)
-                if transition is None or not transition.exits:
-                    continue
-                current = transition.board
-                changed = True
+        plan: list[str] = []
+
+        while not current.is_cleared():
+            safe_ids = safe_exit_ids(current)
+            if not safe_ids:
                 break
-        return current.is_cleared()
 
-    def _ordered_candidates(self, board: Board) -> tuple[Pig, ...]:
-        return tuple(sorted(board.pigs, key=lambda pig: self._move_priority(board, pig)))
+            safe_pig = next(
+                pig for pig in self.ordered_candidates(current) if pig.id in safe_ids
+            )
+            transition = self._transition(current, safe_pig)
+            if transition is None or not transition.exits:
+                break
+            current = transition.board
+            plan.append(safe_pig.id)
 
-    def _move_priority(self, board: Board, pig: Pig) -> tuple[int, int, str]:
-        transition = self._transition(board, pig)
-        if transition is None:
-            return (2, 10**9, pig.id)
+        return current, tuple(plan)
+
+    def ordered_candidates(self, board: Board) -> tuple[Pig, ...]:
+        graph = immediate_blocker_graph(board)
+        counts = blocker_counts(graph)
+        cycles = cycle_members(graph)
+        safe_exits = safe_exit_ids(board)
+        exits = exit_ids(board)
+        stoppers = stopper_values(board)
+        return tuple(
+            sorted(
+                board.pigs,
+                key=lambda pig: self._move_priority(
+                    board,
+                    pig,
+                    counts,
+                    cycles,
+                    safe_exits,
+                    exits,
+                    stoppers,
+                ),
+            )
+        )
+
+    def _move_priority(
+        self,
+        board: Board,
+        pig: Pig,
+        counts: dict[str, int],
+        cycles: set[str],
+        safe_exits: set[str],
+        exits: set[str],
+        stoppers: dict[str, int],
+    ) -> tuple[int, int, int, int, int, int, int, int, int, int, str]:
+        event = move_event(board, pig.id)
+        if event.kind is MoveKind.ZERO:
+            return (2, 1, 0, 0, 0, 1, 0, 0, 10**9, 0, pig.id)
+
+        after = event.board
+        residual = static_zero_peel_residual(after)
+        removed_by_peel = len(board.pigs) - len(residual.pigs)
+        exit_delta = len(exit_ids(after)) - len(exits)
+        cycle_reduction = len(cycles) - len(cycle_members(immediate_blocker_graph(after)))
+        collision_cost = event.collision_cost
+        safe_exit_rank = 0 if pig.id in safe_exits else 1
+        cycle_rank = 0 if event.kind is MoveKind.HIT and pig.id in cycles else 1
+        unblocks = counts.get(pig.id, 0)
+        stopper_value = stoppers.get(pig.id, 0)
         edge_distance = min(pig.x, pig.y, board.width - 1 - pig.x, board.height - 1 - pig.y)
-        return (transition.collision_cost, edge_distance, pig.id)
+        return (
+            collision_cost,
+            safe_exit_rank,
+            -removed_by_peel,
+            -exit_delta,
+            -cycle_reduction,
+            cycle_rank,
+            -unblocks,
+            stopper_value,
+            edge_distance,
+            -event.distance,
+            pig.id,
+        )
