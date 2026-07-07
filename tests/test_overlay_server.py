@@ -3,6 +3,7 @@ import base64
 from widgetable_solver.overlay_server import (
     INDEX_HTML,
     OverlayServerError,
+    OverlayThreadingHTTPServer,
     parse_image_data_url,
 )
 
@@ -38,3 +39,11 @@ def test_index_html_does_not_expose_internal_grid_controls():
     assert "gridHeight" not in INDEX_HTML
     assert "Grid width" not in INDEX_HTML
     assert "Grid height" not in INDEX_HTML
+
+
+def test_index_html_defaults_to_fast_strategy_for_live_overlays():
+    assert '<option value="fast" selected>fast</option>' in INDEX_HTML
+
+
+def test_overlay_server_uses_daemon_request_threads():
+    assert OverlayThreadingHTTPServer.daemon_threads is True

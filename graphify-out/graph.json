@@ -16,7 +16,7 @@
       "label": "test_parse_image_data_url_accepts_png_payload()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L10",
+      "source_location": "L11",
       "id": "tests_test_overlay_server_test_parse_image_data_url_accepts_png_payload",
       "community": 15,
       "norm_label": "test_parse_image_data_url_accepts_png_payload()"
@@ -25,7 +25,7 @@
       "label": "test_parse_image_data_url_rejects_non_images()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L18",
+      "source_location": "L19",
       "id": "tests_test_overlay_server_test_parse_image_data_url_rejects_non_images",
       "community": 15,
       "norm_label": "test_parse_image_data_url_rejects_non_images()"
@@ -34,7 +34,7 @@
       "label": "test_index_html_supports_paste_drop_and_file_upload()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L29",
+      "source_location": "L30",
       "id": "tests_test_overlay_server_test_index_html_supports_paste_drop_and_file_upload",
       "community": 15,
       "norm_label": "test_index_html_supports_paste_drop_and_file_upload()"
@@ -43,10 +43,28 @@
       "label": "test_index_html_does_not_expose_internal_grid_controls()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L36",
+      "source_location": "L37",
       "id": "tests_test_overlay_server_test_index_html_does_not_expose_internal_grid_controls",
       "community": 15,
       "norm_label": "test_index_html_does_not_expose_internal_grid_controls()"
+    },
+    {
+      "label": "test_index_html_defaults_to_fast_strategy_for_live_overlays()",
+      "file_type": "code",
+      "source_file": "tests/test_overlay_server.py",
+      "source_location": "L44",
+      "id": "tests_test_overlay_server_test_index_html_defaults_to_fast_strategy_for_live_overlays",
+      "community": 15,
+      "norm_label": "test_index_html_defaults_to_fast_strategy_for_live_overlays()"
+    },
+    {
+      "label": "test_overlay_server_uses_daemon_request_threads()",
+      "file_type": "code",
+      "source_file": "tests/test_overlay_server.py",
+      "source_location": "L48",
+      "id": "tests_test_overlay_server_test_overlay_server_uses_daemon_request_threads",
+      "community": 15,
+      "norm_label": "test_overlay_server_uses_daemon_request_threads()"
     },
     {
       "label": "test_cli.py",
@@ -171,7 +189,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L1",
       "id": "tests_piggy_push_test_fast_solver_py",
-      "community": 1,
+      "community": 17,
       "norm_label": "test_fast_solver.py"
     },
     {
@@ -180,7 +198,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L5",
       "id": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
-      "community": 1,
+      "community": 17,
       "norm_label": "test_fast_solver_removes_safe_exits_before_stopper_exits()"
     },
     {
@@ -189,7 +207,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L23",
       "id": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
-      "community": 1,
+      "community": 17,
       "norm_label": "test_fast_solver_breaks_blocker_cycle_with_collision_move()"
     },
     {
@@ -198,7 +216,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L42",
       "id": "piggy_push_test_fast_solver_test_beam_breakout_returns_collision_plan_that_creates_an_exit",
-      "community": 1,
+      "community": 17,
       "norm_label": "test_beam_breakout_returns_collision_plan_that_creates_an_exit()"
     },
     {
@@ -207,7 +225,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L60",
       "id": "piggy_push_test_fast_solver_test_fast_solver_honors_move_limit",
-      "community": 1,
+      "community": 17,
       "norm_label": "test_fast_solver_honors_move_limit()"
     },
     {
@@ -216,7 +234,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L76",
       "id": "piggy_push_test_fast_solver_collision_tap_count",
-      "community": 1,
+      "community": 17,
       "norm_label": "_collision_tap_count()"
     },
     {
@@ -225,7 +243,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L87",
       "id": "piggy_push_test_fast_solver_clears",
-      "community": 1,
+      "community": 17,
       "norm_label": "_clears()"
     },
     {
@@ -234,7 +252,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L1",
       "id": "tests_piggy_push_test_analysis_py",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_analysis.py"
     },
     {
@@ -243,7 +261,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L17",
       "id": "piggy_push_test_analysis_test_move_event_reports_exit_hit_and_zero_displacement",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_move_event_reports_exit_hit_and_zero_displacement()"
     },
     {
@@ -252,7 +270,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L51",
       "id": "piggy_push_test_analysis_test_move_event_uses_radius_for_vision_board_collisions",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_move_event_uses_radius_for_vision_board_collisions()"
     },
     {
@@ -261,7 +279,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L70",
       "id": "piggy_push_test_analysis_test_immediate_blocker_graph_and_counts",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_immediate_blocker_graph_and_counts()"
     },
     {
@@ -270,7 +288,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L87",
       "id": "piggy_push_test_analysis_test_all_blockers_graph_reports_every_collinear_blocker_before_exit",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_all_blockers_graph_reports_every_collinear_blocker_before_exit()"
     },
     {
@@ -288,7 +306,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L119",
       "id": "piggy_push_test_analysis_test_safe_exit_ids_excludes_potential_future_stoppers",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_safe_exit_ids_excludes_potential_future_stoppers()"
     },
     {
@@ -297,7 +315,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L138",
       "id": "piggy_push_test_analysis_test_static_zero_peel_residual_keeps_collision_required_cycle",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_static_zero_peel_residual_keeps_collision_required_cycle()"
     },
     {
@@ -709,7 +727,7 @@
       "label": "OverlayServerError",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L22",
+      "source_location": "L23",
       "id": "widgetable_solver_overlay_server_overlayservererror",
       "community": 15,
       "norm_label": "overlayservererror"
@@ -727,7 +745,7 @@
       "label": "parse_image_data_url()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L270",
+      "source_location": "L271",
       "id": "widgetable_solver_overlay_server_parse_image_data_url",
       "community": 15,
       "norm_label": "parse_image_data_url()"
@@ -736,7 +754,7 @@
       "label": "analyze_image_bytes()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L285",
+      "source_location": "L286",
       "id": "widgetable_solver_overlay_server_analyze_image_bytes",
       "community": 15,
       "norm_label": "analyze_image_bytes()"
@@ -745,7 +763,7 @@
       "label": "OverlayRequestHandler",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L316",
+      "source_location": "L317",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler",
       "community": 15,
       "norm_label": "overlayrequesthandler"
@@ -760,10 +778,19 @@
       "norm_label": "basehttprequesthandler"
     },
     {
+      "label": ".setup()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/overlay_server.py",
+      "source_location": "L320",
+      "id": "widgetable_solver_overlay_server_overlayrequesthandler_setup",
+      "community": 15,
+      "norm_label": ".setup()"
+    },
+    {
       "label": ".do_GET()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L319",
+      "source_location": "L324",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler_do_get",
       "community": 15,
       "norm_label": ".do_get()"
@@ -772,7 +799,7 @@
       "label": ".do_POST()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L330",
+      "source_location": "L335",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler_do_post",
       "community": 15,
       "norm_label": ".do_post()"
@@ -781,7 +808,7 @@
       "label": ".log_message()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L352",
+      "source_location": "L359",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler_log_message",
       "community": 15,
       "norm_label": ".log_message()"
@@ -790,16 +817,34 @@
       "label": "._send_json()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L355",
+      "source_location": "L362",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler_send_json",
       "community": 15,
       "norm_label": "._send_json()"
     },
     {
+      "label": "OverlayThreadingHTTPServer",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/overlay_server.py",
+      "source_location": "L371",
+      "id": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
+      "community": 15,
+      "norm_label": "overlaythreadinghttpserver"
+    },
+    {
+      "label": "ThreadingHTTPServer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "threadinghttpserver",
+      "community": 15,
+      "norm_label": "threadinghttpserver"
+    },
+    {
       "label": "serve()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L364",
+      "source_location": "L375",
       "id": "widgetable_solver_overlay_server_serve",
       "community": 15,
       "norm_label": "serve()"
@@ -808,7 +853,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L371",
+      "source_location": "L382",
       "id": "widgetable_solver_overlay_server_main",
       "community": 15,
       "norm_label": "main()"
@@ -1080,7 +1125,7 @@
       "source_file": "",
       "source_location": "",
       "id": "enum",
-      "community": 2,
+      "community": 5,
       "norm_label": "enum"
     },
     {
@@ -1089,7 +1134,7 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L16",
       "id": "piggy_push_analysis_moveevent",
-      "community": 1,
+      "community": 7,
       "norm_label": "moveevent"
     },
     {
@@ -1350,7 +1395,7 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L247",
       "id": "piggy_push_solver_solver_ordered_candidates",
-      "community": 5,
+      "community": 7,
       "norm_label": ".ordered_candidates()"
     },
     {
@@ -1521,7 +1566,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L1",
       "id": "src_widgetable_solver_piggy_push_fast_solver_py",
-      "community": 7,
+      "community": 17,
       "norm_label": "fast_solver.py"
     },
     {
@@ -1530,7 +1575,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L20",
       "id": "piggy_push_fast_solver_fastsearchconfig",
-      "community": 7,
+      "community": 17,
       "norm_label": "fastsearchconfig"
     },
     {
@@ -1539,7 +1584,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L25",
       "id": "piggy_push_fast_solver_solve_fast",
-      "community": 7,
+      "community": 17,
       "norm_label": "solve_fast()"
     },
     {
@@ -1548,7 +1593,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L38",
       "id": "piggy_push_fast_solver_beam_breakout",
-      "community": 7,
+      "community": 17,
       "norm_label": "beam_breakout()"
     },
     {
@@ -1566,7 +1611,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L50",
       "id": "piggy_push_fast_solver_fastsolver_init",
-      "community": 7,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -1665,7 +1710,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L1",
       "id": "src_widgetable_solver_piggy_push_model_py",
-      "community": 2,
+      "community": 1,
       "norm_label": "model.py"
     },
     {
@@ -1683,7 +1728,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L20",
       "id": "piggy_push_model_vector",
-      "community": 2,
+      "community": 1,
       "norm_label": "vector()"
     },
     {
@@ -1701,7 +1746,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L41",
       "id": "piggy_push_model_cell",
-      "community": 2,
+      "community": 1,
       "norm_label": "cell()"
     },
     {
@@ -1728,7 +1773,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L55",
       "id": "piggy_push_model_board_post_init",
-      "community": 2,
+      "community": 1,
       "norm_label": ".__post_init__()"
     },
     {
@@ -2888,6 +2933,26 @@
       "confidence_score": 1.0,
       "source": "tests_test_overlay_server_py",
       "target": "tests_test_overlay_server_test_index_html_does_not_expose_internal_grid_controls"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_overlay_server.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "tests_test_overlay_server_py",
+      "target": "tests_test_overlay_server_test_index_html_defaults_to_fast_strategy_for_live_overlays",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_overlay_server.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "tests_test_overlay_server_py",
+      "target": "tests_test_overlay_server_test_overlay_server_uses_daemon_request_threads",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -4400,9 +4465,9 @@
       "source_file": "tests/piggy_push/test_vision.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_vision_py",
-      "target": "piggy_push_test_vision_test_quantize_detections_can_use_field_crop_coordinates",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_vision_test_quantize_detections_can_use_field_crop_coordinates"
     },
     {
       "relation": "contains",
@@ -4939,6 +5004,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/overlay_server.py",
+      "source_location": "L371",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_overlay_server_py",
+      "target": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/overlay_server.py",
       "source_location": "L368",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5078,6 +5153,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/overlay_server.py",
+      "source_location": "L320",
+      "weight": 1.0,
+      "source": "widgetable_solver_overlay_server_overlayrequesthandler",
+      "target": "widgetable_solver_overlay_server_overlayrequesthandler_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/overlay_server.py",
       "source_location": "L323",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5135,6 +5220,27 @@
       "confidence_score": 1.0,
       "source": "widgetable_solver_overlay_server_overlayrequesthandler_do_post",
       "target": "widgetable_solver_overlay_server_overlayrequesthandler_send_json"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/overlay_server.py",
+      "source_location": "L371",
+      "weight": 1.0,
+      "source": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
+      "target": "threadinghttpserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/overlay_server.py",
+      "source_location": "L376",
+      "weight": 1.0,
+      "source": "widgetable_solver_overlay_server_serve",
+      "target": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -7204,9 +7310,9 @@
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
       "source_location": "L293",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_vision_py",
-      "target": "piggy_push_vision_oriented_angle_from_head",
-      "confidence_score": 1.0
+      "target": "piggy_push_vision_oriented_angle_from_head"
     },
     {
       "relation": "contains",
@@ -7214,9 +7320,9 @@
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
       "source_location": "L322",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_vision_py",
-      "target": "piggy_push_vision_dark_detail_score",
-      "confidence_score": 1.0
+      "target": "piggy_push_vision_dark_detail_score"
     },
     {
       "relation": "method",
@@ -7372,9 +7478,9 @@
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_vision_detect_pigs",
-      "target": "piggy_push_vision_oriented_angle_from_head",
-      "confidence_score": 1.0
+      "target": "piggy_push_vision_oriented_angle_from_head"
     },
     {
       "relation": "calls",
@@ -7416,9 +7522,9 @@
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
       "source_location": "L306",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_vision_oriented_angle_from_head",
-      "target": "piggy_push_vision_dark_detail_score",
-      "confidence_score": 1.0
+      "target": "piggy_push_vision_dark_detail_score"
     },
     {
       "relation": "contains",
@@ -9260,5 +9366,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2ddf03cc554c3408e02b49053e1e8d4807a6562c"
+  "built_at_commit": "bb0be12ce4eb649bceea2a2320d281181e74f3e8"
 }

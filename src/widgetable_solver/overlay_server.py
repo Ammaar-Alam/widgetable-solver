@@ -17,6 +17,7 @@ from widgetable_solver.piggy_push.runner import (
 
 
 MAX_UPLOAD_BYTES = 12 * 1024 * 1024
+REQUEST_TIMEOUT_SECONDS = 10.0
 
 
 class OverlayServerError(ValueError):
@@ -171,8 +172,8 @@ INDEX_HTML = """<!doctype html>
       <div class="controls">
         <label>Strategy
           <select id="strategy">
-            <option value="hybrid" selected>hybrid</option>
-            <option value="fast">fast</option>
+            <option value="fast" selected>fast</option>
+            <option value="hybrid">hybrid</option>
             <option value="exact">exact</option>
           </select>
         </label>
@@ -316,6 +317,10 @@ def analyze_image_bytes(
 class OverlayRequestHandler(BaseHTTPRequestHandler):
     server_version = "WidgetableOverlay/0.1"
 
+    def setup(self) -> None:
+        super().setup()
+        self.connection.settimeout(REQUEST_TIMEOUT_SECONDS)
+
     def do_GET(self) -> None:
         if self.path not in {"/", "/index.html"}:
             self._send_json({"error": "Not found"}, HTTPStatus.NOT_FOUND)
@@ -347,6 +352,8 @@ class OverlayRequestHandler(BaseHTTPRequestHandler):
         except (json.JSONDecodeError, OverlayServerError, ValueError) as error:
             self._send_json({"error": str(error)}, HTTPStatus.BAD_REQUEST)
             return
+        except (TimeoutError, OSError):
+            return
         self._send_json(response, HTTPStatus.OK)
 
     def log_message(self, format: str, *args: Any) -> None:
@@ -361,8 +368,12 @@ class OverlayRequestHandler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
 
+class OverlayThreadingHTTPServer(ThreadingHTTPServer):
+    daemon_threads = True
+
+
 def serve(host: str = "127.0.0.1", port: int = 8765) -> ThreadingHTTPServer:
-    server = ThreadingHTTPServer((host, port), OverlayRequestHandler)
+    server = OverlayThreadingHTTPServer((host, port), OverlayRequestHandler)
     print(f"Widgetable overlay server: http://{host}:{server.server_port}")
     server.serve_forever()
     return server
