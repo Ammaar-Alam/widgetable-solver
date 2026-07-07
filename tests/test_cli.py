@@ -17,3 +17,13 @@ def test_run_command_requires_explicit_live_flag():
     args = parser.parse_args(["piggy-push", "run", "--live"])
 
     assert args.live is True
+
+
+def test_piggy_push_commands_accept_solver_strategy():
+    parser = build_parser()
+
+    solve_args = parser.parse_args(["piggy-push", "solve-state", "state.json", "--strategy", "fast"])
+    run_args = parser.parse_args(["piggy-push", "run", "--strategy", "hybrid"])
+
+    assert solve_args.strategy == "fast"
+    assert run_args.strategy == "hybrid"

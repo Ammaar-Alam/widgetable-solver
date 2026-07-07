@@ -31,14 +31,17 @@ def build_parser() -> argparse.ArgumentParser:
     analyze.add_argument("--overlay", type=Path)
     analyze.add_argument("--grid-width", type=int, default=10)
     analyze.add_argument("--grid-height", type=int, default=14)
+    analyze.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
 
     solve_image_parser = piggy_subparsers.add_parser("solve-image")
     solve_image_parser.add_argument("image", type=Path)
     solve_image_parser.add_argument("--grid-width", type=int, default=10)
     solve_image_parser.add_argument("--grid-height", type=int, default=14)
+    solve_image_parser.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
 
     solve_state = piggy_subparsers.add_parser("solve-state")
     solve_state.add_argument("state", type=Path)
+    solve_state.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
 
     run = piggy_subparsers.add_parser("run")
     run.add_argument("--live", action="store_true")
@@ -46,6 +49,7 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--settle-seconds", type=float, default=0.45)
     run.add_argument("--grid-width", type=int, default=10)
     run.add_argument("--grid-height", type=int, default=14)
+    run.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
 
     return parser
 
@@ -73,17 +77,25 @@ def _run_piggy(args: argparse.Namespace) -> int:
             overlay=args.overlay,
             grid_width=args.grid_width,
             grid_height=args.grid_height,
+            strategy=args.strategy,
         )
         print(_result_json(result))
         return 0
 
     if args.piggy_command == "solve-image":
-        solution = solve_image(args.image, grid_width=args.grid_width, grid_height=args.grid_height)
+        solution = solve_image(
+            args.image,
+            grid_width=args.grid_width,
+            grid_height=args.grid_height,
+            strategy=args.strategy,
+        )
         print(json.dumps({"solution": solution}, indent=2))
         return 0
 
     if args.piggy_command == "solve-state":
-        solution = solve_payload(load_state(args.state))
+        payload = load_state(args.state)
+        payload.setdefault("strategy", args.strategy)
+        solution = solve_payload(payload)
         print(json.dumps({"solution": solution}, indent=2))
         return 0
 
@@ -94,6 +106,7 @@ def _run_piggy(args: argparse.Namespace) -> int:
             settle_seconds=args.settle_seconds,
             grid_width=args.grid_width,
             grid_height=args.grid_height,
+            strategy=args.strategy,
         )
         print(_result_json(result))
         return 0

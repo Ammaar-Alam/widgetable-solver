@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from heapq import heappop, heappush
 from itertools import count
+from typing import Literal
 
 from widgetable_solver.piggy_push.analysis import (
     MoveKind,
@@ -15,10 +16,12 @@ from widgetable_solver.piggy_push.analysis import (
     static_zero_peel_residual,
     stopper_values,
 )
+from widgetable_solver.piggy_push.fast_solver import solve_fast
 from widgetable_solver.piggy_push.model import Board, Pig
 
 
 StateKey = tuple[tuple[int, int, str], ...]
+SolverStrategy = Literal["exact", "fast", "hybrid"]
 
 
 @dataclass(frozen=True, slots=True)
@@ -45,14 +48,45 @@ def solve(
     board: Board,
     max_states: int = 250_000,
     move_limit: int | None = None,
+    strategy: SolverStrategy = "hybrid",
+    beam_width: int = 256,
+    lookahead_hits: int = 4,
 ) -> tuple[str, ...] | None:
-    return Solver(max_states=max_states, move_limit=move_limit).solve(board)
+    if strategy == "fast":
+        return solve_fast(
+            board,
+            move_limit=move_limit,
+            beam_width=beam_width,
+            lookahead_hits=lookahead_hits,
+        )
+    if strategy == "exact":
+        return Solver(max_states=max_states, move_limit=move_limit).solve(board)
+    if strategy == "hybrid":
+        return Solver(
+            max_states=max_states,
+            move_limit=move_limit,
+            use_fast_incumbent=True,
+            fast_beam_width=beam_width,
+            fast_lookahead_hits=lookahead_hits,
+        ).solve(board)
+    raise ValueError(f"Unknown Piggy Push solver strategy: {strategy}")
 
 
 class Solver:
-    def __init__(self, max_states: int = 250_000, move_limit: int | None = None):
+    def __init__(
+        self,
+        max_states: int = 250_000,
+        move_limit: int | None = None,
+        *,
+        use_fast_incumbent: bool = False,
+        fast_beam_width: int = 256,
+        fast_lookahead_hits: int = 4,
+    ):
         self.max_states = max_states
         self.move_limit = move_limit
+        self.use_fast_incumbent = use_fast_incumbent
+        self.fast_beam_width = fast_beam_width
+        self.fast_lookahead_hits = fast_lookahead_hits
         self.explored_states = 0
         self.generated_states = 0
         self.best_collision_cost: int | None = None
@@ -74,6 +108,19 @@ class Solver:
         collision_budget = None
         if self.move_limit is not None:
             collision_budget = self.move_limit - len(board.pigs)
+
+        incumbent_plan: tuple[str, ...] | None = None
+        incumbent_collision_cost: int | None = None
+        if self.use_fast_incumbent:
+            candidate = solve_fast(
+                board,
+                move_limit=self.move_limit,
+                beam_width=self.fast_beam_width,
+                lookahead_hits=self.fast_lookahead_hits,
+            )
+            if candidate is not None:
+                incumbent_plan = candidate
+                incumbent_collision_cost = _collision_tap_count(board, candidate)
 
         sequence = count()
         queue: list[tuple[int, int, int, int, Board, tuple[str, ...]]] = []
@@ -104,6 +151,13 @@ class Solver:
                 self.best_collision_cost = collision_cost
                 return path
 
+            lower_bound = self._admissible_extra_lower_bound(current)
+            if (
+                incumbent_collision_cost is not None
+                and collision_cost + lower_bound >= incumbent_collision_cost
+            ):
+                continue
+
             self.explored_states += 1
             any_transition = False
 
@@ -118,6 +172,13 @@ class Solver:
                     continue
 
                 next_board, safe_macro = self._safe_peel_closure(transition.board)
+                next_lower_bound = self._admissible_extra_lower_bound(next_board)
+                if (
+                    incumbent_collision_cost is not None
+                    and next_collision_cost + next_lower_bound >= incumbent_collision_cost
+                ):
+                    continue
+
                 next_key = next_board.state_key()
                 if next_collision_cost >= best_cost.get(next_key, 10**12):
                     continue
@@ -139,6 +200,9 @@ class Solver:
             if not any_transition:
                 self._dead.add(key)
 
+        if not queue and incumbent_plan is not None:
+            self.best_collision_cost = incumbent_collision_cost
+            return incumbent_plan
         return None
 
     def _transition(self, board: Board, pig: Pig) -> Transition | None:
@@ -240,3 +304,14 @@ class Solver:
             -event.distance,
             pig.id,
         )
+
+
+def _collision_tap_count(board: Board, solution: tuple[str, ...]) -> int:
+    current = board
+    collisions = 0
+    for pig_id in solution:
+        next_board = current.move(pig_id)
+        if len(next_board.pigs) == len(current.pigs):
+            collisions += 1
+        current = next_board
+    return collisions

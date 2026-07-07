@@ -9,7 +9,7 @@
       "source_file": "tests/test_cli.py",
       "source_location": "L1",
       "id": "tests_test_cli_py",
-      "community": 5,
+      "community": 2,
       "norm_label": "test_cli.py"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "tests/test_cli.py",
       "source_location": "L4",
       "id": "tests_test_cli_test_run_command_defaults_to_dry_run",
-      "community": 5,
+      "community": 2,
       "norm_label": "test_run_command_defaults_to_dry_run()"
     },
     {
@@ -27,8 +27,17 @@
       "source_file": "tests/test_cli.py",
       "source_location": "L14",
       "id": "tests_test_cli_test_run_command_requires_explicit_live_flag",
-      "community": 5,
+      "community": 2,
       "norm_label": "test_run_command_requires_explicit_live_flag()"
+    },
+    {
+      "label": "test_piggy_push_commands_accept_solver_strategy()",
+      "file_type": "code",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L22",
+      "id": "tests_test_cli_test_piggy_push_commands_accept_solver_strategy",
+      "community": 2,
+      "norm_label": "test_piggy_push_commands_accept_solver_strategy()"
     },
     {
       "label": "test_model.py",
@@ -85,12 +94,75 @@
       "norm_label": "test_state_key_is_independent_of_pig_order()"
     },
     {
+      "label": "test_fast_solver.py",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L1",
+      "id": "tests_piggy_push_test_fast_solver_py",
+      "community": 15,
+      "norm_label": "test_fast_solver.py"
+    },
+    {
+      "label": "test_fast_solver_removes_safe_exits_before_stopper_exits()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L5",
+      "id": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
+      "community": 15,
+      "norm_label": "test_fast_solver_removes_safe_exits_before_stopper_exits()"
+    },
+    {
+      "label": "test_fast_solver_breaks_blocker_cycle_with_collision_move()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L23",
+      "id": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
+      "community": 15,
+      "norm_label": "test_fast_solver_breaks_blocker_cycle_with_collision_move()"
+    },
+    {
+      "label": "test_beam_breakout_returns_collision_plan_that_creates_an_exit()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L42",
+      "id": "piggy_push_test_fast_solver_test_beam_breakout_returns_collision_plan_that_creates_an_exit",
+      "community": 15,
+      "norm_label": "test_beam_breakout_returns_collision_plan_that_creates_an_exit()"
+    },
+    {
+      "label": "test_fast_solver_honors_move_limit()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L60",
+      "id": "piggy_push_test_fast_solver_test_fast_solver_honors_move_limit",
+      "community": 15,
+      "norm_label": "test_fast_solver_honors_move_limit()"
+    },
+    {
+      "label": "_collision_tap_count()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L76",
+      "id": "piggy_push_test_fast_solver_collision_tap_count",
+      "community": 15,
+      "norm_label": "_collision_tap_count()"
+    },
+    {
+      "label": "_clears()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L87",
+      "id": "piggy_push_test_fast_solver_clears",
+      "community": 15,
+      "norm_label": "_clears()"
+    },
+    {
       "label": "test_analysis.py",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L1",
       "id": "tests_piggy_push_test_analysis_py",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_analysis.py"
     },
     {
@@ -99,7 +171,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L17",
       "id": "piggy_push_test_analysis_test_move_event_reports_exit_hit_and_zero_displacement",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_move_event_reports_exit_hit_and_zero_displacement()"
     },
     {
@@ -108,7 +180,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L51",
       "id": "piggy_push_test_analysis_test_immediate_blocker_graph_and_counts",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_immediate_blocker_graph_and_counts()"
     },
     {
@@ -117,7 +189,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L68",
       "id": "piggy_push_test_analysis_test_all_blockers_graph_reports_every_collinear_blocker_before_exit",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_all_blockers_graph_reports_every_collinear_blocker_before_exit()"
     },
     {
@@ -144,7 +216,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L119",
       "id": "piggy_push_test_analysis_test_static_zero_peel_residual_keeps_collision_required_cycle",
-      "community": 1,
+      "community": 7,
       "norm_label": "test_static_zero_peel_residual_keeps_collision_required_cycle()"
     },
     {
@@ -160,7 +232,7 @@
       "label": "test_board_from_payload_builds_model()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_runner.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "id": "piggy_push_test_runner_test_board_from_payload_builds_model",
       "community": 2,
       "norm_label": "test_board_from_payload_builds_model()"
@@ -169,7 +241,7 @@
       "label": "test_solve_payload_returns_solution_list()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_runner.py",
-      "source_location": "L23",
+      "source_location": "L24",
       "id": "piggy_push_test_runner_test_solve_payload_returns_solution_list",
       "community": 2,
       "norm_label": "test_solve_payload_returns_solution_list()"
@@ -178,10 +250,37 @@
       "label": "test_solve_payload_honors_move_limit()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_runner.py",
-      "source_location": "L35",
+      "source_location": "L36",
       "id": "piggy_push_test_runner_test_solve_payload_honors_move_limit",
       "community": 2,
       "norm_label": "test_solve_payload_honors_move_limit()"
+    },
+    {
+      "label": "test_solve_payload_uses_requested_strategy()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L49",
+      "id": "piggy_push_test_runner_test_solve_payload_uses_requested_strategy",
+      "community": 2,
+      "norm_label": "test_solve_payload_uses_requested_strategy()"
+    },
+    {
+      "label": "test_next_click_detection_uses_current_frame_solution()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L68",
+      "id": "piggy_push_test_runner_test_next_click_detection_uses_current_frame_solution",
+      "community": 2,
+      "norm_label": "test_next_click_detection_uses_current_frame_solution()"
+    },
+    {
+      "label": "test_next_click_detection_rejects_stale_solution_ids()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L79",
+      "id": "piggy_push_test_runner_test_next_click_detection_rejects_stale_solution_ids",
+      "community": 2,
+      "norm_label": "test_next_click_detection_rejects_stale_solution_ids()"
     },
     {
       "label": "test_solver.py",
@@ -238,10 +337,37 @@
       "norm_label": "test_solver_respects_move_limit_as_collision_budget()"
     },
     {
-      "label": "test_solver_prioritizes_safe_exits_before_useful_stoppers()",
+      "label": "test_solver_supports_fast_strategy()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_solver.py",
       "source_location": "L83",
+      "id": "piggy_push_test_solver_test_solver_supports_fast_strategy",
+      "community": 1,
+      "norm_label": "test_solver_supports_fast_strategy()"
+    },
+    {
+      "label": "test_hybrid_solver_returns_incumbent_when_bound_proves_optimal()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L101",
+      "id": "piggy_push_test_solver_test_hybrid_solver_returns_incumbent_when_bound_proves_optimal",
+      "community": 1,
+      "norm_label": "test_hybrid_solver_returns_incumbent_when_bound_proves_optimal()"
+    },
+    {
+      "label": "test_solver_rejects_unknown_strategy()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L120",
+      "id": "piggy_push_test_solver_test_solver_rejects_unknown_strategy",
+      "community": 1,
+      "norm_label": "test_solver_rejects_unknown_strategy()"
+    },
+    {
+      "label": "test_solver_prioritizes_safe_exits_before_useful_stoppers()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L131",
       "id": "piggy_push_test_solver_test_solver_prioritizes_safe_exits_before_useful_stoppers",
       "community": 1,
       "norm_label": "test_solver_prioritizes_safe_exits_before_useful_stoppers()"
@@ -250,7 +376,7 @@
       "label": "test_solver_front_loads_provably_safe_exits()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_solver.py",
-      "source_location": "L99",
+      "source_location": "L147",
       "id": "piggy_push_test_solver_test_solver_front_loads_provably_safe_exits",
       "community": 1,
       "norm_label": "test_solver_front_loads_provably_safe_exits()"
@@ -259,7 +385,7 @@
       "label": "test_solver_prioritizes_collision_moves_inside_blocker_cycles()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_solver.py",
-      "source_location": "L117",
+      "source_location": "L165",
       "id": "piggy_push_test_solver_test_solver_prioritizes_collision_moves_inside_blocker_cycles",
       "community": 1,
       "norm_label": "test_solver_prioritizes_collision_moves_inside_blocker_cycles()"
@@ -268,7 +394,7 @@
       "label": "_collision_tap_count()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_solver.py",
-      "source_location": "L135",
+      "source_location": "L183",
       "id": "piggy_push_test_solver_collision_tap_count",
       "community": 1,
       "norm_label": "_collision_tap_count()"
@@ -277,7 +403,7 @@
       "label": "_clears()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_solver.py",
-      "source_location": "L146",
+      "source_location": "L194",
       "id": "piggy_push_test_solver_clears",
       "community": 1,
       "norm_label": "_clears()"
@@ -405,14 +531,14 @@
       "source_file": "src/widgetable_solver/cli.py",
       "source_location": "L18",
       "id": "widgetable_solver_cli_build_parser",
-      "community": 5,
+      "community": 2,
       "norm_label": "build_parser()"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/cli.py",
-      "source_location": "L53",
+      "source_location": "L57",
       "id": "widgetable_solver_cli_main",
       "community": 2,
       "norm_label": "main()"
@@ -421,7 +547,7 @@
       "label": "_run_piggy()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/cli.py",
-      "source_location": "L69",
+      "source_location": "L73",
       "id": "widgetable_solver_cli_run_piggy",
       "community": 2,
       "norm_label": "_run_piggy()"
@@ -430,7 +556,7 @@
       "label": "_result_json()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/cli.py",
-      "source_location": "L104",
+      "source_location": "L117",
       "id": "widgetable_solver_cli_result_json",
       "community": 2,
       "norm_label": "_result_json()"
@@ -610,7 +736,7 @@
       "label": "load_state()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L55",
+      "source_location": "L57",
       "id": "piggy_push_runner_load_state",
       "community": 2,
       "norm_label": "load_state()"
@@ -619,7 +745,7 @@
       "label": "analyze_image()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L59",
+      "source_location": "L61",
       "id": "piggy_push_runner_analyze_image",
       "community": 2,
       "norm_label": "analyze_image()"
@@ -628,7 +754,7 @@
       "label": "solve_image()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L85",
+      "source_location": "L88",
       "id": "piggy_push_runner_solve_image",
       "community": 2,
       "norm_label": "solve_image()"
@@ -637,7 +763,7 @@
       "label": "capture_once()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L90",
+      "source_location": "L104",
       "id": "piggy_push_runner_capture_once",
       "community": 2,
       "norm_label": "capture_once()"
@@ -646,10 +772,28 @@
       "label": "run_once()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L94",
+      "source_location": "L108",
       "id": "piggy_push_runner_run_once",
       "community": 2,
       "norm_label": "run_once()"
+    },
+    {
+      "label": "next_click_detection()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L154",
+      "id": "piggy_push_runner_next_click_detection",
+      "community": 2,
+      "norm_label": "next_click_detection()"
+    },
+    {
+      "label": "_strategy_from_value()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L166",
+      "id": "piggy_push_runner_strategy_from_value",
+      "community": 2,
+      "norm_label": "_strategy_from_value()"
     },
     {
       "label": "analysis.py",
@@ -666,7 +810,7 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L9",
       "id": "piggy_push_analysis_movekind",
-      "community": 1,
+      "community": 5,
       "norm_label": "movekind"
     },
     {
@@ -684,7 +828,7 @@
       "source_file": "",
       "source_location": "",
       "id": "enum",
-      "community": 1,
+      "community": 5,
       "norm_label": "enum"
     },
     {
@@ -693,7 +837,7 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L16",
       "id": "piggy_push_analysis_moveevent",
-      "community": 1,
+      "community": 7,
       "norm_label": "moveevent"
     },
     {
@@ -828,134 +972,143 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L1",
       "id": "src_widgetable_solver_piggy_push_solver_py",
-      "community": 1,
+      "community": 5,
       "norm_label": "solver.py"
     },
     {
       "label": "SearchStats",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "id": "piggy_push_solver_searchstats",
-      "community": 1,
+      "community": 5,
       "norm_label": "searchstats"
     },
     {
       "label": "Transition",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L33",
+      "source_location": "L36",
       "id": "piggy_push_solver_transition",
-      "community": 1,
+      "community": 5,
       "norm_label": "transition"
     },
     {
       "label": "exits()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L40",
+      "source_location": "L43",
       "id": "piggy_push_solver_exits",
-      "community": 1,
+      "community": 5,
       "norm_label": "exits()"
     },
     {
       "label": "solve()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L44",
+      "source_location": "L47",
       "id": "piggy_push_solver_solve",
-      "community": 7,
+      "community": 5,
       "norm_label": "solve()"
     },
     {
       "label": "Solver",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L52",
+      "source_location": "L75",
       "id": "piggy_push_solver_solver",
-      "community": 7,
+      "community": 5,
       "norm_label": "solver"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L53",
+      "source_location": "L76",
       "id": "piggy_push_solver_solver_init",
-      "community": 7,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
       "label": "stats()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L62",
+      "source_location": "L96",
       "id": "piggy_push_solver_stats",
-      "community": 1,
+      "community": 5,
       "norm_label": "stats()"
     },
     {
       "label": ".solve()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L70",
+      "source_location": "L104",
       "id": "piggy_push_solver_solver_solve",
-      "community": 7,
+      "community": 5,
       "norm_label": ".solve()"
     },
     {
       "label": "._transition()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L144",
+      "source_location": "L208",
       "id": "piggy_push_solver_solver_transition",
-      "community": 7,
+      "community": 5,
       "norm_label": "._transition()"
     },
     {
       "label": "._priority()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L155",
+      "source_location": "L219",
       "id": "piggy_push_solver_solver_priority",
-      "community": 7,
+      "community": 5,
       "norm_label": "._priority()"
     },
     {
       "label": "._admissible_extra_lower_bound()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L158",
+      "source_location": "L222",
       "id": "piggy_push_solver_solver_admissible_extra_lower_bound",
-      "community": 7,
+      "community": 5,
       "norm_label": "._admissible_extra_lower_bound()"
     },
     {
       "label": "._safe_peel_closure()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L163",
+      "source_location": "L227",
       "id": "piggy_push_solver_solver_safe_peel_closure",
-      "community": 7,
+      "community": 5,
       "norm_label": "._safe_peel_closure()"
     },
     {
       "label": ".ordered_candidates()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L183",
+      "source_location": "L247",
       "id": "piggy_push_solver_solver_ordered_candidates",
-      "community": 7,
+      "community": 5,
       "norm_label": ".ordered_candidates()"
     },
     {
       "label": "._move_priority()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L205",
+      "source_location": "L269",
       "id": "piggy_push_solver_solver_move_priority",
       "community": 7,
       "norm_label": "._move_priority()"
+    },
+    {
+      "label": "_collision_tap_count()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L309",
+      "id": "piggy_push_solver_collision_tap_count",
+      "community": 5,
+      "norm_label": "_collision_tap_count()"
     },
     {
       "label": "vision.py",
@@ -1055,6 +1208,132 @@
       "id": "piggy_push_vision_direction_from_angle",
       "community": 2,
       "norm_label": "_direction_from_angle()"
+    },
+    {
+      "label": "fast_solver.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_piggy_push_fast_solver_py",
+      "community": 15,
+      "norm_label": "fast_solver.py"
+    },
+    {
+      "label": "FastSearchConfig",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L20",
+      "id": "piggy_push_fast_solver_fastsearchconfig",
+      "community": 15,
+      "norm_label": "fastsearchconfig"
+    },
+    {
+      "label": "solve_fast()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L25",
+      "id": "piggy_push_fast_solver_solve_fast",
+      "community": 15,
+      "norm_label": "solve_fast()"
+    },
+    {
+      "label": "beam_breakout()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L38",
+      "id": "piggy_push_fast_solver_beam_breakout",
+      "community": 15,
+      "norm_label": "beam_breakout()"
+    },
+    {
+      "label": "FastSolver",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L49",
+      "id": "piggy_push_fast_solver_fastsolver",
+      "community": 7,
+      "norm_label": "fastsolver"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L50",
+      "id": "piggy_push_fast_solver_fastsolver_init",
+      "community": 15,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".solve()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L59",
+      "id": "piggy_push_fast_solver_fastsolver_solve",
+      "community": 7,
+      "norm_label": ".solve()"
+    },
+    {
+      "label": ".beam_breakout()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L88",
+      "id": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "community": 7,
+      "norm_label": ".beam_breakout()"
+    },
+    {
+      "label": "._best_greedy_action()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L126",
+      "id": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "community": 7,
+      "norm_label": "._best_greedy_action()"
+    },
+    {
+      "label": "._collision_candidates()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L147",
+      "id": "piggy_push_fast_solver_fastsolver_collision_candidates",
+      "community": 7,
+      "norm_label": "._collision_candidates()"
+    },
+    {
+      "label": "._ordered_candidates()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L155",
+      "id": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "community": 7,
+      "norm_label": "._ordered_candidates()"
+    },
+    {
+      "label": "._move_priority()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L178",
+      "id": "piggy_push_fast_solver_fastsolver_move_priority",
+      "community": 7,
+      "norm_label": "._move_priority()"
+    },
+    {
+      "label": "._state_score()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L216",
+      "id": "piggy_push_fast_solver_fastsolver_state_score",
+      "community": 7,
+      "norm_label": "._state_score()"
+    },
+    {
+      "label": "._cannot_finish_within_limit()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L230",
+      "id": "piggy_push_fast_solver_fastsolver_cannot_finish_within_limit",
+      "community": 7,
+      "norm_label": "._cannot_finish_within_limit()"
     },
     {
       "label": "__init__.py",
@@ -1323,7 +1602,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L59",
       "id": "docs_algorithm_3_formal_model",
-      "community": 15,
+      "community": 6,
       "norm_label": "3. formal model"
     },
     {
@@ -1332,7 +1611,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L61",
       "id": "docs_algorithm_3_1_continuous_geometric_model",
-      "community": 15,
+      "community": 6,
       "norm_label": "3.1 continuous geometric model"
     },
     {
@@ -1341,7 +1620,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L96",
       "id": "docs_algorithm_3_2_legal_actions",
-      "community": 15,
+      "community": 6,
       "norm_label": "3.2 legal actions"
     },
     {
@@ -1350,7 +1629,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L106",
       "id": "docs_algorithm_3_3_collision_raycast",
-      "community": 15,
+      "community": 6,
       "norm_label": "3.3 collision raycast"
     },
     {
@@ -1359,7 +1638,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L171",
       "id": "docs_algorithm_3_4_transition_function",
-      "community": 15,
+      "community": 6,
       "norm_label": "3.4 transition function"
     },
     {
@@ -1368,7 +1647,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L183",
       "id": "docs_algorithm_3_5_goal_test",
-      "community": 15,
+      "community": 6,
       "norm_label": "3.5 goal test"
     },
     {
@@ -1377,7 +1656,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L189",
       "id": "docs_algorithm_3_6_cost_function",
-      "community": 15,
+      "community": 6,
       "norm_label": "3.6 cost function"
     },
     {
@@ -1386,7 +1665,7 @@
       "source_file": "docs/algorithm.md",
       "source_location": "L209",
       "id": "docs_algorithm_3_7_discretized_quantized_model",
-      "community": 15,
+      "community": 6,
       "norm_label": "3.7 discretized / quantized model"
     },
     {
@@ -2195,7 +2474,7 @@
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L144",
-      "community": 7,
+      "community": 5,
       "norm_label": "._static_zero_peel_clears()",
       "id": "piggy_push_solver_solver_static_zero_peel_clears"
     },
@@ -2204,7 +2483,7 @@
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L34",
-      "community": 7,
+      "community": 5,
       "norm_label": "._search()",
       "id": "piggy_push_solver_solver_search"
     }
@@ -2231,6 +2510,16 @@
       "target": "tests_test_cli_test_run_command_requires_explicit_live_flag"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tests_test_cli_py",
+      "target": "tests_test_cli_test_piggy_push_commands_accept_solver_strategy",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "INFERRED",
@@ -2250,6 +2539,17 @@
       "source_location": "L15",
       "weight": 1.0,
       "source": "tests_test_cli_test_run_command_requires_explicit_live_flag",
+      "target": "widgetable_solver_cli_build_parser"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_cli.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_test_cli_test_piggy_push_commands_accept_solver_strategy",
       "target": "widgetable_solver_cli_build_parser"
     },
     {
@@ -2393,12 +2693,237 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_fast_solver_py",
+      "target": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_fast_solver_py",
+      "target": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_fast_solver_py",
+      "target": "piggy_push_test_fast_solver_test_beam_breakout_returns_collision_plan_that_creates_an_exit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_fast_solver_py",
+      "target": "piggy_push_test_fast_solver_test_fast_solver_honors_move_limit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_fast_solver_py",
+      "target": "piggy_push_test_fast_solver_collision_tap_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_fast_solver_py",
+      "target": "piggy_push_test_fast_solver_clears",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
+      "target": "piggy_push_test_fast_solver_clears",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
+      "target": "piggy_push_fast_solver_solve_fast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
+      "target": "piggy_push_test_fast_solver_collision_tap_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
+      "target": "piggy_push_test_fast_solver_clears",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
+      "target": "piggy_push_fast_solver_solve_fast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_beam_breakout_returns_collision_plan_that_creates_an_exit",
+      "target": "piggy_push_test_fast_solver_collision_tap_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_beam_breakout_returns_collision_plan_that_creates_an_exit",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_beam_breakout_returns_collision_plan_that_creates_an_exit",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_honors_move_limit",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_honors_move_limit",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_fast_solver.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "piggy_push_test_fast_solver_test_fast_solver_honors_move_limit",
+      "target": "piggy_push_fast_solver_solve_fast"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_analysis_py",
-      "target": "piggy_push_test_analysis_test_move_event_reports_exit_hit_and_zero_displacement",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_analysis_test_move_event_reports_exit_hit_and_zero_displacement"
     },
     {
       "relation": "contains",
@@ -2406,9 +2931,9 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_analysis_py",
-      "target": "piggy_push_test_analysis_test_immediate_blocker_graph_and_counts",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_analysis_test_immediate_blocker_graph_and_counts"
     },
     {
       "relation": "contains",
@@ -2416,9 +2941,9 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_analysis_py",
-      "target": "piggy_push_test_analysis_test_all_blockers_graph_reports_every_collinear_blocker_before_exit",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_analysis_test_all_blockers_graph_reports_every_collinear_blocker_before_exit"
     },
     {
       "relation": "contains",
@@ -2426,9 +2951,9 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_analysis_py",
-      "target": "piggy_push_test_analysis_test_strongly_connected_components_find_blocker_cycles",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_analysis_test_strongly_connected_components_find_blocker_cycles"
     },
     {
       "relation": "contains",
@@ -2436,9 +2961,9 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_analysis_py",
-      "target": "piggy_push_test_analysis_test_safe_exit_ids_excludes_potential_future_stoppers",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_analysis_test_safe_exit_ids_excludes_potential_future_stoppers"
     },
     {
       "relation": "contains",
@@ -2446,9 +2971,9 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_analysis_py",
-      "target": "piggy_push_test_analysis_test_static_zero_peel_residual_keeps_collision_required_cycle",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_analysis_test_static_zero_peel_residual_keeps_collision_required_cycle"
     },
     {
       "relation": "calls",
@@ -2723,6 +3248,36 @@
       "target": "piggy_push_test_runner_test_solve_payload_honors_move_limit"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_runner_py",
+      "target": "piggy_push_test_runner_test_solve_payload_uses_requested_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_runner_py",
+      "target": "piggy_push_test_runner_test_next_click_detection_uses_current_frame_solution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_runner_py",
+      "target": "piggy_push_test_runner_test_next_click_detection_rejects_stale_solution_ids",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "INFERRED",
@@ -2754,6 +3309,61 @@
       "weight": 1.0,
       "source": "piggy_push_test_runner_test_solve_payload_honors_move_limit",
       "target": "piggy_push_runner_solve_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_solve_payload_uses_requested_strategy",
+      "target": "piggy_push_runner_solve_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_next_click_detection_uses_current_frame_solution",
+      "target": "piggy_push_vision_detection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_next_click_detection_uses_current_frame_solution",
+      "target": "piggy_push_runner_next_click_detection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_next_click_detection_rejects_stale_solution_ids",
+      "target": "piggy_push_vision_detection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_next_click_detection_rejects_stale_solution_ids",
+      "target": "piggy_push_runner_next_click_detection"
     },
     {
       "relation": "contains",
@@ -2812,8 +3422,38 @@
       "source_location": "L83",
       "weight": 1.0,
       "source": "tests_piggy_push_test_solver_py",
-      "target": "piggy_push_test_solver_test_solver_prioritizes_safe_exits_before_useful_stoppers",
+      "target": "piggy_push_test_solver_test_solver_supports_fast_strategy",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_hybrid_solver_returns_incumbent_when_bound_proves_optimal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_solver_rejects_unknown_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_solver_prioritizes_safe_exits_before_useful_stoppers"
     },
     {
       "relation": "contains",
@@ -2821,9 +3461,9 @@
       "source_file": "tests/piggy_push/test_solver.py",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_solver_py",
-      "target": "piggy_push_test_solver_test_solver_front_loads_provably_safe_exits",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_solver_test_solver_front_loads_provably_safe_exits"
     },
     {
       "relation": "contains",
@@ -2831,9 +3471,9 @@
       "source_file": "tests/piggy_push/test_solver.py",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_solver_py",
-      "target": "piggy_push_test_solver_test_solver_prioritizes_collision_moves_inside_blocker_cycles",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_solver_test_solver_prioritizes_collision_moves_inside_blocker_cycles"
     },
     {
       "relation": "contains",
@@ -2990,6 +3630,105 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_supports_fast_strategy",
+      "target": "piggy_push_test_solver_clears",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_supports_fast_strategy",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_supports_fast_strategy",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_hybrid_solver_returns_incumbent_when_bound_proves_optimal",
+      "target": "piggy_push_test_solver_collision_tap_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_hybrid_solver_returns_incumbent_when_bound_proves_optimal",
+      "target": "piggy_push_test_solver_clears",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_hybrid_solver_returns_incumbent_when_bound_proves_optimal",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_hybrid_solver_returns_incumbent_when_bound_proves_optimal",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_rejects_unknown_strategy",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_rejects_unknown_strategy",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/piggy_push/test_solver.py",
@@ -3027,9 +3766,9 @@
       "source_file": "tests/piggy_push/test_solver.py",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_test_solver_test_solver_front_loads_provably_safe_exits",
-      "target": "piggy_push_test_solver_clears",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_solver_clears"
     },
     {
       "relation": "calls",
@@ -3379,7 +4118,7 @@
       "source_location": "L86",
       "weight": 1.0,
       "source": "widgetable_solver_cli_run_piggy",
-      "target": "piggy_push_runner_solve_payload"
+      "target": "piggy_push_runner_load_state"
     },
     {
       "relation": "calls",
@@ -3390,7 +4129,7 @@
       "source_location": "L86",
       "weight": 1.0,
       "source": "widgetable_solver_cli_run_piggy",
-      "target": "piggy_push_runner_load_state"
+      "target": "piggy_push_runner_solve_payload"
     },
     {
       "relation": "calls",
@@ -3734,6 +4473,26 @@
       "target": "piggy_push_runner_run_once"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_next_click_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_strategy_from_value",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -3865,6 +4624,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "piggy_push_runner_solve_payload",
+      "target": "piggy_push_runner_strategy_from_value",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
       "source_location": "L82",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3918,6 +4688,17 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "piggy_push_runner_run_once",
+      "target": "piggy_push_runner_next_click_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
@@ -3955,9 +4736,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "enum",
-      "confidence_score": 1.0
+      "target": "enum"
     },
     {
       "relation": "contains",
@@ -3965,9 +4746,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_movekind",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_movekind"
     },
     {
       "relation": "contains",
@@ -3975,9 +4756,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_moveevent",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_moveevent"
     },
     {
       "relation": "contains",
@@ -3985,9 +4766,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_collision_cost",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_collision_cost"
     },
     {
       "relation": "contains",
@@ -3995,9 +4776,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_exits",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_exits"
     },
     {
       "relation": "contains",
@@ -4005,9 +4786,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_move_event",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_move_event"
     },
     {
       "relation": "contains",
@@ -4015,9 +4796,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_immediate_blocker_graph",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_immediate_blocker_graph"
     },
     {
       "relation": "contains",
@@ -4025,9 +4806,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_all_blockers_graph",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_all_blockers_graph"
     },
     {
       "relation": "contains",
@@ -4035,9 +4816,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_blocker_counts",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_blocker_counts"
     },
     {
       "relation": "contains",
@@ -4045,9 +4826,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_strongly_connected_components",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_strongly_connected_components"
     },
     {
       "relation": "contains",
@@ -4055,9 +4836,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_cycle_members",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_cycle_members"
     },
     {
       "relation": "contains",
@@ -4065,9 +4846,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L157",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_can_never_be_stopper",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_can_never_be_stopper"
     },
     {
       "relation": "contains",
@@ -4075,9 +4856,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L166",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_stopper_values",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_stopper_values"
     },
     {
       "relation": "contains",
@@ -4085,9 +4866,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L177",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_exit_ids",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_exit_ids"
     },
     {
       "relation": "contains",
@@ -4095,9 +4876,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_safe_exit_ids",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_safe_exit_ids"
     },
     {
       "relation": "contains",
@@ -4105,9 +4886,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_static_zero_peel_residual",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_static_zero_peel_residual"
     },
     {
       "relation": "contains",
@@ -4115,9 +4896,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_analysis_py",
-      "target": "piggy_push_analysis_cell_lies_on_forward_ray",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_cell_lies_on_forward_ray"
     },
     {
       "relation": "inherits",
@@ -4125,9 +4906,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_movekind",
-      "target": "str",
-      "confidence_score": 1.0
+      "target": "str"
     },
     {
       "relation": "inherits",
@@ -4135,9 +4916,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_movekind",
-      "target": "enum",
-      "confidence_score": 1.0
+      "target": "enum"
     },
     {
       "relation": "uses",
@@ -4145,9 +4926,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L6",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "piggy_push_analysis_movekind",
-      "target": "piggy_push_model_board",
-      "confidence_score": 0.5
+      "target": "piggy_push_model_board"
     },
     {
       "relation": "uses",
@@ -4155,9 +4936,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L6",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "piggy_push_analysis_movekind",
-      "target": "piggy_push_model_pig",
-      "confidence_score": 0.5
+      "target": "piggy_push_model_pig"
     },
     {
       "relation": "uses",
@@ -4165,9 +4946,9 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L7",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "piggy_push_solver_searchstats",
-      "target": "piggy_push_analysis_movekind",
-      "confidence_score": 0.5
+      "target": "piggy_push_analysis_movekind"
     },
     {
       "relation": "uses",
@@ -4175,9 +4956,9 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L7",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "piggy_push_solver_transition",
-      "target": "piggy_push_analysis_movekind",
-      "confidence_score": 0.5
+      "target": "piggy_push_analysis_movekind"
     },
     {
       "relation": "uses",
@@ -4185,7 +4966,27 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L7",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "piggy_push_solver_solver",
+      "target": "piggy_push_analysis_movekind"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "piggy_push_fast_solver_fastsearchconfig",
+      "target": "piggy_push_analysis_movekind",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "piggy_push_fast_solver_fastsolver",
       "target": "piggy_push_analysis_movekind",
       "confidence_score": 0.5
     },
@@ -4249,9 +5050,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_move_event",
-      "target": "piggy_push_analysis_moveevent",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_moveevent"
     },
     {
       "relation": "uses",
@@ -4259,9 +5060,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L6",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "piggy_push_analysis_moveevent",
-      "target": "piggy_push_model_board",
-      "confidence_score": 0.5
+      "target": "piggy_push_model_board"
     },
     {
       "relation": "uses",
@@ -4269,9 +5070,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L6",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "piggy_push_analysis_moveevent",
-      "target": "piggy_push_model_pig",
-      "confidence_score": 0.5
+      "target": "piggy_push_model_pig"
     },
     {
       "relation": "calls",
@@ -4280,9 +5081,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_immediate_blocker_graph",
-      "target": "piggy_push_analysis_move_event",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_move_event"
     },
     {
       "relation": "calls",
@@ -4291,9 +5092,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_exit_ids",
-      "target": "piggy_push_analysis_move_event",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_move_event"
     },
     {
       "relation": "calls",
@@ -4302,9 +5103,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_safe_exit_ids",
-      "target": "piggy_push_analysis_move_event",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_move_event"
     },
     {
       "relation": "calls",
@@ -4313,9 +5114,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_static_zero_peel_residual",
-      "target": "piggy_push_analysis_move_event",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_move_event"
     },
     {
       "relation": "calls",
@@ -4344,6 +5145,39 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "target": "piggy_push_analysis_move_event"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "target": "piggy_push_analysis_move_event"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_move_priority",
+      "target": "piggy_push_analysis_move_event"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L184",
       "weight": 1.0,
@@ -4366,6 +5200,50 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_collision_candidates",
+      "target": "piggy_push_analysis_immediate_blocker_graph"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "target": "piggy_push_analysis_immediate_blocker_graph"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_move_priority",
+      "target": "piggy_push_analysis_immediate_blocker_graph"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L218",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_state_score",
+      "target": "piggy_push_analysis_immediate_blocker_graph"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L185",
       "weight": 1.0,
@@ -4375,13 +5253,24 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "target": "piggy_push_analysis_blocker_counts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_cycle_members",
-      "target": "piggy_push_analysis_strongly_connected_components",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_strongly_connected_components"
     },
     {
       "relation": "calls",
@@ -4408,13 +5297,57 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_collision_candidates",
+      "target": "piggy_push_analysis_cycle_members"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "target": "piggy_push_analysis_cycle_members"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_move_priority",
+      "target": "piggy_push_analysis_cycle_members"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_state_score",
+      "target": "piggy_push_analysis_cycle_members"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_can_never_be_stopper",
-      "target": "piggy_push_analysis_cell_lies_on_forward_ray",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_cell_lies_on_forward_ray"
     },
     {
       "relation": "calls",
@@ -4423,9 +5356,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L185",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_safe_exit_ids",
-      "target": "piggy_push_analysis_can_never_be_stopper",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_can_never_be_stopper"
     },
     {
       "relation": "calls",
@@ -4434,9 +5367,9 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_analysis_stopper_values",
-      "target": "piggy_push_analysis_cell_lies_on_forward_ray",
-      "confidence_score": 1.0
+      "target": "piggy_push_analysis_cell_lies_on_forward_ray"
     },
     {
       "relation": "calls",
@@ -4447,6 +5380,28 @@
       "source_location": "L189",
       "weight": 1.0,
       "source": "piggy_push_solver_solver_ordered_candidates",
+      "target": "piggy_push_analysis_stopper_values"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L161",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "target": "piggy_push_analysis_stopper_values"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_state_score",
       "target": "piggy_push_analysis_stopper_values"
     },
     {
@@ -4476,6 +5431,50 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "target": "piggy_push_analysis_exit_ids"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "target": "piggy_push_analysis_exit_ids"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_move_priority",
+      "target": "piggy_push_analysis_exit_ids"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_state_score",
+      "target": "piggy_push_analysis_exit_ids"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L168",
       "weight": 1.0,
@@ -4498,6 +5497,28 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "target": "piggy_push_analysis_safe_exit_ids"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "target": "piggy_push_analysis_safe_exit_ids"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L159",
       "weight": 1.0,
@@ -4513,6 +5534,28 @@
       "source_location": "L220",
       "weight": 1.0,
       "source": "piggy_push_solver_solver_move_priority",
+      "target": "piggy_push_analysis_static_zero_peel_residual"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_move_priority",
+      "target": "piggy_push_analysis_static_zero_peel_residual"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_state_score",
       "target": "piggy_push_analysis_static_zero_peel_residual"
     },
     {
@@ -4574,6 +5617,16 @@
       "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_solver_py",
       "target": "piggy_push_solver_stats"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L309",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_solver_py",
+      "target": "piggy_push_solver_collision_tap_count",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -4660,6 +5713,17 @@
       "target": "piggy_push_solver_solver"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solve",
+      "target": "piggy_push_fast_solver_solve_fast"
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
@@ -4715,9 +5779,9 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_solver_solver",
-      "target": "piggy_push_solver_solver_safe_peel_closure",
-      "confidence_score": 1.0
+      "target": "piggy_push_solver_solver_safe_peel_closure"
     },
     {
       "relation": "method",
@@ -4784,11 +5848,22 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L80",
+      "source_location": "L123",
       "weight": 1.0,
       "source": "piggy_push_solver_solver_solve",
-      "target": "piggy_push_solver_solver_safe_peel_closure",
+      "target": "piggy_push_solver_collision_tap_count",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "piggy_push_solver_solver_solve",
+      "target": "piggy_push_solver_solver_safe_peel_closure"
     },
     {
       "relation": "calls",
@@ -4800,6 +5875,17 @@
       "confidence_score": 1.0,
       "source": "piggy_push_solver_solver_solve",
       "target": "piggy_push_solver_solver_priority"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_solve",
+      "target": "piggy_push_solver_solver_admissible_extra_lower_bound",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -4826,6 +5912,17 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_solve",
+      "target": "piggy_push_fast_solver_solve_fast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L32",
@@ -4841,9 +5938,9 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L175",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_solver_solver_safe_peel_closure",
-      "target": "piggy_push_solver_solver_transition",
-      "confidence_score": 1.0
+      "target": "piggy_push_solver_solver_transition"
     },
     {
       "relation": "calls",
@@ -4896,9 +5993,9 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "piggy_push_solver_solver_safe_peel_closure",
-      "target": "piggy_push_solver_solver_ordered_candidates",
-      "confidence_score": 1.0
+      "target": "piggy_push_solver_solver_ordered_candidates"
     },
     {
       "relation": "calls",
@@ -5169,6 +6266,363 @@
       "confidence_score": 1.0,
       "source": "piggy_push_vision_write_overlay",
       "target": "piggy_push_vision_overlay_labels"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_fast_solver_py",
+      "target": "piggy_push_fast_solver_fastsearchconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_fast_solver_py",
+      "target": "piggy_push_fast_solver_solve_fast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_fast_solver_py",
+      "target": "piggy_push_fast_solver_beam_breakout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_fast_solver_py",
+      "target": "piggy_push_fast_solver_fastsolver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_solve_fast",
+      "target": "piggy_push_fast_solver_fastsearchconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_beam_breakout",
+      "target": "piggy_push_fast_solver_fastsearchconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_init",
+      "target": "piggy_push_fast_solver_fastsearchconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "source": "piggy_push_fast_solver_fastsearchconfig",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "source": "piggy_push_fast_solver_fastsearchconfig",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_solve_fast",
+      "target": "piggy_push_fast_solver_fastsolver_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_solve_fast",
+      "target": "piggy_push_fast_solver_fastsolver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_beam_breakout",
+      "target": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_beam_breakout",
+      "target": "piggy_push_fast_solver_fastsolver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_collision_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_move_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_state_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_fast_solver_fastsolver_cannot_finish_within_limit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "source": "piggy_push_fast_solver_fastsolver",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_solve",
+      "target": "piggy_push_fast_solver_fastsolver_cannot_finish_within_limit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_solve",
+      "target": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_solve",
+      "target": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "target": "piggy_push_fast_solver_fastsolver_collision_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_beam_breakout",
+      "target": "piggy_push_fast_solver_fastsolver_state_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "target": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "target": "piggy_push_fast_solver_fastsolver_collision_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_best_greedy_action",
+      "target": "piggy_push_fast_solver_fastsolver_state_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_collision_candidates",
+      "target": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "piggy_push_fast_solver_fastsolver_ordered_candidates",
+      "target": "piggy_push_fast_solver_fastsolver_move_priority",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -6450,5 +7904,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "54d0a3934fef47a1f0306e4ea3c9c7842c2fb305"
+  "built_at_commit": "e7d2371dfce81a46c500fd2b8b8b675045ce4f2a"
 }

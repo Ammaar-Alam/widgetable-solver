@@ -80,6 +80,54 @@ def test_solver_respects_move_limit_as_collision_budget():
     assert solve(board, move_limit=6) is not None
 
 
+def test_solver_supports_fast_strategy():
+    board = Board(
+        width=5,
+        height=5,
+        pigs=(
+            Pig("a", 1, 1, Direction.RIGHT),
+            Pig("b", 3, 1, Direction.DOWN),
+            Pig("c", 3, 3, Direction.LEFT),
+            Pig("d", 1, 3, Direction.UP),
+        ),
+    )
+
+    solution = solve(board, strategy="fast")
+
+    assert solution is not None
+    assert _clears(board, solution)
+
+
+def test_hybrid_solver_returns_incumbent_when_bound_proves_optimal():
+    board = Board(
+        width=5,
+        height=5,
+        pigs=(
+            Pig("a", 1, 1, Direction.RIGHT),
+            Pig("b", 3, 1, Direction.DOWN),
+            Pig("c", 3, 3, Direction.LEFT),
+            Pig("d", 1, 3, Direction.UP),
+        ),
+    )
+
+    solution = solve(board, strategy="hybrid")
+
+    assert solution is not None
+    assert _collision_tap_count(board, solution) == 1
+    assert _clears(board, solution)
+
+
+def test_solver_rejects_unknown_strategy():
+    board = Board(width=4, height=4, pigs=(Pig("a", 1, 1, Direction.RIGHT),))
+
+    try:
+        solve(board, strategy="unknown")
+    except ValueError as error:
+        assert str(error) == "Unknown Piggy Push solver strategy: unknown"
+    else:
+        raise AssertionError("Expected ValueError")
+
+
 def test_solver_prioritizes_safe_exits_before_useful_stoppers():
     board = Board(
         width=5,
