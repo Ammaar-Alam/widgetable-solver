@@ -10,18 +10,18 @@
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/tests/piggy_push/test_runner.py": {
-    "mtime": 1783402614.1871414,
-    "ast_hash": "bd39557413fd002d4163351e3e18653e",
+    "mtime": 1783405451.187295,
+    "ast_hash": "70571dc1c2bb2038c650e269042ac2de",
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/tests/piggy_push/test_solver.py": {
-    "mtime": 1783402442.8063104,
-    "ast_hash": "2d70498a09458323c6c3d72706ef79ea",
+    "mtime": 1783405333.2755208,
+    "ast_hash": "8865c505b609784ff70941db8371cb27",
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/tests/piggy_push/test_vision.py": {
-    "mtime": 1783403944.7436392,
-    "ast_hash": "91327b018ad77f5cc72ff26c126d1235",
+    "mtime": 1783404838.2796018,
+    "ast_hash": "28d3528fa3cb117aa688d25301e27b90",
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/examples/simple_state.json": {
@@ -55,18 +55,18 @@
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/src/widgetable_solver/piggy_push/runner.py": {
-    "mtime": 1783402699.7898428,
-    "ast_hash": "9f41c6b08fff4c8b84becb1439f6dbb3",
+    "mtime": 1783405475.2482562,
+    "ast_hash": "a6785917368408b58c3d63306677ad0c",
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/src/widgetable_solver/piggy_push/solver.py": {
-    "mtime": 1783402417.4604301,
-    "ast_hash": "7a7793c856bd7fb148be7ae06f0a03c0",
+    "mtime": 1783405381.0373569,
+    "ast_hash": "cb19499aea317a42274fd19d1cae4ae3",
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/src/widgetable_solver/piggy_push/vision.py": {
-    "mtime": 1783403967.2574086,
-    "ast_hash": "c69e4d75ce6be4b0cc1e6a86d687d52c",
+    "mtime": 1783404899.7361374,
+    "ast_hash": "f4b521b648f92897e6e49358794cabb4",
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/src/widgetable_solver/piggy_push/__init__.py": {
@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/README.md": {
-    "mtime": 1783402835.9024117,
-    "ast_hash": "8795f52657d48751ed4cc2d6ffd5065e",
+    "mtime": 1783405502.6255374,
+    "ast_hash": "fcbe870e86b7b699b264ecbfbf410f41",
     "semantic_hash": ""
   },
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md": {
@@ -117,6 +117,11 @@
   "/Users/alam/GitHub/gamepigeon/widgetable-solver/data/examples/piggy_push/level-015-start.png": {
     "mtime": 1783402789.424115,
     "ast_hash": "2203677a0e400501696bea4f30aa345b",
+    "semantic_hash": ""
+  },
+  "/Users/alam/GitHub/gamepigeon/widgetable-solver/docs/algorithm.md": {
+    "mtime": 1783404847.6287553,
+    "ast_hash": "42926b76719ed131644ba42e339c5958",
     "semantic_hash": ""
   }
 }

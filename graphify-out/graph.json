@@ -90,7 +90,7 @@
       "source_file": "tests/piggy_push/test_runner.py",
       "source_location": "L1",
       "id": "tests_piggy_push_test_runner_py",
-      "community": 6,
+      "community": 2,
       "norm_label": "test_runner.py"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "tests/piggy_push/test_runner.py",
       "source_location": "L5",
       "id": "piggy_push_test_runner_test_board_from_payload_builds_model",
-      "community": 6,
+      "community": 2,
       "norm_label": "test_board_from_payload_builds_model()"
     },
     {
@@ -108,8 +108,17 @@
       "source_file": "tests/piggy_push/test_runner.py",
       "source_location": "L23",
       "id": "piggy_push_test_runner_test_solve_payload_returns_solution_list",
-      "community": 6,
+      "community": 2,
       "norm_label": "test_solve_payload_returns_solution_list()"
+    },
+    {
+      "label": "test_solve_payload_honors_move_limit()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L35",
+      "id": "piggy_push_test_runner_test_solve_payload_honors_move_limit",
+      "community": 2,
+      "norm_label": "test_solve_payload_honors_move_limit()"
     },
     {
       "label": "test_solver.py",
@@ -148,6 +157,42 @@
       "norm_label": "test_solver_returns_none_when_no_pig_can_move()"
     },
     {
+      "label": "test_solver_minimizes_collision_taps_before_total_order()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L46",
+      "id": "piggy_push_test_solver_test_solver_minimizes_collision_taps_before_total_order",
+      "community": 1,
+      "norm_label": "test_solver_minimizes_collision_taps_before_total_order()"
+    },
+    {
+      "label": "test_solver_respects_move_limit_as_collision_budget()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L66",
+      "id": "piggy_push_test_solver_test_solver_respects_move_limit_as_collision_budget",
+      "community": 1,
+      "norm_label": "test_solver_respects_move_limit_as_collision_budget()"
+    },
+    {
+      "label": "_collision_tap_count()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L83",
+      "id": "piggy_push_test_solver_collision_tap_count",
+      "community": 1,
+      "norm_label": "_collision_tap_count()"
+    },
+    {
+      "label": "_clears()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L94",
+      "id": "piggy_push_test_solver_clears",
+      "community": 1,
+      "norm_label": "_clears()"
+    },
+    {
       "label": "test_vision.py",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
@@ -160,7 +205,7 @@
       "label": "test_field_crop_constrains_to_image_bounds()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L5",
+      "source_location": "L11",
       "id": "piggy_push_test_vision_test_field_crop_constrains_to_image_bounds",
       "community": 5,
       "norm_label": "test_field_crop_constrains_to_image_bounds()"
@@ -169,7 +214,7 @@
       "label": "test_quantize_detections_maps_centers_to_cells()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L14",
+      "source_location": "L20",
       "id": "piggy_push_test_vision_test_quantize_detections_maps_centers_to_cells",
       "community": 5,
       "norm_label": "test_quantize_detections_maps_centers_to_cells()"
@@ -178,7 +223,7 @@
       "label": "test_low_confidence_detection_is_rejected()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L28",
+      "source_location": "L34",
       "id": "piggy_push_test_vision_test_low_confidence_detection_is_rejected",
       "community": 5,
       "norm_label": "test_low_confidence_detection_is_rejected()"
@@ -187,10 +232,19 @@
       "label": "test_direction_from_angle_preserves_diagonal_axes()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L38",
+      "source_location": "L44",
       "id": "piggy_push_test_vision_test_direction_from_angle_preserves_diagonal_axes",
       "community": 5,
       "norm_label": "test_direction_from_angle_preserves_diagonal_axes()"
+    },
+    {
+      "label": "test_overlay_labels_prefer_planned_move_numbers()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L49",
+      "id": "piggy_push_test_vision_test_overlay_labels_prefer_planned_move_numbers",
+      "community": 5,
+      "norm_label": "test_overlay_labels_prefer_planned_move_numbers()"
     },
     {
       "label": "simple_state.json",
@@ -450,7 +504,7 @@
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
       "source_location": "L31",
       "id": "piggy_push_runner_board_from_payload",
-      "community": 6,
+      "community": 2,
       "norm_label": "board_from_payload()"
     },
     {
@@ -459,14 +513,14 @@
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
       "source_location": "L46",
       "id": "piggy_push_runner_solve_payload",
-      "community": 6,
+      "community": 2,
       "norm_label": "solve_payload()"
     },
     {
       "label": "load_state()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L51",
+      "source_location": "L55",
       "id": "piggy_push_runner_load_state",
       "community": 2,
       "norm_label": "load_state()"
@@ -475,7 +529,7 @@
       "label": "analyze_image()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L55",
+      "source_location": "L59",
       "id": "piggy_push_runner_analyze_image",
       "community": 2,
       "norm_label": "analyze_image()"
@@ -484,7 +538,7 @@
       "label": "solve_image()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L81",
+      "source_location": "L85",
       "id": "piggy_push_runner_solve_image",
       "community": 2,
       "norm_label": "solve_image()"
@@ -493,7 +547,7 @@
       "label": "capture_once()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L86",
+      "source_location": "L90",
       "id": "piggy_push_runner_capture_once",
       "community": 2,
       "norm_label": "capture_once()"
@@ -502,7 +556,7 @@
       "label": "run_once()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L90",
+      "source_location": "L94",
       "id": "piggy_push_runner_run_once",
       "community": 2,
       "norm_label": "run_once()"
@@ -520,16 +574,34 @@
       "label": "SearchStats",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L9",
+      "source_location": "L14",
       "id": "piggy_push_solver_searchstats",
       "community": 7,
       "norm_label": "searchstats"
     },
     {
+      "label": "Transition",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L22",
+      "id": "piggy_push_solver_transition",
+      "community": 1,
+      "norm_label": "transition"
+    },
+    {
+      "label": "exits()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L27",
+      "id": "piggy_push_solver_exits",
+      "community": 7,
+      "norm_label": "exits()"
+    },
+    {
       "label": "solve()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L14",
+      "source_location": "L31",
       "id": "piggy_push_solver_solve",
       "community": 7,
       "norm_label": "solve()"
@@ -538,7 +610,7 @@
       "label": "Solver",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L18",
+      "source_location": "L39",
       "id": "piggy_push_solver_solver",
       "community": 7,
       "norm_label": "solver"
@@ -547,7 +619,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L19",
+      "source_location": "L40",
       "id": "piggy_push_solver_solver_init",
       "community": 7,
       "norm_label": ".__init__()"
@@ -556,7 +628,7 @@
       "label": "stats()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L25",
+      "source_location": "L49",
       "id": "piggy_push_solver_stats",
       "community": 7,
       "norm_label": "stats()"
@@ -565,25 +637,52 @@
       "label": ".solve()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L31",
+      "source_location": "L57",
       "id": "piggy_push_solver_solver_solve",
       "community": 7,
       "norm_label": ".solve()"
     },
     {
-      "label": "._search()",
+      "label": "._transition()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L34",
-      "id": "piggy_push_solver_solver_search",
+      "source_location": "L129",
+      "id": "piggy_push_solver_solver_transition",
       "community": 7,
-      "norm_label": "._search()"
+      "norm_label": "._transition()"
+    },
+    {
+      "label": "._priority()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L136",
+      "id": "piggy_push_solver_solver_priority",
+      "community": 7,
+      "norm_label": "._priority()"
+    },
+    {
+      "label": "._admissible_extra_lower_bound()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L139",
+      "id": "piggy_push_solver_solver_admissible_extra_lower_bound",
+      "community": 7,
+      "norm_label": "._admissible_extra_lower_bound()"
+    },
+    {
+      "label": "._static_zero_peel_clears()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L144",
+      "id": "piggy_push_solver_solver_static_zero_peel_clears",
+      "community": 7,
+      "norm_label": "._static_zero_peel_clears()"
     },
     {
       "label": "._ordered_candidates()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L57",
+      "source_location": "L158",
       "id": "piggy_push_solver_solver_ordered_candidates",
       "community": 7,
       "norm_label": "._ordered_candidates()"
@@ -592,7 +691,7 @@
       "label": "._move_priority()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L60",
+      "source_location": "L161",
       "id": "piggy_push_solver_solver_move_priority",
       "community": 7,
       "norm_label": "._move_priority()"
@@ -661,10 +760,19 @@
       "norm_label": "detect_pigs()"
     },
     {
-      "label": "write_overlay()",
+      "label": "overlay_labels()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
       "source_location": "L115",
+      "id": "piggy_push_vision_overlay_labels",
+      "community": 2,
+      "norm_label": "overlay_labels()"
+    },
+    {
+      "label": "write_overlay()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L123",
       "id": "piggy_push_vision_write_overlay",
       "community": 2,
       "norm_label": "write_overlay()"
@@ -673,7 +781,7 @@
       "label": "_fit_ellipse()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L135",
+      "source_location": "L174",
       "id": "piggy_push_vision_fit_ellipse",
       "community": 5,
       "norm_label": "_fit_ellipse()"
@@ -682,7 +790,7 @@
       "label": "_direction_from_angle()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L141",
+      "source_location": "L180",
       "id": "piggy_push_vision_direction_from_angle",
       "community": 5,
       "norm_label": "_direction_from_angle()"
@@ -711,7 +819,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L1",
       "id": "src_widgetable_solver_piggy_push_model_py",
-      "community": 6,
+      "community": 1,
       "norm_label": "model.py"
     },
     {
@@ -720,7 +828,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L8",
       "id": "piggy_push_model_direction",
-      "community": 6,
+      "community": 2,
       "norm_label": "direction"
     },
     {
@@ -738,7 +846,7 @@
       "source_file": "",
       "source_location": "",
       "id": "enum",
-      "community": 6,
+      "community": 1,
       "norm_label": "enum"
     },
     {
@@ -747,7 +855,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L19",
       "id": "piggy_push_model_vector",
-      "community": 6,
+      "community": 1,
       "norm_label": "vector()"
     },
     {
@@ -765,7 +873,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L40",
       "id": "piggy_push_model_cell",
-      "community": 6,
+      "community": 1,
       "norm_label": "cell()"
     },
     {
@@ -801,7 +909,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L67",
       "id": "piggy_push_model_from_iterable",
-      "community": 6,
+      "community": 1,
       "norm_label": "from_iterable()"
     },
     {
@@ -940,6 +1048,555 @@
       "norm_label": "code:json ({)"
     },
     {
+      "label": "algorithm.md",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1",
+      "id": "docs_algorithm_md",
+      "community": 6,
+      "norm_label": "algorithm.md"
+    },
+    {
+      "label": "1. Closest formal puzzle class",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1",
+      "id": "docs_algorithm_1_closest_formal_puzzle_class",
+      "community": 6,
+      "norm_label": "1. closest formal puzzle class"
+    },
+    {
+      "label": "2. Literature review and known complexity landscape",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L29",
+      "id": "docs_algorithm_2_literature_review_and_known_complexity_landscape",
+      "community": 6,
+      "norm_label": "2. literature review and known complexity landscape"
+    },
+    {
+      "label": "3. Formal model",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L59",
+      "id": "docs_algorithm_3_formal_model",
+      "community": 15,
+      "norm_label": "3. formal model"
+    },
+    {
+      "label": "3.1 Continuous geometric model",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L61",
+      "id": "docs_algorithm_3_1_continuous_geometric_model",
+      "community": 15,
+      "norm_label": "3.1 continuous geometric model"
+    },
+    {
+      "label": "3.2 Legal actions",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L96",
+      "id": "docs_algorithm_3_2_legal_actions",
+      "community": 15,
+      "norm_label": "3.2 legal actions"
+    },
+    {
+      "label": "3.3 Collision raycast",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L106",
+      "id": "docs_algorithm_3_3_collision_raycast",
+      "community": 15,
+      "norm_label": "3.3 collision raycast"
+    },
+    {
+      "label": "3.4 Transition function",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L171",
+      "id": "docs_algorithm_3_4_transition_function",
+      "community": 15,
+      "norm_label": "3.4 transition function"
+    },
+    {
+      "label": "3.5 Goal test",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L183",
+      "id": "docs_algorithm_3_5_goal_test",
+      "community": 15,
+      "norm_label": "3.5 goal test"
+    },
+    {
+      "label": "3.6 Cost function",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L189",
+      "id": "docs_algorithm_3_6_cost_function",
+      "community": 15,
+      "norm_label": "3.6 cost function"
+    },
+    {
+      "label": "3.7 Discretized / quantized model",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L209",
+      "id": "docs_algorithm_3_7_discretized_quantized_model",
+      "community": 15,
+      "norm_label": "3.7 discretized / quantized model"
+    },
+    {
+      "label": "4. Is greedy edge peeling always correct?",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L237",
+      "id": "docs_algorithm_4_is_greedy_edge_peeling_always_correct",
+      "community": 6,
+      "norm_label": "4. is greedy edge peeling always correct?"
+    },
+    {
+      "label": "4.1 Under the stated rules: no",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L239",
+      "id": "docs_algorithm_4_1_under_the_stated_rules_no",
+      "community": 6,
+      "norm_label": "4.1 under the stated rules: no"
+    },
+    {
+      "label": "4.2 When greedy edge peeling is correct",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L280",
+      "id": "docs_algorithm_4_2_when_greedy_edge_peeling_is_correct",
+      "community": 6,
+      "norm_label": "4.2 when greedy edge peeling is correct"
+    },
+    {
+      "label": "5. Complexity analysis",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L310",
+      "id": "docs_algorithm_5_complexity_analysis",
+      "community": 6,
+      "norm_label": "5. complexity analysis"
+    },
+    {
+      "label": "5.1 Fixed phone level",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L312",
+      "id": "docs_algorithm_5_1_fixed_phone_level",
+      "community": 6,
+      "norm_label": "5.1 fixed phone level"
+    },
+    {
+      "label": "5.2 Discretized generalized version",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L316",
+      "id": "docs_algorithm_5_2_discretized_generalized_version",
+      "community": 6,
+      "norm_label": "5.2 discretized generalized version"
+    },
+    {
+      "label": "5.3 Continuous model",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L335",
+      "id": "docs_algorithm_5_3_continuous_model",
+      "community": 6,
+      "norm_label": "5.3 continuous model"
+    },
+    {
+      "label": "5.4 Known vs unknown",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L343",
+      "id": "docs_algorithm_5_4_known_vs_unknown",
+      "community": 6,
+      "norm_label": "5.4 known vs unknown"
+    },
+    {
+      "label": "6. Best exact solver for optimal fewest-tap solutions",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L361",
+      "id": "docs_algorithm_6_best_exact_solver_for_optimal_fewest_tap_solutions",
+      "community": 6,
+      "norm_label": "6. best exact solver for optimal fewest-tap solutions"
+    },
+    {
+      "label": "**Peel-Aware 0-1 A***",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L375",
+      "id": "docs_algorithm_peel_aware_0_1_a",
+      "community": 6,
+      "norm_label": "**peel-aware 0-1 a***"
+    },
+    {
+      "label": "Solver comparison",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L397",
+      "id": "docs_algorithm_solver_comparison",
+      "community": 6,
+      "norm_label": "solver comparison"
+    },
+    {
+      "label": "7. Heuristics and reductions",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L412",
+      "id": "docs_algorithm_7_heuristics_and_reductions",
+      "community": 14,
+      "norm_label": "7. heuristics and reductions"
+    },
+    {
+      "label": "7.1 Exit-ray detection",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L414",
+      "id": "docs_algorithm_7_1_exit_ray_detection",
+      "community": 14,
+      "norm_label": "7.1 exit-ray detection"
+    },
+    {
+      "label": "code:text (raycast(i):)",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L432",
+      "id": "docs_algorithm_codeblock_1",
+      "community": 14,
+      "norm_label": "code:text (raycast(i):)"
+    },
+    {
+      "label": "7.2 Blocker graph",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L452",
+      "id": "docs_algorithm_7_2_blocker_graph",
+      "community": 14,
+      "norm_label": "7.2 blocker graph"
+    },
+    {
+      "label": "7.3 SCC analysis",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L474",
+      "id": "docs_algorithm_7_3_scc_analysis",
+      "community": 14,
+      "norm_label": "7.3 scc analysis"
+    },
+    {
+      "label": "7.4 Deadlock detection",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L499",
+      "id": "docs_algorithm_7_4_deadlock_detection",
+      "community": 14,
+      "norm_label": "7.4 deadlock detection"
+    },
+    {
+      "label": "7.5 Safe-peel reductions",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L533",
+      "id": "docs_algorithm_7_5_safe_peel_reductions",
+      "community": 14,
+      "norm_label": "7.5 safe-peel reductions"
+    },
+    {
+      "label": "7.6 Move ordering",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L551",
+      "id": "docs_algorithm_7_6_move_ordering",
+      "community": 14,
+      "norm_label": "7.6 move ordering"
+    },
+    {
+      "label": "7.7 Canonicalization of equivalent pigs",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L581",
+      "id": "docs_algorithm_7_7_canonicalization_of_equivalent_pigs",
+      "community": 14,
+      "norm_label": "7.7 canonicalization of equivalent pigs"
+    },
+    {
+      "label": "7.8 Transposition table hashing",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L596",
+      "id": "docs_algorithm_7_8_transposition_table_hashing",
+      "community": 14,
+      "norm_label": "7.8 transposition table hashing"
+    },
+    {
+      "label": "8. Exact solver pseudocode: PA01-A*",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L617",
+      "id": "docs_algorithm_8_exact_solver_pseudocode_pa01_a",
+      "community": 6,
+      "norm_label": "8. exact solver pseudocode: pa01-a*"
+    },
+    {
+      "label": "code:python (def solve_exact(initial_state, move_limit=None):)",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L619",
+      "id": "docs_algorithm_codeblock_2",
+      "community": 6,
+      "norm_label": "code:python (def solve_exact(initial_state, move_limit=none):)"
+    },
+    {
+      "label": "code:python (def admissible_extra_lower_bound(state):)",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L718",
+      "id": "docs_algorithm_codeblock_3",
+      "community": 6,
+      "norm_label": "code:python (def admissible_extra_lower_bound(state):)"
+    },
+    {
+      "label": "code:python (def safe_peel_closure(state):)",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L738",
+      "id": "docs_algorithm_codeblock_4",
+      "community": 6,
+      "norm_label": "code:python (def safe_peel_closure(state):)"
+    },
+    {
+      "label": "9. Fast practical solver for phone-sized levels",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L764",
+      "id": "docs_algorithm_9_fast_practical_solver_for_phone_sized_levels",
+      "community": 6,
+      "norm_label": "9. fast practical solver for phone-sized levels"
+    },
+    {
+      "label": "**PAWS: Peel-Aware Weighted Search**",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L768",
+      "id": "docs_algorithm_paws_peel_aware_weighted_search",
+      "community": 6,
+      "norm_label": "**paws: peel-aware weighted search**"
+    },
+    {
+      "label": "code:python (def solve_fast(initial_state, move_limit=None, beam_width=25)",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L780",
+      "id": "docs_algorithm_codeblock_5",
+      "community": 6,
+      "norm_label": "code:python (def solve_fast(initial_state, move_limit=none, beam_width=25)"
+    },
+    {
+      "label": "code:python (def beam_breakout(state, beam_width, max_hit_depth):)",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L841",
+      "id": "docs_algorithm_codeblock_6",
+      "community": 6,
+      "norm_label": "code:python (def beam_breakout(state, beam_width, max_hit_depth):)"
+    },
+    {
+      "label": "10. Screenshot-to-state extraction",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L883",
+      "id": "docs_algorithm_10_screenshot_to_state_extraction",
+      "community": 6,
+      "norm_label": "10. screenshot-to-state extraction"
+    },
+    {
+      "label": "10.1 Board bounds",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L885",
+      "id": "docs_algorithm_10_1_board_bounds",
+      "community": 6,
+      "norm_label": "10.1 board bounds"
+    },
+    {
+      "label": "10.2 Pig center detection",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L898",
+      "id": "docs_algorithm_10_2_pig_center_detection",
+      "community": 6,
+      "norm_label": "10.2 pig center detection"
+    },
+    {
+      "label": "10.3 Heading estimation",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L920",
+      "id": "docs_algorithm_10_3_heading_estimation",
+      "community": 6,
+      "norm_label": "10.3 heading estimation"
+    },
+    {
+      "label": "10.4 Collision shape approximation",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L940",
+      "id": "docs_algorithm_10_4_collision_shape_approximation",
+      "community": 6,
+      "norm_label": "10.4 collision shape approximation"
+    },
+    {
+      "label": "10.5 Transition validation from observed frames",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L959",
+      "id": "docs_algorithm_10_5_transition_validation_from_observed_frames",
+      "community": 6,
+      "norm_label": "10.5 transition validation from observed frames"
+    },
+    {
+      "label": "10.6 Solvable-state extraction",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L979",
+      "id": "docs_algorithm_10_6_solvable_state_extraction",
+      "community": 6,
+      "norm_label": "10.6 solvable-state extraction"
+    },
+    {
+      "label": "11. Known results vs novel proposals",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L999",
+      "id": "docs_algorithm_11_known_results_vs_novel_proposals",
+      "community": 6,
+      "norm_label": "11. known results vs novel proposals"
+    },
+    {
+      "label": "12. Recommended implementation architecture in Python",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1032",
+      "id": "docs_algorithm_12_recommended_implementation_architecture_in_python",
+      "community": 6,
+      "norm_label": "12. recommended implementation architecture in python"
+    },
+    {
+      "label": "**PAWS: Peel-Aware 0-1 Search**",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1036",
+      "id": "docs_algorithm_paws_peel_aware_0_1_search",
+      "community": 13,
+      "norm_label": "**paws: peel-aware 0-1 search**"
+    },
+    {
+      "label": "code:text (paws/)",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1045",
+      "id": "docs_algorithm_codeblock_7",
+      "community": 13,
+      "norm_label": "code:text (paws/)"
+    },
+    {
+      "label": "code:python (@dataclass(frozen=True))",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1083",
+      "id": "docs_algorithm_codeblock_8",
+      "community": 13,
+      "norm_label": "code:python (@dataclass(frozen=true))"
+    },
+    {
+      "label": "13. Failure cases and handling",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1110",
+      "id": "docs_algorithm_13_failure_cases_and_handling",
+      "community": 13,
+      "norm_label": "13. failure cases and handling"
+    },
+    {
+      "label": "Vision failures",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1112",
+      "id": "docs_algorithm_vision_failures",
+      "community": 13,
+      "norm_label": "vision failures"
+    },
+    {
+      "label": "Heading ambiguity",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1123",
+      "id": "docs_algorithm_heading_ambiguity",
+      "community": 13,
+      "norm_label": "heading ambiguity"
+    },
+    {
+      "label": "Collider mismatch",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1134",
+      "id": "docs_algorithm_collider_mismatch",
+      "community": 13,
+      "norm_label": "collider mismatch"
+    },
+    {
+      "label": "Greedy dead ends",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1145",
+      "id": "docs_algorithm_greedy_dead_ends",
+      "community": 13,
+      "norm_label": "greedy dead ends"
+    },
+    {
+      "label": "State explosion",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1155",
+      "id": "docs_algorithm_state_explosion",
+      "community": 13,
+      "norm_label": "state explosion"
+    },
+    {
+      "label": "Continuous numerical instability",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1168",
+      "id": "docs_algorithm_continuous_numerical_instability",
+      "community": 13,
+      "norm_label": "continuous numerical instability"
+    },
+    {
+      "label": "Move limit",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1179",
+      "id": "docs_algorithm_move_limit",
+      "community": 13,
+      "norm_label": "move limit"
+    },
+    {
+      "label": "Final recommendation",
+      "file_type": "document",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1192",
+      "id": "docs_algorithm_final_recommendation",
+      "community": 13,
+      "norm_label": "final recommendation"
+    },
+    {
       "label": "2026-07-06-widgetable-solver-piggy-push.md",
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
@@ -972,7 +1629,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L35",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
-      "community": 13,
+      "community": 0,
       "norm_label": "task 1: repository foundation"
     },
     {
@@ -981,7 +1638,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L49",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_1",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:toml ([build-system])"
     },
     {
@@ -990,7 +1647,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L89",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_2",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:gitignore (.ds_store)"
     },
     {
@@ -999,7 +1656,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L109",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_3",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:markdown (# widgetable solver)"
     },
     {
@@ -1008,7 +1665,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L121",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_4",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:block4"
     },
     {
@@ -1017,7 +1674,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L134",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_5",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:block5"
     },
     {
@@ -1026,7 +1683,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L143",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_6",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:python (\"\"\"widgetable solver package.\"\"\")"
     },
     {
@@ -1035,7 +1692,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L149",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_7",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:python (\"\"\"shared macos automation helpers.\"\"\")"
     },
     {
@@ -1044,7 +1701,7 @@
       "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
       "source_location": "L155",
       "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_8",
-      "community": 13,
+      "community": 0,
       "norm_label": "code:python (\"\"\"piggy push solver package.\"\"\")"
     },
     {
@@ -1289,6 +1946,15 @@
       "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_repository_hygiene",
       "community": 4,
       "norm_label": "repository hygiene"
+    },
+    {
+      "label": "._search()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L34",
+      "community": 7,
+      "norm_label": "._search()",
+      "id": "piggy_push_solver_solver_search"
     }
   ],
   "links": [
@@ -1370,9 +2036,9 @@
       "source_file": "tests/piggy_push/test_model.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_model_py",
-      "target": "piggy_push_test_model_test_clicking_diagonal_pig_moves_along_diagonal_until_blocked",
-      "confidence_score": 1.0
+      "target": "piggy_push_test_model_test_clicking_diagonal_pig_moves_along_diagonal_until_blocked"
     },
     {
       "relation": "contains",
@@ -1493,6 +2159,16 @@
       "target": "piggy_push_test_runner_test_solve_payload_returns_solution_list"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_runner_py",
+      "target": "piggy_push_test_runner_test_solve_payload_honors_move_limit",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "INFERRED",
@@ -1512,6 +2188,17 @@
       "source_location": "L32",
       "weight": 1.0,
       "source": "piggy_push_test_runner_test_solve_payload_returns_solution_list",
+      "target": "piggy_push_runner_solve_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_solve_payload_honors_move_limit",
       "target": "piggy_push_runner_solve_payload"
     },
     {
@@ -1543,6 +2230,46 @@
       "confidence_score": 1.0,
       "source": "tests_piggy_push_test_solver_py",
       "target": "piggy_push_test_solver_test_solver_returns_none_when_no_pig_can_move"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_solver_minimizes_collision_taps_before_total_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_solver_respects_move_limit_as_collision_budget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_collision_tap_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_clears",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1611,6 +2338,72 @@
       "target": "piggy_push_model_pig"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_minimizes_collision_taps_before_total_order",
+      "target": "piggy_push_test_solver_collision_tap_count",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_minimizes_collision_taps_before_total_order",
+      "target": "piggy_push_test_solver_clears",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_minimizes_collision_taps_before_total_order",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_minimizes_collision_taps_before_total_order",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_respects_move_limit_as_collision_budget",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_respects_move_limit_as_collision_budget",
+      "target": "piggy_push_model_pig"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/piggy_push/test_vision.py",
@@ -1646,8 +2439,18 @@
       "source_file": "tests/piggy_push/test_vision.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_piggy_push_test_vision_py",
-      "target": "piggy_push_test_vision_test_direction_from_angle_preserves_diagonal_axes",
+      "target": "piggy_push_test_vision_test_direction_from_angle_preserves_diagonal_axes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_vision_py",
+      "target": "piggy_push_test_vision_test_overlay_labels_prefer_planned_move_numbers",
       "confidence_score": 1.0
     },
     {
@@ -1704,6 +2507,28 @@
       "weight": 1.0,
       "source": "piggy_push_test_vision_test_direction_from_angle_preserves_diagonal_axes",
       "target": "piggy_push_vision_direction_from_angle"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "piggy_push_test_vision_test_overlay_labels_prefer_planned_move_numbers",
+      "target": "piggy_push_vision_detection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "piggy_push_test_vision_test_overlay_labels_prefer_planned_move_numbers",
+      "target": "piggy_push_vision_overlay_labels"
     },
     {
       "relation": "contains",
@@ -2454,6 +3279,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_solver_py",
+      "target": "piggy_push_solver_transition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_solver_py",
+      "target": "piggy_push_solver_exits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2516,6 +3361,37 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_transition",
+      "target": "piggy_push_solver_transition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L7",
+      "weight": 0.8,
+      "source": "piggy_push_solver_transition",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L7",
+      "weight": 0.8,
+      "source": "piggy_push_solver_transition",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L15",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2557,11 +3433,41 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L34",
+      "source_location": "L129",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "piggy_push_solver_solver",
-      "target": "piggy_push_solver_solver_search"
+      "target": "piggy_push_solver_solver_transition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_admissible_extra_lower_bound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_static_zero_peel_clears",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -2604,6 +3510,49 @@
       "target": "piggy_push_model_pig"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_search"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_solve",
+      "target": "piggy_push_solver_solver_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_solve",
+      "target": "piggy_push_solver_solver_ordered_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_solve",
+      "target": "piggy_push_solver_solver_transition",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -2619,11 +3568,55 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
-      "source_location": "L45",
+      "source_location": "L150",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "piggy_push_solver_solver_search",
-      "target": "piggy_push_solver_solver_ordered_candidates"
+      "source": "piggy_push_solver_solver_static_zero_peel_clears",
+      "target": "piggy_push_solver_solver_transition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_move_priority",
+      "target": "piggy_push_solver_solver_transition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_priority",
+      "target": "piggy_push_solver_solver_admissible_extra_lower_bound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_admissible_extra_lower_bound",
+      "target": "piggy_push_solver_solver_static_zero_peel_clears",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_static_zero_peel_clears",
+      "target": "piggy_push_solver_solver_ordered_candidates",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -2635,6 +3628,17 @@
       "confidence_score": 1.0,
       "source": "piggy_push_solver_solver_ordered_candidates",
       "target": "piggy_push_solver_solver_move_priority"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "piggy_push_solver_solver_search",
+      "target": "piggy_push_solver_solver_ordered_candidates"
     },
     {
       "relation": "contains",
@@ -2685,6 +3689,16 @@
       "confidence_score": 1.0,
       "source": "src_widgetable_solver_piggy_push_vision_py",
       "target": "piggy_push_vision_detect_pigs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_overlay_labels",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2851,6 +3865,28 @@
       "confidence_score": 1.0,
       "source": "piggy_push_vision_detect_pigs",
       "target": "piggy_push_vision_direction_from_angle"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "piggy_push_vision_write_overlay",
+      "target": "piggy_push_vision_overlay_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "piggy_push_vision_overlay_labels",
+      "target": "str"
     },
     {
       "relation": "calls",
@@ -3201,6 +4237,606 @@
       "confidence_score": 1.0,
       "source": "widgetable_solver_readme_piggy_push_status",
       "target": "widgetable_solver_readme_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_1_closest_formal_puzzle_class",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_2_literature_review_and_known_complexity_landscape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_3_formal_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_4_is_greedy_edge_peeling_always_correct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L310",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_5_complexity_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L361",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_6_best_exact_solver_for_optimal_fewest_tap_solutions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L375",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_peel_aware_0_1_a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L412",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_7_heuristics_and_reductions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L617",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_8_exact_solver_pseudocode_pa01_a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L764",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_9_fast_practical_solver_for_phone_sized_levels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L768",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_paws_peel_aware_weighted_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L883",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_10_screenshot_to_state_extraction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L999",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_11_known_results_vs_novel_proposals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1032",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_12_recommended_implementation_architecture_in_python",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1036",
+      "weight": 1.0,
+      "source": "docs_algorithm_md",
+      "target": "docs_algorithm_paws_peel_aware_0_1_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "docs_algorithm_3_formal_model",
+      "target": "docs_algorithm_3_1_continuous_geometric_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "docs_algorithm_3_formal_model",
+      "target": "docs_algorithm_3_2_legal_actions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "docs_algorithm_3_formal_model",
+      "target": "docs_algorithm_3_3_collision_raycast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "docs_algorithm_3_formal_model",
+      "target": "docs_algorithm_3_4_transition_function",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "docs_algorithm_3_formal_model",
+      "target": "docs_algorithm_3_5_goal_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L189",
+      "weight": 1.0,
+      "source": "docs_algorithm_3_formal_model",
+      "target": "docs_algorithm_3_6_cost_function",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "docs_algorithm_3_formal_model",
+      "target": "docs_algorithm_3_7_discretized_quantized_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "docs_algorithm_4_is_greedy_edge_peeling_always_correct",
+      "target": "docs_algorithm_4_1_under_the_stated_rules_no",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "docs_algorithm_4_is_greedy_edge_peeling_always_correct",
+      "target": "docs_algorithm_4_2_when_greedy_edge_peeling_is_correct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L312",
+      "weight": 1.0,
+      "source": "docs_algorithm_5_complexity_analysis",
+      "target": "docs_algorithm_5_1_fixed_phone_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L316",
+      "weight": 1.0,
+      "source": "docs_algorithm_5_complexity_analysis",
+      "target": "docs_algorithm_5_2_discretized_generalized_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L335",
+      "weight": 1.0,
+      "source": "docs_algorithm_5_complexity_analysis",
+      "target": "docs_algorithm_5_3_continuous_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L343",
+      "weight": 1.0,
+      "source": "docs_algorithm_5_complexity_analysis",
+      "target": "docs_algorithm_5_4_known_vs_unknown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L397",
+      "weight": 1.0,
+      "source": "docs_algorithm_peel_aware_0_1_a",
+      "target": "docs_algorithm_solver_comparison",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L414",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_1_exit_ray_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L452",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_2_blocker_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L474",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_3_scc_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L499",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_4_deadlock_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L533",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_5_safe_peel_reductions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L551",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_6_move_ordering",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L581",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_7_canonicalization_of_equivalent_pigs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L596",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_heuristics_and_reductions",
+      "target": "docs_algorithm_7_8_transposition_table_hashing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L432",
+      "weight": 1.0,
+      "source": "docs_algorithm_7_1_exit_ray_detection",
+      "target": "docs_algorithm_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L619",
+      "weight": 1.0,
+      "source": "docs_algorithm_8_exact_solver_pseudocode_pa01_a",
+      "target": "docs_algorithm_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L718",
+      "weight": 1.0,
+      "source": "docs_algorithm_8_exact_solver_pseudocode_pa01_a",
+      "target": "docs_algorithm_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L738",
+      "weight": 1.0,
+      "source": "docs_algorithm_8_exact_solver_pseudocode_pa01_a",
+      "target": "docs_algorithm_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L780",
+      "weight": 1.0,
+      "source": "docs_algorithm_paws_peel_aware_weighted_search",
+      "target": "docs_algorithm_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L841",
+      "weight": 1.0,
+      "source": "docs_algorithm_paws_peel_aware_weighted_search",
+      "target": "docs_algorithm_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L885",
+      "weight": 1.0,
+      "source": "docs_algorithm_10_screenshot_to_state_extraction",
+      "target": "docs_algorithm_10_1_board_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L898",
+      "weight": 1.0,
+      "source": "docs_algorithm_10_screenshot_to_state_extraction",
+      "target": "docs_algorithm_10_2_pig_center_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L920",
+      "weight": 1.0,
+      "source": "docs_algorithm_10_screenshot_to_state_extraction",
+      "target": "docs_algorithm_10_3_heading_estimation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L940",
+      "weight": 1.0,
+      "source": "docs_algorithm_10_screenshot_to_state_extraction",
+      "target": "docs_algorithm_10_4_collision_shape_approximation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L959",
+      "weight": 1.0,
+      "source": "docs_algorithm_10_screenshot_to_state_extraction",
+      "target": "docs_algorithm_10_5_transition_validation_from_observed_frames",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L979",
+      "weight": 1.0,
+      "source": "docs_algorithm_10_screenshot_to_state_extraction",
+      "target": "docs_algorithm_10_6_solvable_state_extraction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1045",
+      "weight": 1.0,
+      "source": "docs_algorithm_paws_peel_aware_0_1_search",
+      "target": "docs_algorithm_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1083",
+      "weight": 1.0,
+      "source": "docs_algorithm_paws_peel_aware_0_1_search",
+      "target": "docs_algorithm_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1110",
+      "weight": 1.0,
+      "source": "docs_algorithm_paws_peel_aware_0_1_search",
+      "target": "docs_algorithm_13_failure_cases_and_handling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1192",
+      "weight": 1.0,
+      "source": "docs_algorithm_paws_peel_aware_0_1_search",
+      "target": "docs_algorithm_final_recommendation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1112",
+      "weight": 1.0,
+      "source": "docs_algorithm_13_failure_cases_and_handling",
+      "target": "docs_algorithm_vision_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1123",
+      "weight": 1.0,
+      "source": "docs_algorithm_13_failure_cases_and_handling",
+      "target": "docs_algorithm_heading_ambiguity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1134",
+      "weight": 1.0,
+      "source": "docs_algorithm_13_failure_cases_and_handling",
+      "target": "docs_algorithm_collider_mismatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1145",
+      "weight": 1.0,
+      "source": "docs_algorithm_13_failure_cases_and_handling",
+      "target": "docs_algorithm_greedy_dead_ends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1155",
+      "weight": 1.0,
+      "source": "docs_algorithm_13_failure_cases_and_handling",
+      "target": "docs_algorithm_state_explosion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1168",
+      "weight": 1.0,
+      "source": "docs_algorithm_13_failure_cases_and_handling",
+      "target": "docs_algorithm_continuous_numerical_instability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/algorithm.md",
+      "source_location": "L1179",
+      "weight": 1.0,
+      "source": "docs_algorithm_13_failure_cases_and_handling",
+      "target": "docs_algorithm_move_limit",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3574,5 +5210,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "99a4f776d93545722c43a2966ddc71ae0672e75d"
+  "built_at_commit": "20b55ef4e3c937892956fe92b03c08c5ed4269d8"
 }
