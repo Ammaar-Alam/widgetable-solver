@@ -1,0 +1,3507 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "test_cli.py",
+      "file_type": "code",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L1",
+      "id": "tests_test_cli_py",
+      "community": 2,
+      "norm_label": "test_cli.py"
+    },
+    {
+      "label": "test_run_command_defaults_to_dry_run()",
+      "file_type": "code",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L4",
+      "id": "tests_test_cli_test_run_command_defaults_to_dry_run",
+      "community": 2,
+      "norm_label": "test_run_command_defaults_to_dry_run()"
+    },
+    {
+      "label": "test_run_command_requires_explicit_live_flag()",
+      "file_type": "code",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L14",
+      "id": "tests_test_cli_test_run_command_requires_explicit_live_flag",
+      "community": 2,
+      "norm_label": "test_run_command_requires_explicit_live_flag()"
+    },
+    {
+      "label": "test_model.py",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L1",
+      "id": "tests_piggy_push_test_model_py",
+      "community": 1,
+      "norm_label": "test_model.py"
+    },
+    {
+      "label": "test_direction_vectors_match_screen_coordinates()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L4",
+      "id": "piggy_push_test_model_test_direction_vectors_match_screen_coordinates",
+      "community": 1,
+      "norm_label": "test_direction_vectors_match_screen_coordinates()"
+    },
+    {
+      "label": "test_clicking_unblocked_pig_removes_it_from_board()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L11",
+      "id": "piggy_push_test_model_test_clicking_unblocked_pig_removes_it_from_board",
+      "community": 1,
+      "norm_label": "test_clicking_unblocked_pig_removes_it_from_board()"
+    },
+    {
+      "label": "test_clicking_blocked_pig_stops_before_blocker()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L19",
+      "id": "piggy_push_test_model_test_clicking_blocked_pig_stops_before_blocker",
+      "community": 1,
+      "norm_label": "test_clicking_blocked_pig_stops_before_blocker()"
+    },
+    {
+      "label": "test_state_key_is_independent_of_pig_order()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L35",
+      "id": "piggy_push_test_model_test_state_key_is_independent_of_pig_order",
+      "community": 1,
+      "norm_label": "test_state_key_is_independent_of_pig_order()"
+    },
+    {
+      "label": "test_runner.py",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L1",
+      "id": "tests_piggy_push_test_runner_py",
+      "community": 6,
+      "norm_label": "test_runner.py"
+    },
+    {
+      "label": "test_board_from_payload_builds_model()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L5",
+      "id": "piggy_push_test_runner_test_board_from_payload_builds_model",
+      "community": 6,
+      "norm_label": "test_board_from_payload_builds_model()"
+    },
+    {
+      "label": "test_solve_payload_returns_solution_list()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L23",
+      "id": "piggy_push_test_runner_test_solve_payload_returns_solution_list",
+      "community": 6,
+      "norm_label": "test_solve_payload_returns_solution_list()"
+    },
+    {
+      "label": "test_solver.py",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L1",
+      "id": "tests_piggy_push_test_solver_py",
+      "community": 1,
+      "norm_label": "test_solver.py"
+    },
+    {
+      "label": "test_solver_clears_single_pig()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L5",
+      "id": "piggy_push_test_solver_test_solver_clears_single_pig",
+      "community": 1,
+      "norm_label": "test_solver_clears_single_pig()"
+    },
+    {
+      "label": "test_solver_returns_clearing_sequence_for_interdependent_board()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L13",
+      "id": "piggy_push_test_solver_test_solver_returns_clearing_sequence_for_interdependent_board",
+      "community": 1,
+      "norm_label": "test_solver_returns_clearing_sequence_for_interdependent_board()"
+    },
+    {
+      "label": "test_solver_returns_none_when_no_pig_can_move()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L33",
+      "id": "piggy_push_test_solver_test_solver_returns_none_when_no_pig_can_move",
+      "community": 1,
+      "norm_label": "test_solver_returns_none_when_no_pig_can_move()"
+    },
+    {
+      "label": "test_vision.py",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L1",
+      "id": "tests_piggy_push_test_vision_py",
+      "community": 5,
+      "norm_label": "test_vision.py"
+    },
+    {
+      "label": "test_field_crop_constrains_to_image_bounds()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L5",
+      "id": "piggy_push_test_vision_test_field_crop_constrains_to_image_bounds",
+      "community": 5,
+      "norm_label": "test_field_crop_constrains_to_image_bounds()"
+    },
+    {
+      "label": "test_quantize_detections_maps_centers_to_cells()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L14",
+      "id": "piggy_push_test_vision_test_quantize_detections_maps_centers_to_cells",
+      "community": 5,
+      "norm_label": "test_quantize_detections_maps_centers_to_cells()"
+    },
+    {
+      "label": "test_low_confidence_detection_is_rejected()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L28",
+      "id": "piggy_push_test_vision_test_low_confidence_detection_is_rejected",
+      "community": 5,
+      "norm_label": "test_low_confidence_detection_is_rejected()"
+    },
+    {
+      "label": "simple_state.json",
+      "file_type": "code",
+      "source_file": "examples/simple_state.json",
+      "source_location": "L1",
+      "id": "examples_simple_state_json",
+      "community": 9,
+      "norm_label": "simple_state.json"
+    },
+    {
+      "label": "width",
+      "file_type": "code",
+      "source_file": "examples/simple_state.json",
+      "source_location": "L2",
+      "id": "examples_simple_state_width",
+      "community": 9,
+      "norm_label": "width"
+    },
+    {
+      "label": "height",
+      "file_type": "code",
+      "source_file": "examples/simple_state.json",
+      "source_location": "L3",
+      "id": "examples_simple_state_height",
+      "community": 9,
+      "norm_label": "height"
+    },
+    {
+      "label": "pigs",
+      "file_type": "code",
+      "source_file": "examples/simple_state.json",
+      "source_location": "L4",
+      "id": "examples_simple_state_pigs",
+      "community": 9,
+      "norm_label": "pigs"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/__init__.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_init_py",
+      "community": 12,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "Widgetable solver package.",
+      "file_type": "rationale",
+      "source_file": "src/widgetable_solver/__init__.py",
+      "source_location": "L1",
+      "id": "widgetable_solver_init_rationale_1",
+      "community": 12,
+      "norm_label": "widgetable solver package."
+    },
+    {
+      "label": "cli.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_cli_py",
+      "community": 2,
+      "norm_label": "cli.py"
+    },
+    {
+      "label": "build_parser()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L18",
+      "id": "widgetable_solver_cli_build_parser",
+      "community": 2,
+      "norm_label": "build_parser()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L53",
+      "id": "widgetable_solver_cli_main",
+      "community": 2,
+      "norm_label": "main()"
+    },
+    {
+      "label": "_run_piggy()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L69",
+      "id": "widgetable_solver_cli_run_piggy",
+      "community": 2,
+      "norm_label": "_run_piggy()"
+    },
+    {
+      "label": "_result_json()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L104",
+      "id": "widgetable_solver_cli_result_json",
+      "community": 2,
+      "norm_label": "_result_json()"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/__init__.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_platform_init_py",
+      "community": 11,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "Shared macOS automation helpers.",
+      "file_type": "rationale",
+      "source_file": "src/widgetable_solver/platform/__init__.py",
+      "source_location": "L1",
+      "id": "platform_init_rationale_1",
+      "community": 11,
+      "norm_label": "shared macos automation helpers."
+    },
+    {
+      "label": "mouse.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_platform_mouse_py",
+      "community": 3,
+      "norm_label": "mouse.py"
+    },
+    {
+      "label": "Clicker",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L25",
+      "id": "platform_mouse_clicker",
+      "community": 3,
+      "norm_label": "clicker"
+    },
+    {
+      "label": "for_window()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L30",
+      "id": "platform_mouse_for_window",
+      "community": 3,
+      "norm_label": "for_window()"
+    },
+    {
+      "label": ".click_window_point()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L33",
+      "id": "platform_mouse_clicker_click_window_point",
+      "community": 3,
+      "norm_label": ".click_window_point()"
+    },
+    {
+      "label": "iphone.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_platform_iphone_py",
+      "community": 3,
+      "norm_label": "iphone.py"
+    },
+    {
+      "label": "WindowBounds",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L14",
+      "id": "platform_iphone_windowbounds",
+      "community": 3,
+      "norm_label": "windowbounds"
+    },
+    {
+      "label": "monitor()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L21",
+      "id": "platform_iphone_monitor",
+      "community": 3,
+      "norm_label": "monitor()"
+    },
+    {
+      "label": "find_iphone_mirroring_window()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L31",
+      "id": "platform_iphone_find_iphone_mirroring_window",
+      "community": 3,
+      "norm_label": "find_iphone_mirroring_window()"
+    },
+    {
+      "label": "focus_iphone_mirroring()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L55",
+      "id": "platform_iphone_focus_iphone_mirroring",
+      "community": 3,
+      "norm_label": "focus_iphone_mirroring()"
+    },
+    {
+      "label": "move_iphone_mirroring_to_corner()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L67",
+      "id": "platform_iphone_move_iphone_mirroring_to_corner",
+      "community": 3,
+      "norm_label": "move_iphone_mirroring_to_corner()"
+    },
+    {
+      "label": "capture_window()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L82",
+      "id": "platform_iphone_capture_window",
+      "community": 3,
+      "norm_label": "capture_window()"
+    },
+    {
+      "label": "capture_iphone()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L88",
+      "id": "platform_iphone_capture_iphone",
+      "community": 3,
+      "norm_label": "capture_iphone()"
+    },
+    {
+      "label": "save_capture()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L96",
+      "id": "platform_iphone_save_capture",
+      "community": 3,
+      "norm_label": "save_capture()"
+    },
+    {
+      "label": "runner.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_piggy_push_runner_py",
+      "community": 2,
+      "norm_label": "runner.py"
+    },
+    {
+      "label": "ImageSolveResult",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L25",
+      "id": "piggy_push_runner_imagesolveresult",
+      "community": 2,
+      "norm_label": "imagesolveresult"
+    },
+    {
+      "label": "board_from_payload()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L31",
+      "id": "piggy_push_runner_board_from_payload",
+      "community": 6,
+      "norm_label": "board_from_payload()"
+    },
+    {
+      "label": "solve_payload()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L46",
+      "id": "piggy_push_runner_solve_payload",
+      "community": 6,
+      "norm_label": "solve_payload()"
+    },
+    {
+      "label": "load_state()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L51",
+      "id": "piggy_push_runner_load_state",
+      "community": 2,
+      "norm_label": "load_state()"
+    },
+    {
+      "label": "analyze_image()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L55",
+      "id": "piggy_push_runner_analyze_image",
+      "community": 2,
+      "norm_label": "analyze_image()"
+    },
+    {
+      "label": "solve_image()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L81",
+      "id": "piggy_push_runner_solve_image",
+      "community": 2,
+      "norm_label": "solve_image()"
+    },
+    {
+      "label": "capture_once()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L86",
+      "id": "piggy_push_runner_capture_once",
+      "community": 2,
+      "norm_label": "capture_once()"
+    },
+    {
+      "label": "run_once()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L90",
+      "id": "piggy_push_runner_run_once",
+      "community": 2,
+      "norm_label": "run_once()"
+    },
+    {
+      "label": "solver.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_piggy_push_solver_py",
+      "community": 7,
+      "norm_label": "solver.py"
+    },
+    {
+      "label": "SearchStats",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L9",
+      "id": "piggy_push_solver_searchstats",
+      "community": 7,
+      "norm_label": "searchstats"
+    },
+    {
+      "label": "solve()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L14",
+      "id": "piggy_push_solver_solve",
+      "community": 7,
+      "norm_label": "solve()"
+    },
+    {
+      "label": "Solver",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L18",
+      "id": "piggy_push_solver_solver",
+      "community": 7,
+      "norm_label": "solver"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L19",
+      "id": "piggy_push_solver_solver_init",
+      "community": 7,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "stats()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L25",
+      "id": "piggy_push_solver_stats",
+      "community": 7,
+      "norm_label": "stats()"
+    },
+    {
+      "label": ".solve()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L31",
+      "id": "piggy_push_solver_solver_solve",
+      "community": 7,
+      "norm_label": ".solve()"
+    },
+    {
+      "label": "._search()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L34",
+      "id": "piggy_push_solver_solver_search",
+      "community": 7,
+      "norm_label": "._search()"
+    },
+    {
+      "label": "._ordered_candidates()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L57",
+      "id": "piggy_push_solver_solver_ordered_candidates",
+      "community": 7,
+      "norm_label": "._ordered_candidates()"
+    },
+    {
+      "label": "._move_priority()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L60",
+      "id": "piggy_push_solver_solver_move_priority",
+      "community": 7,
+      "norm_label": "._move_priority()"
+    },
+    {
+      "label": "vision.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_piggy_push_vision_py",
+      "community": 5,
+      "norm_label": "vision.py"
+    },
+    {
+      "label": "FieldCrop",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L13",
+      "id": "piggy_push_vision_fieldcrop",
+      "community": 5,
+      "norm_label": "fieldcrop"
+    },
+    {
+      "label": "from_image_shape()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L20",
+      "id": "piggy_push_vision_from_image_shape",
+      "community": 5,
+      "norm_label": "from_image_shape()"
+    },
+    {
+      "label": ".apply()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L24",
+      "id": "piggy_push_vision_fieldcrop_apply",
+      "community": 5,
+      "norm_label": ".apply()"
+    },
+    {
+      "label": "Detection",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L29",
+      "id": "piggy_push_vision_detection",
+      "community": 5,
+      "norm_label": "detection"
+    },
+    {
+      "label": "quantize_detections()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L37",
+      "id": "piggy_push_vision_quantize_detections",
+      "community": 5,
+      "norm_label": "quantize_detections()"
+    },
+    {
+      "label": "detect_pigs()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L64",
+      "id": "piggy_push_vision_detect_pigs",
+      "community": 5,
+      "norm_label": "detect_pigs()"
+    },
+    {
+      "label": "write_overlay()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L115",
+      "id": "piggy_push_vision_write_overlay",
+      "community": 2,
+      "norm_label": "write_overlay()"
+    },
+    {
+      "label": "_fit_ellipse()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L135",
+      "id": "piggy_push_vision_fit_ellipse",
+      "community": 5,
+      "norm_label": "_fit_ellipse()"
+    },
+    {
+      "label": "_direction_from_angle()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L141",
+      "id": "piggy_push_vision_direction_from_angle",
+      "community": 5,
+      "norm_label": "_direction_from_angle()"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/__init__.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_piggy_push_init_py",
+      "community": 10,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "Piggy Push solver package.",
+      "file_type": "rationale",
+      "source_file": "src/widgetable_solver/piggy_push/__init__.py",
+      "source_location": "L1",
+      "id": "piggy_push_init_rationale_1",
+      "community": 10,
+      "norm_label": "piggy push solver package."
+    },
+    {
+      "label": "model.py",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L1",
+      "id": "src_widgetable_solver_piggy_push_model_py",
+      "community": 6,
+      "norm_label": "model.py"
+    },
+    {
+      "label": "Direction",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L8",
+      "id": "piggy_push_model_direction",
+      "community": 6,
+      "norm_label": "direction"
+    },
+    {
+      "label": "str",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "str",
+      "community": 2,
+      "norm_label": "str"
+    },
+    {
+      "label": "Enum",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "enum",
+      "community": 6,
+      "norm_label": "enum"
+    },
+    {
+      "label": "vector()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L15",
+      "id": "piggy_push_model_vector",
+      "community": 6,
+      "norm_label": "vector()"
+    },
+    {
+      "label": "Pig",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L25",
+      "id": "piggy_push_model_pig",
+      "community": 1,
+      "norm_label": "pig"
+    },
+    {
+      "label": "cell()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L32",
+      "id": "piggy_push_model_cell",
+      "community": 6,
+      "norm_label": "cell()"
+    },
+    {
+      "label": ".moved_to()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L35",
+      "id": "piggy_push_model_pig_moved_to",
+      "community": 1,
+      "norm_label": ".moved_to()"
+    },
+    {
+      "label": "Board",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L40",
+      "id": "piggy_push_model_board",
+      "community": 1,
+      "norm_label": "board"
+    },
+    {
+      "label": ".__post_init__()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L45",
+      "id": "piggy_push_model_board_post_init",
+      "community": 1,
+      "norm_label": ".__post_init__()"
+    },
+    {
+      "label": "from_iterable()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L59",
+      "id": "piggy_push_model_from_iterable",
+      "community": 6,
+      "norm_label": "from_iterable()"
+    },
+    {
+      "label": ".contains()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L62",
+      "id": "piggy_push_model_board_contains",
+      "community": 1,
+      "norm_label": ".contains()"
+    },
+    {
+      "label": ".get()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L65",
+      "id": "piggy_push_model_board_get",
+      "community": 1,
+      "norm_label": ".get()"
+    },
+    {
+      "label": ".occupied_cells()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L71",
+      "id": "piggy_push_model_board_occupied_cells",
+      "community": 1,
+      "norm_label": ".occupied_cells()"
+    },
+    {
+      "label": ".move()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L74",
+      "id": "piggy_push_model_board_move",
+      "community": 1,
+      "norm_label": ".move()"
+    },
+    {
+      "label": ".legal_moves()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L102",
+      "id": "piggy_push_model_board_legal_moves",
+      "community": 1,
+      "norm_label": ".legal_moves()"
+    },
+    {
+      "label": ".is_cleared()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L105",
+      "id": "piggy_push_model_board_is_cleared",
+      "community": 1,
+      "norm_label": ".is_cleared()"
+    },
+    {
+      "label": ".state_key()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L108",
+      "id": "piggy_push_model_board_state_key",
+      "community": 1,
+      "norm_label": ".state_key()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 8,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Widgetable Solver",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "widgetable_solver_readme_widgetable_solver",
+      "community": 8,
+      "norm_label": "widgetable solver"
+    },
+    {
+      "label": "Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "id": "widgetable_solver_readme_setup",
+      "community": 8,
+      "norm_label": "setup"
+    },
+    {
+      "label": "code:bash (python3 -m venv .venv)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "id": "widgetable_solver_readme_codeblock_1",
+      "community": 8,
+      "norm_label": "code:bash (python3 -m venv .venv)"
+    },
+    {
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L16",
+      "id": "widgetable_solver_readme_commands",
+      "community": 8,
+      "norm_label": "commands"
+    },
+    {
+      "label": "code:bash (widgetable capture --output captures/current.png)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "id": "widgetable_solver_readme_codeblock_2",
+      "community": 8,
+      "norm_label": "code:bash (widgetable capture --output captures/current.png)"
+    },
+    {
+      "label": "Piggy Push Status",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "id": "widgetable_solver_readme_piggy_push_status",
+      "community": 8,
+      "norm_label": "piggy push status"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "id": "widgetable_solver_readme_codeblock_3",
+      "community": 8,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "2026-07-06-widgetable-solver-piggy-push.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L1",
+      "id": "docs_superpowers_plans_2026_07_06_widgetable_solver_piggy_push_md",
+      "community": 0,
+      "norm_label": "2026-07-06-widgetable-solver-piggy-push.md"
+    },
+    {
+      "label": "Widgetable Solver Piggy Push Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L1",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "community": 0,
+      "norm_label": "widgetable solver piggy push implementation plan"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L13",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_file_structure",
+      "community": 0,
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Repository Foundation",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L35",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "community": 0,
+      "norm_label": "task 1: repository foundation"
+    },
+    {
+      "label": "code:toml ([build-system])",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L49",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_1",
+      "community": 0,
+      "norm_label": "code:toml ([build-system])"
+    },
+    {
+      "label": "code:gitignore (.DS_Store)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L89",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_2",
+      "community": 0,
+      "norm_label": "code:gitignore (.ds_store)"
+    },
+    {
+      "label": "code:markdown (# Widgetable Solver)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L109",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_3",
+      "community": 0,
+      "norm_label": "code:markdown (# widgetable solver)"
+    },
+    {
+      "label": "code:block4",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L121",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_4",
+      "community": 0,
+      "norm_label": "code:block4"
+    },
+    {
+      "label": "code:block5",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L134",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_5",
+      "community": 0,
+      "norm_label": "code:block5"
+    },
+    {
+      "label": "code:python (\"\"\"Widgetable solver package.\"\"\")",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L143",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_6",
+      "community": 0,
+      "norm_label": "code:python (\"\"\"widgetable solver package.\"\"\")"
+    },
+    {
+      "label": "code:python (\"\"\"Shared macOS automation helpers.\"\"\")",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L149",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_7",
+      "community": 0,
+      "norm_label": "code:python (\"\"\"shared macos automation helpers.\"\"\")"
+    },
+    {
+      "label": "code:python (\"\"\"Piggy Push solver package.\"\"\")",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L155",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_8",
+      "community": 0,
+      "norm_label": "code:python (\"\"\"piggy push solver package.\"\"\")"
+    },
+    {
+      "label": "Task 2: Piggy Push Model",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L167",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_task_2_piggy_push_model",
+      "community": 0,
+      "norm_label": "task 2: piggy push model"
+    },
+    {
+      "label": "code:python (from widgetable_solver.piggy_push.model import Board, Direct)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L177",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_9",
+      "community": 0,
+      "norm_label": "code:python (from widgetable_solver.piggy_push.model import board, direct)"
+    },
+    {
+      "label": "code:python (from __future__ import annotations)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L243",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_10",
+      "community": 0,
+      "norm_label": "code:python (from __future__ import annotations)"
+    },
+    {
+      "label": "Task 3: Exact Solver",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L357",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_task_3_exact_solver",
+      "community": 0,
+      "norm_label": "task 3: exact solver"
+    },
+    {
+      "label": "code:python (from widgetable_solver.piggy_push.model import Board, Direct)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L367",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_11",
+      "community": 0,
+      "norm_label": "code:python (from widgetable_solver.piggy_push.model import board, direct)"
+    },
+    {
+      "label": "code:python (from __future__ import annotations)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L423",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_12",
+      "community": 0,
+      "norm_label": "code:python (from __future__ import annotations)"
+    },
+    {
+      "label": "Task 4: Vision Utilities",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L490",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_task_4_vision_utilities",
+      "community": 0,
+      "norm_label": "task 4: vision utilities"
+    },
+    {
+      "label": "code:python (import numpy as np)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L500",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_13",
+      "community": 0,
+      "norm_label": "code:python (import numpy as np)"
+    },
+    {
+      "label": "code:python (from __future__ import annotations)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L550",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_14",
+      "community": 0,
+      "norm_label": "code:python (from __future__ import annotations)"
+    },
+    {
+      "label": "Task 5: Platform Automation and Runner",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L683",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_task_5_platform_automation_and_runner",
+      "community": 0,
+      "norm_label": "task 5: platform automation and runner"
+    },
+    {
+      "label": "Task 6: Example Screenshots, Verification, GitHub",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L713",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_task_6_example_screenshots_verification_github",
+      "community": 0,
+      "norm_label": "task 6: example screenshots, verification, github"
+    },
+    {
+      "label": "code:bash (git init)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L745",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_15",
+      "community": 0,
+      "norm_label": "code:bash (git init)"
+    },
+    {
+      "label": "code:bash (gh repo create widgetable-solver --private --source . --remo)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L757",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_16",
+      "community": 0,
+      "norm_label": "code:bash (gh repo create widgetable-solver --private --source . --remo)"
+    },
+    {
+      "label": "Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L763",
+      "id": "plans_2026_07_06_widgetable_solver_piggy_push_self_review",
+      "community": 0,
+      "norm_label": "self-review"
+    },
+    {
+      "label": "2026-07-06-widgetable-solver-piggy-push-design.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L1",
+      "id": "docs_superpowers_specs_2026_07_06_widgetable_solver_piggy_push_design_md",
+      "community": 4,
+      "norm_label": "2026-07-06-widgetable-solver-piggy-push-design.md"
+    },
+    {
+      "label": "Widgetable Solver Piggy Push Design",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L1",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "community": 4,
+      "norm_label": "widgetable solver piggy push design"
+    },
+    {
+      "label": "Goal",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L3",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_goal",
+      "community": 4,
+      "norm_label": "goal"
+    },
+    {
+      "label": "Scope",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L7",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_scope",
+      "community": 4,
+      "norm_label": "scope"
+    },
+    {
+      "label": "Movement Rule",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L20",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_movement_rule",
+      "community": 4,
+      "norm_label": "movement rule"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L24",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_architecture",
+      "community": 4,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "Data Flow",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L38",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_data_flow",
+      "community": 4,
+      "norm_label": "data flow"
+    },
+    {
+      "label": "Solver Strategy",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L48",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_solver_strategy",
+      "community": 4,
+      "norm_label": "solver strategy"
+    },
+    {
+      "label": "Vision Strategy",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L54",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_vision_strategy",
+      "community": 4,
+      "norm_label": "vision strategy"
+    },
+    {
+      "label": "Live Automation",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L66",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_live_automation",
+      "community": 4,
+      "norm_label": "live automation"
+    },
+    {
+      "label": "CLI",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L77",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_cli",
+      "community": 4,
+      "norm_label": "cli"
+    },
+    {
+      "label": "Testing",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L90",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_testing",
+      "community": 4,
+      "norm_label": "testing"
+    },
+    {
+      "label": "Repository Hygiene",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L103",
+      "id": "specs_2026_07_06_widgetable_solver_piggy_push_design_repository_hygiene",
+      "community": 4,
+      "norm_label": "repository hygiene"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_test_cli_py",
+      "target": "tests_test_cli_test_run_command_defaults_to_dry_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_cli_py",
+      "target": "tests_test_cli_test_run_command_requires_explicit_live_flag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_cli.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_test_cli_test_run_command_defaults_to_dry_run",
+      "target": "widgetable_solver_cli_build_parser"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_cli.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tests_test_cli_test_run_command_requires_explicit_live_flag",
+      "target": "widgetable_solver_cli_build_parser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_model_py",
+      "target": "piggy_push_test_model_test_direction_vectors_match_screen_coordinates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_model_py",
+      "target": "piggy_push_test_model_test_clicking_unblocked_pig_removes_it_from_board",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_model_py",
+      "target": "piggy_push_test_model_test_clicking_blocked_pig_stops_before_blocker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_model_py",
+      "target": "piggy_push_test_model_test_state_key_is_independent_of_pig_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "piggy_push_test_model_test_clicking_unblocked_pig_removes_it_from_board",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "piggy_push_test_model_test_clicking_unblocked_pig_removes_it_from_board",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "piggy_push_test_model_test_clicking_blocked_pig_stops_before_blocker",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "piggy_push_test_model_test_clicking_blocked_pig_stops_before_blocker",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "piggy_push_test_model_test_state_key_is_independent_of_pig_order",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_model.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "piggy_push_test_model_test_state_key_is_independent_of_pig_order",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_runner_py",
+      "target": "piggy_push_test_runner_test_board_from_payload_builds_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_runner_py",
+      "target": "piggy_push_test_runner_test_solve_payload_returns_solution_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_board_from_payload_builds_model",
+      "target": "piggy_push_runner_board_from_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_runner.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "piggy_push_test_runner_test_solve_payload_returns_solution_list",
+      "target": "piggy_push_runner_solve_payload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_solver_clears_single_pig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_solver_returns_clearing_sequence_for_interdependent_board",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_solver_py",
+      "target": "piggy_push_test_solver_test_solver_returns_none_when_no_pig_can_move",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_clears_single_pig",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_clears_single_pig",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_returns_clearing_sequence_for_interdependent_board",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_returns_clearing_sequence_for_interdependent_board",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_returns_none_when_no_pig_can_move",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_solver.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "piggy_push_test_solver_test_solver_returns_none_when_no_pig_can_move",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_vision_py",
+      "target": "piggy_push_test_vision_test_field_crop_constrains_to_image_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_vision_py",
+      "target": "piggy_push_test_vision_test_quantize_detections_maps_centers_to_cells",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_vision_py",
+      "target": "piggy_push_test_vision_test_low_confidence_detection_is_rejected",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "piggy_push_test_vision_test_quantize_detections_maps_centers_to_cells",
+      "target": "piggy_push_vision_detection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "piggy_push_test_vision_test_quantize_detections_maps_centers_to_cells",
+      "target": "piggy_push_vision_quantize_detections"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "piggy_push_test_vision_test_low_confidence_detection_is_rejected",
+      "target": "piggy_push_vision_detection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "piggy_push_test_vision_test_low_confidence_detection_is_rejected",
+      "target": "piggy_push_vision_quantize_detections"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/simple_state.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "examples_simple_state_json",
+      "target": "examples_simple_state_width",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/simple_state.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "examples_simple_state_json",
+      "target": "examples_simple_state_height",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "examples/simple_state.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "examples_simple_state_json",
+      "target": "examples_simple_state_pigs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "widgetable_solver_init_rationale_1",
+      "target": "src_widgetable_solver_init_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_cli_py",
+      "target": "widgetable_solver_cli_build_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_cli_py",
+      "target": "widgetable_solver_cli_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_cli_py",
+      "target": "widgetable_solver_cli_run_piggy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_cli_py",
+      "target": "widgetable_solver_cli_result_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_main",
+      "target": "widgetable_solver_cli_build_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_main",
+      "target": "widgetable_solver_cli_run_piggy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_main",
+      "target": "piggy_push_runner_capture_once"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_main",
+      "target": "str"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_run_piggy",
+      "target": "widgetable_solver_cli_result_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_run_piggy",
+      "target": "piggy_push_runner_analyze_image"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_run_piggy",
+      "target": "piggy_push_runner_solve_image"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_run_piggy",
+      "target": "piggy_push_runner_solve_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_run_piggy",
+      "target": "piggy_push_runner_load_state"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/cli.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "widgetable_solver_cli_run_piggy",
+      "target": "piggy_push_runner_run_once"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "platform_init_rationale_1",
+      "target": "src_widgetable_solver_platform_init_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_mouse_py",
+      "target": "platform_mouse_clicker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_mouse_py",
+      "target": "platform_mouse_for_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "platform_mouse_clicker",
+      "target": "platform_mouse_clicker_click_window_point",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/platform/mouse.py",
+      "source_location": "L21",
+      "weight": 0.8,
+      "source": "platform_mouse_clicker",
+      "target": "platform_iphone_windowbounds",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L21",
+      "weight": 0.8,
+      "source": "piggy_push_runner_imagesolveresult",
+      "target": "platform_mouse_clicker",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_windowbounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_monitor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_find_iphone_mirroring_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_focus_iphone_mirroring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_move_iphone_mirroring_to_corner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_capture_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_capture_iphone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_save_capture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "platform_iphone_find_iphone_mirroring_window",
+      "target": "platform_iphone_windowbounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "platform_iphone_move_iphone_mirroring_to_corner",
+      "target": "platform_iphone_find_iphone_mirroring_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "platform_iphone_capture_iphone",
+      "target": "platform_iphone_find_iphone_mirroring_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "platform_iphone_find_iphone_mirroring_window",
+      "target": "str"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "platform_iphone_capture_iphone",
+      "target": "platform_iphone_focus_iphone_mirroring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "platform_iphone_capture_iphone",
+      "target": "platform_iphone_move_iphone_mirroring_to_corner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "platform_iphone_capture_iphone",
+      "target": "platform_iphone_capture_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "platform_iphone_save_capture",
+      "target": "platform_iphone_capture_iphone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "piggy_push_runner_run_once",
+      "target": "platform_iphone_capture_iphone"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "piggy_push_runner_capture_once",
+      "target": "platform_iphone_save_capture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_imagesolveresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_board_from_payload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_solve_payload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_load_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_analyze_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_solve_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_capture_once",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_runner_py",
+      "target": "piggy_push_runner_run_once",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "piggy_push_runner_analyze_image",
+      "target": "piggy_push_runner_imagesolveresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "piggy_push_runner_run_once",
+      "target": "piggy_push_runner_imagesolveresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L11",
+      "weight": 0.8,
+      "source": "piggy_push_runner_imagesolveresult",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L11",
+      "weight": 0.8,
+      "source": "piggy_push_runner_imagesolveresult",
+      "target": "piggy_push_model_direction",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L11",
+      "weight": 0.8,
+      "source": "piggy_push_runner_imagesolveresult",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L13",
+      "weight": 0.8,
+      "source": "piggy_push_runner_imagesolveresult",
+      "target": "piggy_push_vision_detection",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L13",
+      "weight": 0.8,
+      "source": "piggy_push_runner_imagesolveresult",
+      "target": "piggy_push_vision_fieldcrop",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "piggy_push_runner_solve_payload",
+      "target": "piggy_push_runner_board_from_payload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "piggy_push_runner_board_from_payload",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "piggy_push_runner_board_from_payload",
+      "target": "str"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "piggy_push_runner_board_from_payload",
+      "target": "piggy_push_model_direction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "piggy_push_runner_board_from_payload",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "piggy_push_runner_solve_image",
+      "target": "piggy_push_runner_analyze_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "piggy_push_runner_analyze_image",
+      "target": "str"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "piggy_push_runner_analyze_image",
+      "target": "piggy_push_vision_detect_pigs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "piggy_push_runner_analyze_image",
+      "target": "piggy_push_vision_quantize_detections"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "piggy_push_runner_analyze_image",
+      "target": "piggy_push_vision_write_overlay"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "piggy_push_runner_run_once",
+      "target": "piggy_push_vision_detect_pigs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "piggy_push_runner_run_once",
+      "target": "piggy_push_vision_quantize_detections"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/runner.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "piggy_push_runner_run_once",
+      "target": "piggy_push_vision_write_overlay"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_solver_py",
+      "target": "piggy_push_solver_searchstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_solver_py",
+      "target": "piggy_push_solver_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_solver_py",
+      "target": "piggy_push_solver_solver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_solver_py",
+      "target": "piggy_push_solver_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "piggy_push_solver_stats",
+      "target": "piggy_push_solver_searchstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "piggy_push_solver_searchstats",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "piggy_push_solver_searchstats",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solve",
+      "target": "piggy_push_solver_solver_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solve",
+      "target": "piggy_push_solver_solver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_ordered_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_solver_solver_move_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "piggy_push_solver_solver",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_solve",
+      "target": "piggy_push_solver_solver_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_search",
+      "target": "piggy_push_solver_solver_ordered_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/solver.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "piggy_push_solver_solver_ordered_candidates",
+      "target": "piggy_push_solver_solver_move_priority",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_fieldcrop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_from_image_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_quantize_detections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_detect_pigs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_write_overlay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_fit_ellipse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_direction_from_angle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "piggy_push_vision_fieldcrop",
+      "target": "piggy_push_vision_fieldcrop_apply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "piggy_push_vision_fieldcrop",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "piggy_push_vision_fieldcrop",
+      "target": "piggy_push_model_direction",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "piggy_push_vision_fieldcrop",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "piggy_push_vision_detect_pigs",
+      "target": "piggy_push_vision_fieldcrop_apply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "piggy_push_vision_detect_pigs",
+      "target": "piggy_push_vision_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "piggy_push_vision_detection",
+      "target": "piggy_push_model_board",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "piggy_push_vision_detection",
+      "target": "piggy_push_model_direction",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "piggy_push_vision_detection",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "piggy_push_vision_quantize_detections",
+      "target": "piggy_push_model_pig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "piggy_push_vision_quantize_detections",
+      "target": "piggy_push_model_board"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "piggy_push_vision_detect_pigs",
+      "target": "piggy_push_vision_fit_ellipse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "piggy_push_vision_detect_pigs",
+      "target": "piggy_push_vision_direction_from_angle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "piggy_push_vision_write_overlay",
+      "target": "str"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "piggy_push_init_rationale_1",
+      "target": "src_widgetable_solver_piggy_push_init_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_model_py",
+      "target": "enum",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_model_py",
+      "target": "piggy_push_model_direction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_model_py",
+      "target": "piggy_push_model_vector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_model_py",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_model_py",
+      "target": "piggy_push_model_cell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_model_py",
+      "target": "piggy_push_model_board",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_model_py",
+      "target": "piggy_push_model_from_iterable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "piggy_push_model_direction",
+      "target": "str",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "piggy_push_model_direction",
+      "target": "enum",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "context": "call",
+      "source": "piggy_push_model_pig_moved_to",
+      "target": "piggy_push_model_pig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "piggy_push_model_board_move",
+      "target": "piggy_push_model_pig_moved_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_post_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_contains",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_occupied_cells",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_move",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_legal_moves",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_is_cleared",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "piggy_push_model_board",
+      "target": "piggy_push_model_board_state_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "piggy_push_model_board_post_init",
+      "target": "piggy_push_model_board_contains",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "piggy_push_model_board_move",
+      "target": "piggy_push_model_from_iterable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "piggy_push_model_board_move",
+      "target": "piggy_push_model_board_contains",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "piggy_push_model_board_move",
+      "target": "piggy_push_model_board_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "piggy_push_model_board_move",
+      "target": "piggy_push_model_board_occupied_cells",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/model.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "piggy_push_model_board_legal_moves",
+      "target": "piggy_push_model_board_move",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "widgetable_solver_readme_widgetable_solver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "widgetable_solver_readme_widgetable_solver",
+      "target": "widgetable_solver_readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "widgetable_solver_readme_widgetable_solver",
+      "target": "widgetable_solver_readme_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "widgetable_solver_readme_widgetable_solver",
+      "target": "widgetable_solver_readme_piggy_push_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "widgetable_solver_readme_setup",
+      "target": "widgetable_solver_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "widgetable_solver_readme_commands",
+      "target": "widgetable_solver_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "widgetable_solver_readme_piggy_push_status",
+      "target": "widgetable_solver_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_superpowers_plans_2026_07_06_widgetable_solver_piggy_push_md",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_task_2_piggy_push_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L357",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_task_3_exact_solver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L490",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_task_4_vision_utilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L683",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_task_5_platform_automation_and_runner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L713",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_task_6_example_screenshots_verification_github",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L763",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_widgetable_solver_piggy_push_implementation_plan",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_1_repository_foundation",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_2_piggy_push_model",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_2_piggy_push_model",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L367",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_3_exact_solver",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L423",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_3_exact_solver",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L500",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_4_vision_utilities",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L550",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_4_vision_utilities",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L745",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_6_example_screenshots_verification_github",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-06-widgetable-solver-piggy-push.md",
+      "source_location": "L757",
+      "weight": 1.0,
+      "source": "plans_2026_07_06_widgetable_solver_piggy_push_task_6_example_screenshots_verification_github",
+      "target": "plans_2026_07_06_widgetable_solver_piggy_push_codeblock_16",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_superpowers_specs_2026_07_06_widgetable_solver_piggy_push_design_md",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_goal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_movement_rule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_data_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_solver_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_vision_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_live_automation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/specs/2026-07-06-widgetable-solver-piggy-push-design.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "specs_2026_07_06_widgetable_solver_piggy_push_design_widgetable_solver_piggy_push_design",
+      "target": "specs_2026_07_06_widgetable_solver_piggy_push_design_repository_hygiene",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "c9c08bd80cf10bac216641567665c9ca25ba2042"
+}
