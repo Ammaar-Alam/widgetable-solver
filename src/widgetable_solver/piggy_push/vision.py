@@ -143,7 +143,7 @@ def _direction_from_angle(angle: float) -> Direction:
     if normalized < 22.5 or normalized >= 157.5:
         return Direction.RIGHT
     if normalized < 67.5:
-        return Direction.DOWN
+        return Direction.DOWN_RIGHT
     if normalized < 112.5:
         return Direction.DOWN
-    return Direction.LEFT
+    return Direction.DOWN_LEFT

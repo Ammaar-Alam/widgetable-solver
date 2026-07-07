@@ -1,5 +1,5 @@
 from widgetable_solver.piggy_push.model import Direction
-from widgetable_solver.piggy_push.vision import Detection, FieldCrop, quantize_detections
+from widgetable_solver.piggy_push.vision import Detection, FieldCrop, _direction_from_angle, quantize_detections
 
 
 def test_field_crop_constrains_to_image_bounds():
@@ -33,3 +33,8 @@ def test_low_confidence_detection_is_rejected():
     board = quantize_detections(detections, width=4, height=4, image_shape=(400, 400, 3), min_confidence=0.5)
 
     assert board.pigs == ()
+
+
+def test_direction_from_angle_preserves_diagonal_axes():
+    assert _direction_from_angle(44.0) is Direction.DOWN_RIGHT
+    assert _direction_from_angle(134.0) is Direction.DOWN_LEFT

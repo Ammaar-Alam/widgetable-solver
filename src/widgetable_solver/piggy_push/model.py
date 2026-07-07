@@ -7,17 +7,25 @@ from typing import Iterable
 
 class Direction(str, Enum):
     UP = "up"
+    UP_RIGHT = "up_right"
     RIGHT = "right"
+    DOWN_RIGHT = "down_right"
     DOWN = "down"
+    DOWN_LEFT = "down_left"
     LEFT = "left"
+    UP_LEFT = "up_left"
 
     @property
     def vector(self) -> tuple[int, int]:
         return {
             Direction.UP: (0, -1),
+            Direction.UP_RIGHT: (1, -1),
             Direction.RIGHT: (1, 0),
+            Direction.DOWN_RIGHT: (1, 1),
             Direction.DOWN: (0, 1),
+            Direction.DOWN_LEFT: (-1, 1),
             Direction.LEFT: (-1, 0),
+            Direction.UP_LEFT: (-1, -1),
         }[self]
 
 
