@@ -1,4 +1,5 @@
 from widgetable_solver.cli import build_parser
+from widgetable_solver.piggy_push.runner import DEFAULT_GRID_HEIGHT, DEFAULT_GRID_WIDTH
 
 
 def test_run_command_defaults_to_dry_run():
@@ -27,3 +28,27 @@ def test_piggy_push_commands_accept_solver_strategy():
 
     assert solve_args.strategy == "fast"
     assert run_args.strategy == "hybrid"
+
+
+def test_overlay_commands_accept_debug_detections_flag():
+    parser = build_parser()
+
+    analyze_args = parser.parse_args(
+        ["piggy-push", "analyze", "image.png", "--debug-detections"]
+    )
+    run_args = parser.parse_args(["piggy-push", "run", "--debug-detections"])
+
+    assert analyze_args.debug_detections is True
+    assert run_args.debug_detections is True
+
+
+def test_piggy_push_image_commands_use_fine_grid_defaults():
+    parser = build_parser()
+
+    analyze_args = parser.parse_args(["piggy-push", "analyze", "image.png"])
+    run_args = parser.parse_args(["piggy-push", "run"])
+
+    assert analyze_args.grid_width == DEFAULT_GRID_WIDTH
+    assert analyze_args.grid_height == DEFAULT_GRID_HEIGHT
+    assert run_args.grid_width == DEFAULT_GRID_WIDTH
+    assert run_args.grid_height == DEFAULT_GRID_HEIGHT

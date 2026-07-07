@@ -21,6 +21,10 @@ from widgetable_solver.platform.iphone import capture_iphone, save_capture
 from widgetable_solver.platform.mouse import Clicker
 
 
+DEFAULT_GRID_WIDTH = 20
+DEFAULT_GRID_HEIGHT = 28
+
+
 @dataclass(frozen=True, slots=True)
 class ImageSolveResult:
     board: Board
@@ -62,10 +66,11 @@ def analyze_image(
     image_path: Path,
     *,
     overlay: Path | None = None,
-    grid_width: int = 10,
-    grid_height: int = 14,
+    grid_width: int = DEFAULT_GRID_WIDTH,
+    grid_height: int = DEFAULT_GRID_HEIGHT,
     min_confidence: float = 0.5,
     strategy: SolverStrategy = "hybrid",
+    debug_detections: bool = False,
 ) -> ImageSolveResult:
     image = cv2.imread(str(image_path))
     if image is None:
@@ -81,22 +86,31 @@ def analyze_image(
     )
     solution = solve(board, strategy=strategy)
     if overlay is not None:
-        write_overlay(image, detections, overlay, solution=solution)
+        write_overlay(
+            image,
+            detections,
+            overlay,
+            board=board,
+            solution=solution,
+            debug_detections=debug_detections,
+        )
     return ImageSolveResult(board=board, detections=detections, solution=solution)
 
 
 def solve_image(
     image_path: Path,
     *,
-    grid_width: int = 10,
-    grid_height: int = 14,
+    grid_width: int = DEFAULT_GRID_WIDTH,
+    grid_height: int = DEFAULT_GRID_HEIGHT,
     strategy: SolverStrategy = "hybrid",
+    debug_detections: bool = False,
 ) -> list[str] | None:
     result = analyze_image(
         image_path,
         grid_width=grid_width,
         grid_height=grid_height,
         strategy=strategy,
+        debug_detections=debug_detections,
     )
     return list(result.solution) if result.solution is not None else None
 
@@ -110,9 +124,10 @@ def run_once(
     live: bool = False,
     overlay: Path | None = None,
     settle_seconds: float = 0.45,
-    grid_width: int = 10,
-    grid_height: int = 14,
+    grid_width: int = DEFAULT_GRID_WIDTH,
+    grid_height: int = DEFAULT_GRID_HEIGHT,
     strategy: SolverStrategy = "hybrid",
+    debug_detections: bool = False,
 ) -> ImageSolveResult:
     window, image = capture_iphone(position=True)
     crop = FieldCrop.from_image_shape(image.shape)
@@ -121,7 +136,14 @@ def run_once(
     solution = solve(board, strategy=strategy)
 
     if overlay is not None:
-        write_overlay(image, detections, overlay, solution=solution)
+        write_overlay(
+            image,
+            detections,
+            overlay,
+            board=board,
+            solution=solution,
+            debug_detections=debug_detections,
+        )
 
     if not live or solution is None:
         return ImageSolveResult(board=board, detections=detections, solution=solution)

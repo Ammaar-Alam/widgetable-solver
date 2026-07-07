@@ -6,6 +6,8 @@ from dataclasses import asdict
 from pathlib import Path
 
 from widgetable_solver.piggy_push.runner import (
+    DEFAULT_GRID_HEIGHT,
+    DEFAULT_GRID_WIDTH,
     analyze_image,
     capture_once,
     load_state,
@@ -29,15 +31,17 @@ def build_parser() -> argparse.ArgumentParser:
     analyze = piggy_subparsers.add_parser("analyze")
     analyze.add_argument("image", type=Path)
     analyze.add_argument("--overlay", type=Path)
-    analyze.add_argument("--grid-width", type=int, default=10)
-    analyze.add_argument("--grid-height", type=int, default=14)
+    analyze.add_argument("--grid-width", type=int, default=DEFAULT_GRID_WIDTH)
+    analyze.add_argument("--grid-height", type=int, default=DEFAULT_GRID_HEIGHT)
     analyze.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
+    analyze.add_argument("--debug-detections", action="store_true")
 
     solve_image_parser = piggy_subparsers.add_parser("solve-image")
     solve_image_parser.add_argument("image", type=Path)
-    solve_image_parser.add_argument("--grid-width", type=int, default=10)
-    solve_image_parser.add_argument("--grid-height", type=int, default=14)
+    solve_image_parser.add_argument("--grid-width", type=int, default=DEFAULT_GRID_WIDTH)
+    solve_image_parser.add_argument("--grid-height", type=int, default=DEFAULT_GRID_HEIGHT)
     solve_image_parser.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
+    solve_image_parser.add_argument("--debug-detections", action="store_true")
 
     solve_state = piggy_subparsers.add_parser("solve-state")
     solve_state.add_argument("state", type=Path)
@@ -47,9 +51,10 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--live", action="store_true")
     run.add_argument("--overlay", type=Path)
     run.add_argument("--settle-seconds", type=float, default=0.45)
-    run.add_argument("--grid-width", type=int, default=10)
-    run.add_argument("--grid-height", type=int, default=14)
+    run.add_argument("--grid-width", type=int, default=DEFAULT_GRID_WIDTH)
+    run.add_argument("--grid-height", type=int, default=DEFAULT_GRID_HEIGHT)
     run.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
+    run.add_argument("--debug-detections", action="store_true")
 
     return parser
 
@@ -78,6 +83,7 @@ def _run_piggy(args: argparse.Namespace) -> int:
             grid_width=args.grid_width,
             grid_height=args.grid_height,
             strategy=args.strategy,
+            debug_detections=args.debug_detections,
         )
         print(_result_json(result))
         return 0
@@ -88,6 +94,7 @@ def _run_piggy(args: argparse.Namespace) -> int:
             grid_width=args.grid_width,
             grid_height=args.grid_height,
             strategy=args.strategy,
+            debug_detections=args.debug_detections,
         )
         print(json.dumps({"solution": solution}, indent=2))
         return 0
@@ -107,6 +114,7 @@ def _run_piggy(args: argparse.Namespace) -> int:
             grid_width=args.grid_width,
             grid_height=args.grid_height,
             strategy=args.strategy,
+            debug_detections=args.debug_detections,
         )
         print(_result_json(result))
         return 0

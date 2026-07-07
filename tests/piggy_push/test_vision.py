@@ -4,6 +4,7 @@ from widgetable_solver.piggy_push.vision import (
     FieldCrop,
     _direction_from_angle,
     overlay_labels,
+    overlay_visible_detections,
     quantize_detections,
 )
 
@@ -41,6 +42,19 @@ def test_low_confidence_detection_is_rejected():
     assert board.pigs == ()
 
 
+def test_finer_grid_keeps_close_distinct_pigs():
+    detections = (
+        Detection(id="p0", center=(250.0, 300.0), direction=Direction.DOWN_LEFT, radius=28.0, confidence=0.9),
+        Detection(id="p1", center=(330.0, 300.0), direction=Direction.DOWN_RIGHT, radius=28.0, confidence=0.9),
+    )
+
+    coarse_board = quantize_detections(detections, width=10, height=14, image_shape=(2000, 1200, 3))
+    fine_board = quantize_detections(detections, width=20, height=28, image_shape=(2000, 1200, 3))
+
+    assert len(coarse_board.pigs) == 1
+    assert len(fine_board.pigs) == 2
+
+
 def test_direction_from_angle_preserves_diagonal_axes():
     assert _direction_from_angle(44.0) is Direction.DOWN_RIGHT
     assert _direction_from_angle(134.0) is Direction.DOWN_LEFT
@@ -56,3 +70,40 @@ def test_overlay_labels_prefer_planned_move_numbers():
     labels = overlay_labels(detections, solution=("p7", "p0"))
 
     assert labels == {"p0": "2", "p7": "1", "p9": "p9"}
+
+
+def test_overlay_visible_detections_defaults_to_solved_board_pigs():
+    detections = (
+        Detection(id="used", center=(100.0, 120.0), direction=Direction.RIGHT, radius=28.0, confidence=0.9),
+        Detection(id="duplicate", center=(110.0, 120.0), direction=Direction.DOWN, radius=14.0, confidence=0.4),
+        Detection(id="unused", center=(300.0, 120.0), direction=Direction.LEFT, radius=28.0, confidence=0.9),
+    )
+    board = quantize_detections(
+        detections,
+        width=4,
+        height=4,
+        image_shape=(400, 400, 3),
+        min_confidence=0.5,
+    )
+
+    visible = overlay_visible_detections(detections, board=board)
+
+    assert tuple(detection.id for detection in visible) == ("used", "unused")
+
+
+def test_overlay_visible_detections_can_show_raw_debug_detections():
+    detections = (
+        Detection(id="used", center=(100.0, 120.0), direction=Direction.RIGHT, radius=28.0, confidence=0.9),
+        Detection(id="duplicate", center=(110.0, 120.0), direction=Direction.DOWN, radius=14.0, confidence=0.4),
+    )
+    board = quantize_detections(
+        detections,
+        width=4,
+        height=4,
+        image_shape=(400, 400, 3),
+        min_confidence=0.5,
+    )
+
+    visible = overlay_visible_detections(detections, board=board, debug_detections=True)
+
+    assert visible == detections

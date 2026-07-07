@@ -120,17 +120,37 @@ def overlay_labels(
     return {detection.id: move_numbers.get(detection.id, detection.id) for detection in detections}
 
 
+def overlay_visible_detections(
+    detections: tuple[Detection, ...],
+    *,
+    board: Board | None = None,
+    debug_detections: bool = False,
+) -> tuple[Detection, ...]:
+    if debug_detections or board is None:
+        return detections
+
+    solved_ids = {pig.id for pig in board.pigs}
+    return tuple(detection for detection in detections if detection.id in solved_ids)
+
+
 def write_overlay(
     image: np.ndarray,
     detections: tuple[Detection, ...],
     output: Path,
     *,
+    board: Board | None = None,
     solution: tuple[str, ...] | None = None,
+    debug_detections: bool = False,
 ) -> None:
     overlay = image.copy()
-    labels = overlay_labels(detections, solution)
+    visible_detections = overlay_visible_detections(
+        detections,
+        board=board,
+        debug_detections=debug_detections,
+    )
+    labels = overlay_labels(visible_detections, solution)
     planned_ids = set(solution or ())
-    for detection in detections:
+    for detection in visible_detections:
         x, y = int(detection.center[0]), int(detection.center[1])
         cv2.circle(overlay, (x, y), int(detection.radius), (255, 0, 255), 2)
         dx, dy = detection.direction.vector
@@ -148,15 +168,16 @@ def write_overlay(
                 (0, 0, 255),
                 2,
             )
-            cv2.putText(
-                overlay,
-                detection.id,
-                (x + 18, y - 18),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.45,
-                (50, 50, 50),
-                1,
-            )
+            if debug_detections:
+                cv2.putText(
+                    overlay,
+                    detection.id,
+                    (x + 18, y - 18),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.45,
+                    (50, 50, 50),
+                    1,
+                )
             continue
         cv2.putText(
             overlay,
