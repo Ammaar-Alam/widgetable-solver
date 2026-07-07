@@ -1,0 +1,1 @@
+"""Shared macOS automation helpers."""

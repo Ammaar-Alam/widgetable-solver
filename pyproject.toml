@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "widgetable-solver"
+version = "0.1.0"
+description = "macOS automation tools for solving Widgetable games from iPhone Mirroring."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mss>=9.0.1",
+  "numpy>=2.0",
+  "opencv-python>=4.10",
+  "Pillow>=10.0",
+  "pyautogui>=0.9.54",
+  "pyobjc-framework-Quartz>=10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+]
+
+[project.scripts]
+widgetable = "widgetable_solver.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
