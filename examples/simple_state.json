@@ -1,0 +1,18 @@
+{
+  "width": 4,
+  "height": 4,
+  "pigs": [
+    {
+      "id": "a",
+      "x": 1,
+      "y": 1,
+      "direction": "right"
+    },
+    {
+      "id": "b",
+      "x": 3,
+      "y": 1,
+      "direction": "down"
+    }
+  ]
+}

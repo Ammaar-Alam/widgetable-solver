@@ -25,3 +25,20 @@ widgetable piggy-push run --live
 ```
 
 Live mode is explicit. Dry-run mode captures, detects, solves, and writes overlays without clicking.
+
+## Piggy Push Status
+
+The board model and exact solver are deterministic and covered by tests. The first OpenCV detector can analyze the saved screenshots and write overlays, but live clicking should only be used after the overlay matches the visible board. Uncertain or duplicated detections should be treated as calibration data for the next detector pass.
+
+State files use integer grid cells:
+
+```json
+{
+  "width": 4,
+  "height": 4,
+  "pigs": [
+    {"id": "a", "x": 1, "y": 1, "direction": "right"},
+    {"id": "b", "x": 3, "y": 1, "direction": "down"}
+  ]
+}
+```
