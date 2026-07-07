@@ -30,3 +30,16 @@ def test_solve_payload_returns_solution_list():
     }
 
     assert solve_payload(payload) == ["a"]
+
+
+def test_solve_payload_honors_move_limit():
+    payload = {
+        "width": 4,
+        "height": 4,
+        "move_limit": 0,
+        "pigs": [
+            {"id": "a", "x": 1, "y": 1, "direction": "right"},
+        ],
+    }
+
+    assert solve_payload(payload) is None

@@ -44,7 +44,11 @@ def board_from_payload(payload: dict[str, Any]) -> Board:
 
 
 def solve_payload(payload: dict[str, Any]) -> list[str] | None:
-    solution = solve(board_from_payload(payload))
+    move_limit = payload.get("move_limit")
+    solution = solve(
+        board_from_payload(payload),
+        move_limit=int(move_limit) if move_limit is not None else None,
+    )
     return list(solution) if solution is not None else None
 
 
