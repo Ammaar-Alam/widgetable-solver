@@ -1,5 +1,11 @@
 from widgetable_solver.piggy_push.model import Direction
-from widgetable_solver.piggy_push.vision import Detection, FieldCrop, _direction_from_angle, quantize_detections
+from widgetable_solver.piggy_push.vision import (
+    Detection,
+    FieldCrop,
+    _direction_from_angle,
+    overlay_labels,
+    quantize_detections,
+)
 
 
 def test_field_crop_constrains_to_image_bounds():
@@ -38,3 +44,15 @@ def test_low_confidence_detection_is_rejected():
 def test_direction_from_angle_preserves_diagonal_axes():
     assert _direction_from_angle(44.0) is Direction.DOWN_RIGHT
     assert _direction_from_angle(134.0) is Direction.DOWN_LEFT
+
+
+def test_overlay_labels_prefer_planned_move_numbers():
+    detections = (
+        Detection(id="p0", center=(100.0, 120.0), direction=Direction.RIGHT, radius=28.0, confidence=0.9),
+        Detection(id="p7", center=(200.0, 120.0), direction=Direction.LEFT, radius=28.0, confidence=0.9),
+        Detection(id="p9", center=(300.0, 120.0), direction=Direction.LEFT, radius=28.0, confidence=0.9),
+    )
+
+    labels = overlay_labels(detections, solution=("p7", "p0"))
+
+    assert labels == {"p0": "2", "p7": "1", "p9": "p9"}

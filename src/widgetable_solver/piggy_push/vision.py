@@ -112,16 +112,55 @@ def detect_pigs(image: np.ndarray, *, crop: FieldCrop | None = None) -> tuple[De
     return tuple(sorted(detections, key=lambda detection: (detection.center[1], detection.center[0])))
 
 
-def write_overlay(image: np.ndarray, detections: tuple[Detection, ...], output: Path) -> None:
+def overlay_labels(
+    detections: tuple[Detection, ...],
+    solution: tuple[str, ...] | None = None,
+) -> dict[str, str]:
+    move_numbers = {pig_id: str(index + 1) for index, pig_id in enumerate(solution or ())}
+    return {detection.id: move_numbers.get(detection.id, detection.id) for detection in detections}
+
+
+def write_overlay(
+    image: np.ndarray,
+    detections: tuple[Detection, ...],
+    output: Path,
+    *,
+    solution: tuple[str, ...] | None = None,
+) -> None:
     overlay = image.copy()
+    labels = overlay_labels(detections, solution)
+    planned_ids = set(solution or ())
     for detection in detections:
         x, y = int(detection.center[0]), int(detection.center[1])
         cv2.circle(overlay, (x, y), int(detection.radius), (255, 0, 255), 2)
         dx, dy = detection.direction.vector
         cv2.arrowedLine(overlay, (x, y), (x + dx * 36, y + dy * 36), (0, 0, 255), 3)
+        label = labels[detection.id]
+        if detection.id in planned_ids:
+            cv2.circle(overlay, (x, y), 20, (255, 255, 255), -1)
+            cv2.circle(overlay, (x, y), 20, (0, 0, 255), 2)
+            cv2.putText(
+                overlay,
+                label,
+                (x - 9 if len(label) == 1 else x - 15, y + 8),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.8,
+                (0, 0, 255),
+                2,
+            )
+            cv2.putText(
+                overlay,
+                detection.id,
+                (x + 18, y - 18),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.45,
+                (50, 50, 50),
+                1,
+            )
+            continue
         cv2.putText(
             overlay,
-            detection.id,
+            label,
             (x + 8, y - 8),
             cv2.FONT_HERSHEY_SIMPLEX,
             0.6,

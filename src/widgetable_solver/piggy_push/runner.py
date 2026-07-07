@@ -74,7 +74,7 @@ def analyze_image(
     )
     solution = solve(board)
     if overlay is not None:
-        write_overlay(image, detections, overlay)
+        write_overlay(image, detections, overlay, solution=solution)
     return ImageSolveResult(board=board, detections=detections, solution=solution)
 
 
@@ -102,7 +102,7 @@ def run_once(
     solution = solve(board)
 
     if overlay is not None:
-        write_overlay(image, detections, overlay)
+        write_overlay(image, detections, overlay, solution=solution)
 
     if not live or solution is None:
         return ImageSolveResult(board=board, detections=detections, solution=solution)
