@@ -1,16 +1,16 @@
 # Graph Report - widgetable-solver  (2026-07-07)
 
 ## Corpus Check
-- 28 files · ~599,644 words
+- 28 files · ~599,810 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 328 nodes · 628 edges · 17 communities (14 shown, 3 thin omitted)
-- Extraction: 67% EXTRACTED · 33% INFERRED · 0% AMBIGUOUS · INFERRED: 210 edges (avg confidence: 0.75)
+- 334 nodes · 641 edges · 18 communities (15 shown, 3 thin omitted)
+- Extraction: 67% EXTRACTED · 33% INFERRED · 0% AMBIGUOUS · INFERRED: 211 edges (avg confidence: 0.75)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a8f9e9c0`
+- Built from commit: `0800bdea`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,6 +32,7 @@
 - [[_COMMUNITY_Community 14|Community 14]]
 - [[_COMMUNITY_Community 15|Community 15]]
 - [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Board` - 53 edges
@@ -41,9 +42,9 @@
 5. `FastSolver` - 15 edges
 6. `move_event()` - 14 edges
 7. `quantize_detections()` - 14 edges
-8. `Widgetable Solver Piggy Push Design` - 12 edges
-9. `analyze_image()` - 10 edges
-10. `MoveKind` - 10 edges
+8. `detect_pigs()` - 12 edges
+9. `Widgetable Solver Piggy Push Design` - 12 edges
+10. `analyze_image()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_parse_image_data_url_accepts_png_payload()` --calls--> `parse_image_data_url()`  [INFERRED]
@@ -57,19 +58,19 @@
 - `test_piggy_push_commands_accept_solver_strategy()` --calls--> `build_parser()`  [INFERRED]
   tests/test_cli.py → src/widgetable_solver/cli.py
 
-## Communities (17 total, 3 thin omitted)
+## Communities (18 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.08
 Nodes (25): code:toml ([build-system]), code:python (from __future__ import annotations), code:python (from widgetable_solver.piggy_push.model import Board, Direct), code:python (from __future__ import annotations), code:python (import numpy as np), code:python (from __future__ import annotations), code:bash (git init), code:bash (gh repo create widgetable-solver --private --source . --remo) (+17 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.09
-Nodes (35): MoveEvent, MoveKind, Board, from_iterable(), Pig, Transition, test_all_blockers_graph_reports_every_collinear_blocker_before_exit(), test_immediate_blocker_graph_and_counts() (+27 more)
+Cohesion: 0.10
+Nodes (32): Board, from_iterable(), Pig, test_all_blockers_graph_reports_every_collinear_blocker_before_exit(), test_immediate_blocker_graph_and_counts(), test_move_event_reports_exit_hit_and_zero_displacement(), test_move_event_uses_radius_for_vision_board_collisions(), test_static_zero_peel_residual_keeps_collision_required_cycle() (+24 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.09
-Nodes (32): Enum, Direction, analyze_image(), board_from_payload(), capture_once(), ImageSolveResult, load_state(), next_click_detection() (+24 more)
+Cohesion: 0.11
+Nodes (26): Enum, Direction, analyze_image(), board_from_payload(), capture_once(), ImageSolveResult, load_state(), next_click_detection() (+18 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.17
@@ -80,16 +81,16 @@ Cohesion: 0.15
 Nodes (12): Architecture, CLI, Data Flow, Goal, Live Automation, Movement Rule, Repository Hygiene, Scope (+4 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.27
-Nodes (5): _collision_tap_count(), SearchStats, solve(), Solver, stats()
+Cohesion: 0.24
+Nodes (6): _collision_tap_count(), SearchStats, solve(), Solver, stats(), Transition
 
 ### Community 6 - "Community 6"
 Cohesion: 0.05
 Nodes (38): 10.1 Board bounds, 10.2 Pig center detection, 10.3 Heading estimation, 10.4 Collision shape approximation, 10.5 Transition validation from observed frames, 10.6 Solvable-state extraction, 10. Screenshot-to-state extraction, 11. Known results vs novel proposals (+30 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.17
-Nodes (19): all_blockers_graph(), blocker_counts(), can_never_be_stopper(), _cell_lies_on_forward_ray(), cycle_members(), exit_ids(), _forward_projection(), immediate_blocker_graph() (+11 more)
+Cohesion: 0.16
+Nodes (21): all_blockers_graph(), blocker_counts(), can_never_be_stopper(), _cell_lies_on_forward_ray(), cycle_members(), exit_ids(), _forward_projection(), immediate_blocker_graph() (+13 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.25
@@ -112,8 +113,12 @@ Cohesion: 0.12
 Nodes (11): BaseHTTPRequestHandler, test_parse_image_data_url_accepts_png_payload(), test_parse_image_data_url_rejects_non_images(), ThreadingHTTPServer, analyze_image_bytes(), main(), OverlayRequestHandler, OverlayServerError (+3 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.16
-Nodes (20): test_direction_from_angle_preserves_diagonal_axes(), test_finer_grid_keeps_close_distinct_pigs(), test_low_confidence_detection_is_rejected(), test_low_confidence_full_size_detection_is_rescued(), test_overlay_labels_prefer_planned_move_numbers(), test_overlay_visible_detections_can_show_raw_debug_detections(), test_overlay_visible_detections_defaults_to_solved_board_pigs(), test_quantize_detections_can_use_field_crop_coordinates() (+12 more)
+Cohesion: 0.14
+Nodes (24): test_detect_pigs_handles_actual_size_mirroring_scale(), test_direction_from_angle_preserves_diagonal_axes(), test_finer_grid_keeps_close_distinct_pigs(), test_low_confidence_detection_is_rejected(), test_low_confidence_full_size_detection_is_rescued(), test_overlay_visible_detections_can_show_raw_debug_detections(), test_overlay_visible_detections_defaults_to_solved_board_pigs(), test_quantize_detections_can_use_field_crop_coordinates() (+16 more)
+
+### Community 17 - "Community 17"
+Cohesion: 0.36
+Nodes (7): test_capture_and_run_accept_manual_actual_size_flag(), test_overlay_commands_accept_debug_detections_flag(), test_piggy_push_commands_accept_solver_strategy(), test_piggy_push_image_commands_use_fine_grid_defaults(), test_run_command_defaults_to_dry_run(), test_run_command_requires_explicit_live_flag(), build_parser()
 
 ## Knowledge Gaps
 - **85 isolated node(s):** `width`, `height`, `pigs`, `code:bash (python3 -m venv .venv)`, `code:bash (widgetable capture --output captures/current.png)` (+80 more)
@@ -126,9 +131,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Board` connect `Community 1` to `Community 16`, `Community 2`, `Community 5`, `Community 7`?**
   _High betweenness centrality (0.143) - this node is a cross-community bridge._
 - **Why does `Pig` connect `Community 1` to `Community 16`, `Community 2`, `Community 5`, `Community 7`?**
-  _High betweenness centrality (0.082) - this node is a cross-community bridge._
+  _High betweenness centrality (0.083) - this node is a cross-community bridge._
 - **Why does `analyze_image()` connect `Community 2` to `Community 16`, `Community 15`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
+  _High betweenness centrality (0.055) - this node is a cross-community bridge._
 - **Are the 38 inferred relationships involving `Board` (e.g. with `ImageSolveResult` and `MoveKind`) actually correct?**
   _`Board` has 38 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 38 inferred relationships involving `Pig` (e.g. with `ImageSolveResult` and `MoveKind`) actually correct?**

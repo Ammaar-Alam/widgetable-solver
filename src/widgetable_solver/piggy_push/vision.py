@@ -94,7 +94,8 @@ def detect_pigs(image: np.ndarray, *, crop: FieldCrop | None = None) -> tuple[De
         np.array([179, 180, 255], dtype=np.uint8),
     )
     mask = cv2.bitwise_or(mask_a, mask_b)
-    kernel = np.ones((5, 5), dtype=np.uint8)
+    kernel_size = _morphology_kernel_size(field.shape)
+    kernel = np.ones((kernel_size, kernel_size), dtype=np.uint8)
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
@@ -102,10 +103,12 @@ def detect_pigs(image: np.ndarray, *, crop: FieldCrop | None = None) -> tuple[De
     detections: list[Detection] = []
     offset_x = crop.left if crop else 0
     offset_y = crop.top if crop else 0
+    min_area = _min_contour_area(field.shape)
+    confidence_area = _confidence_area(field.shape)
 
     for index, contour in enumerate(contours):
         area = cv2.contourArea(contour)
-        if area < 250:
+        if area < min_area:
             continue
 
         ellipse = _fit_ellipse(contour)
@@ -129,7 +132,7 @@ def detect_pigs(image: np.ndarray, *, crop: FieldCrop | None = None) -> tuple[De
                 center=(float(center_x + offset_x), float(center_y + offset_y)),
                 direction=_direction_from_angle(angle),
                 radius=float(max(axis_a, axis_b) / 2.0),
-                confidence=min(1.0, max(0.0, area / 2200.0)),
+                confidence=min(1.0, max(0.0, area / confidence_area)),
             )
         )
 
@@ -220,6 +223,23 @@ def _fit_ellipse(contour: np.ndarray):
     if len(contour) < 5:
         return None
     return cv2.fitEllipse(contour)
+
+
+def _field_scale(shape: tuple[int, ...]) -> float:
+    height, width = shape[:2]
+    return max(0.15, min(width / 1179.0, height / 1380.0))
+
+
+def _morphology_kernel_size(shape: tuple[int, ...]) -> int:
+    return 5 if _field_scale(shape) >= 0.5 else 3
+
+
+def _min_contour_area(shape: tuple[int, ...]) -> float:
+    return max(20.0, 250.0 * _field_scale(shape) ** 2)
+
+
+def _confidence_area(shape: tuple[int, ...]) -> float:
+    return max(80.0, 2200.0 * _field_scale(shape) ** 2)
 
 
 def _accepted_detections(

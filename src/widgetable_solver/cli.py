@@ -90,7 +90,6 @@ def _run_piggy(args: argparse.Namespace) -> int:
             grid_height=args.grid_height,
             strategy=args.strategy,
             debug_detections=args.debug_detections,
-            manual_actual_size=args.manual_actual_size,
         )
         print(_result_json(result))
         return 0
@@ -122,6 +121,7 @@ def _run_piggy(args: argparse.Namespace) -> int:
             grid_height=args.grid_height,
             strategy=args.strategy,
             debug_detections=args.debug_detections,
+            manual_actual_size=args.manual_actual_size,
         )
         print(_result_json(result))
         return 0

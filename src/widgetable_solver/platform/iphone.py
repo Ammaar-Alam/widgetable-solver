@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import subprocess
+import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -97,10 +98,14 @@ def capture_iphone(
     if bounds is None:
         raise RuntimeError("Could not find iPhone Mirroring window")
     if manual_actual_size:
-        try:
-            input("Press Command-0 in iPhone Mirroring, then press Enter here to capture...")
-        except EOFError as error:
-            raise RuntimeError("Manual Actual Size confirmation requires an interactive terminal") from error
+        if not sys.stdin.isatty():
+            raise RuntimeError("Manual Actual Size confirmation requires an interactive terminal")
+        print(
+            "\nPress Command-0 in iPhone Mirroring now.\n"
+            "When the phone is Actual Size, press Enter here to capture.",
+            flush=True,
+        )
+        sys.stdin.readline()
         bounds = find_iphone_mirroring_window()
         if bounds is None:
             raise RuntimeError("Could not find iPhone Mirroring window")

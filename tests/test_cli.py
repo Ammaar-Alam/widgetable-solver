@@ -1,3 +1,6 @@
+from types import SimpleNamespace
+
+import widgetable_solver.cli as cli
 from widgetable_solver.cli import build_parser
 from widgetable_solver.piggy_push.runner import DEFAULT_GRID_HEIGHT, DEFAULT_GRID_WIDTH
 
@@ -50,6 +53,24 @@ def test_capture_and_run_accept_manual_actual_size_flag():
 
     assert capture_args.manual_actual_size is True
     assert run_args.manual_actual_size is True
+
+
+def test_run_command_forwards_manual_actual_size_flag(monkeypatch, capsys):
+    captured_kwargs = {}
+
+    def fake_run_once(**kwargs):
+        captured_kwargs.update(kwargs)
+        return SimpleNamespace(
+            board=SimpleNamespace(pigs=()),
+            detections=(),
+            solution=(),
+        )
+
+    monkeypatch.setattr(cli, "run_once", fake_run_once)
+
+    assert cli.main(["piggy-push", "run", "--manual-actual-size"]) == 0
+
+    assert captured_kwargs["manual_actual_size"] is True
 
 
 def test_piggy_push_image_commands_use_fine_grid_defaults():

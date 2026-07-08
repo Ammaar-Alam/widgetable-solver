@@ -1,8 +1,12 @@
+import cv2
+import numpy as np
+
 from widgetable_solver.piggy_push.model import Direction
 from widgetable_solver.piggy_push.vision import (
     Detection,
     FieldCrop,
     _direction_from_angle,
+    detect_pigs,
     overlay_labels,
     overlay_visible_detections,
     quantize_detections,
@@ -149,3 +153,23 @@ def test_overlay_visible_detections_can_show_raw_debug_detections():
     visible = overlay_visible_detections(detections, board=board, debug_detections=True)
 
     assert visible == detections
+
+
+def test_detect_pigs_handles_actual_size_mirroring_scale():
+    image = np.full((412, 348, 3), (190, 238, 150), dtype=np.uint8)
+    for center in ((130, 170), (165, 190), (200, 210)):
+        cv2.ellipse(
+            image,
+            center,
+            (18, 11),
+            45,
+            0,
+            360,
+            (214, 204, 255),
+            -1,
+        )
+
+    detections = detect_pigs(image)
+
+    assert len(detections) == 3
+    assert all(detection.confidence >= 0.5 for detection in detections)

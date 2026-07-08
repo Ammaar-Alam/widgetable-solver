@@ -99,61 +99,70 @@
       "source_file": "tests/test_cli.py",
       "source_location": "L1",
       "id": "tests_test_cli_py",
-      "community": 2,
+      "community": 17,
       "norm_label": "test_cli.py"
     },
     {
       "label": "test_run_command_defaults_to_dry_run()",
       "file_type": "code",
       "source_file": "tests/test_cli.py",
-      "source_location": "L5",
+      "source_location": "L8",
       "id": "tests_test_cli_test_run_command_defaults_to_dry_run",
-      "community": 2,
+      "community": 17,
       "norm_label": "test_run_command_defaults_to_dry_run()"
     },
     {
       "label": "test_run_command_requires_explicit_live_flag()",
       "file_type": "code",
       "source_file": "tests/test_cli.py",
-      "source_location": "L15",
+      "source_location": "L18",
       "id": "tests_test_cli_test_run_command_requires_explicit_live_flag",
-      "community": 2,
+      "community": 17,
       "norm_label": "test_run_command_requires_explicit_live_flag()"
     },
     {
       "label": "test_piggy_push_commands_accept_solver_strategy()",
       "file_type": "code",
       "source_file": "tests/test_cli.py",
-      "source_location": "L23",
+      "source_location": "L26",
       "id": "tests_test_cli_test_piggy_push_commands_accept_solver_strategy",
-      "community": 2,
+      "community": 17,
       "norm_label": "test_piggy_push_commands_accept_solver_strategy()"
     },
     {
       "label": "test_overlay_commands_accept_debug_detections_flag()",
       "file_type": "code",
       "source_file": "tests/test_cli.py",
-      "source_location": "L33",
+      "source_location": "L36",
       "id": "tests_test_cli_test_overlay_commands_accept_debug_detections_flag",
-      "community": 2,
+      "community": 17,
       "norm_label": "test_overlay_commands_accept_debug_detections_flag()"
     },
     {
       "label": "test_capture_and_run_accept_manual_actual_size_flag()",
       "file_type": "code",
       "source_file": "tests/test_cli.py",
-      "source_location": "L45",
+      "source_location": "L48",
       "id": "tests_test_cli_test_capture_and_run_accept_manual_actual_size_flag",
-      "community": 2,
+      "community": 17,
       "norm_label": "test_capture_and_run_accept_manual_actual_size_flag()"
+    },
+    {
+      "label": "test_run_command_forwards_manual_actual_size_flag()",
+      "file_type": "code",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L58",
+      "id": "tests_test_cli_test_run_command_forwards_manual_actual_size_flag",
+      "community": 17,
+      "norm_label": "test_run_command_forwards_manual_actual_size_flag()"
     },
     {
       "label": "test_piggy_push_image_commands_use_fine_grid_defaults()",
       "file_type": "code",
       "source_file": "tests/test_cli.py",
-      "source_location": "L55",
+      "source_location": "L76",
       "id": "tests_test_cli_test_piggy_push_image_commands_use_fine_grid_defaults",
-      "community": 2,
+      "community": 17,
       "norm_label": "test_piggy_push_image_commands_use_fine_grid_defaults()"
     },
     {
@@ -556,7 +565,7 @@
       "label": "test_field_crop_constrains_to_image_bounds()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L12",
+      "source_location": "L16",
       "id": "piggy_push_test_vision_test_field_crop_constrains_to_image_bounds",
       "community": 16,
       "norm_label": "test_field_crop_constrains_to_image_bounds()"
@@ -565,7 +574,7 @@
       "label": "test_field_crop_keeps_cropped_board_images_full_frame()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L21",
+      "source_location": "L25",
       "id": "piggy_push_test_vision_test_field_crop_keeps_cropped_board_images_full_frame",
       "community": 16,
       "norm_label": "test_field_crop_keeps_cropped_board_images_full_frame()"
@@ -574,7 +583,7 @@
       "label": "test_quantize_detections_maps_centers_to_cells()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L30",
+      "source_location": "L34",
       "id": "piggy_push_test_vision_test_quantize_detections_maps_centers_to_cells",
       "community": 16,
       "norm_label": "test_quantize_detections_maps_centers_to_cells()"
@@ -583,7 +592,7 @@
       "label": "test_quantize_detections_can_use_field_crop_coordinates()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L44",
+      "source_location": "L48",
       "id": "piggy_push_test_vision_test_quantize_detections_can_use_field_crop_coordinates",
       "community": 16,
       "norm_label": "test_quantize_detections_can_use_field_crop_coordinates()"
@@ -592,7 +601,7 @@
       "label": "test_low_confidence_detection_is_rejected()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L63",
+      "source_location": "L67",
       "id": "piggy_push_test_vision_test_low_confidence_detection_is_rejected",
       "community": 16,
       "norm_label": "test_low_confidence_detection_is_rejected()"
@@ -601,7 +610,7 @@
       "label": "test_low_confidence_full_size_detection_is_rescued()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L73",
+      "source_location": "L77",
       "id": "piggy_push_test_vision_test_low_confidence_full_size_detection_is_rescued",
       "community": 16,
       "norm_label": "test_low_confidence_full_size_detection_is_rescued()"
@@ -610,7 +619,7 @@
       "label": "test_finer_grid_keeps_close_distinct_pigs()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L85",
+      "source_location": "L89",
       "id": "piggy_push_test_vision_test_finer_grid_keeps_close_distinct_pigs",
       "community": 16,
       "norm_label": "test_finer_grid_keeps_close_distinct_pigs()"
@@ -619,7 +628,7 @@
       "label": "test_direction_from_angle_preserves_diagonal_axes()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L98",
+      "source_location": "L102",
       "id": "piggy_push_test_vision_test_direction_from_angle_preserves_diagonal_axes",
       "community": 16,
       "norm_label": "test_direction_from_angle_preserves_diagonal_axes()"
@@ -628,16 +637,16 @@
       "label": "test_overlay_labels_prefer_planned_move_numbers()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L105",
+      "source_location": "L109",
       "id": "piggy_push_test_vision_test_overlay_labels_prefer_planned_move_numbers",
-      "community": 16,
+      "community": 2,
       "norm_label": "test_overlay_labels_prefer_planned_move_numbers()"
     },
     {
       "label": "test_overlay_visible_detections_defaults_to_solved_board_pigs()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L117",
+      "source_location": "L121",
       "id": "piggy_push_test_vision_test_overlay_visible_detections_defaults_to_solved_board_pigs",
       "community": 16,
       "norm_label": "test_overlay_visible_detections_defaults_to_solved_board_pigs()"
@@ -646,10 +655,19 @@
       "label": "test_overlay_visible_detections_can_show_raw_debug_detections()",
       "file_type": "code",
       "source_file": "tests/piggy_push/test_vision.py",
-      "source_location": "L136",
+      "source_location": "L140",
       "id": "piggy_push_test_vision_test_overlay_visible_detections_can_show_raw_debug_detections",
       "community": 16,
       "norm_label": "test_overlay_visible_detections_can_show_raw_debug_detections()"
+    },
+    {
+      "label": "test_detect_pigs_handles_actual_size_mirroring_scale()",
+      "file_type": "code",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L158",
+      "id": "piggy_push_test_vision_test_detect_pigs_handles_actual_size_mirroring_scale",
+      "community": 16,
+      "norm_label": "test_detect_pigs_handles_actual_size_mirroring_scale()"
     },
     {
       "label": "simple_state.json",
@@ -738,7 +756,7 @@
       "source_file": "src/widgetable_solver/cli.py",
       "source_location": "L20",
       "id": "widgetable_solver_cli_build_parser",
-      "community": 2,
+      "community": 17,
       "norm_label": "build_parser()"
     },
     {
@@ -979,7 +997,7 @@
       "label": "WindowBounds",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L14",
+      "source_location": "L15",
       "id": "platform_iphone_windowbounds",
       "community": 3,
       "norm_label": "windowbounds"
@@ -988,7 +1006,7 @@
       "label": "monitor()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L21",
+      "source_location": "L22",
       "id": "platform_iphone_monitor",
       "community": 3,
       "norm_label": "monitor()"
@@ -997,7 +1015,7 @@
       "label": "find_iphone_mirroring_window()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L31",
+      "source_location": "L32",
       "id": "platform_iphone_find_iphone_mirroring_window",
       "community": 3,
       "norm_label": "find_iphone_mirroring_window()"
@@ -1006,7 +1024,7 @@
       "label": "focus_iphone_mirroring()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L55",
+      "source_location": "L56",
       "id": "platform_iphone_focus_iphone_mirroring",
       "community": 3,
       "norm_label": "focus_iphone_mirroring()"
@@ -1015,7 +1033,7 @@
       "label": "move_iphone_mirroring_to_corner()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L67",
+      "source_location": "L68",
       "id": "platform_iphone_move_iphone_mirroring_to_corner",
       "community": 3,
       "norm_label": "move_iphone_mirroring_to_corner()"
@@ -1024,7 +1042,7 @@
       "label": "_position_iphone_script()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L73",
+      "source_location": "L74",
       "id": "platform_iphone_position_iphone_script",
       "community": 3,
       "norm_label": "_position_iphone_script()"
@@ -1033,7 +1051,7 @@
       "label": "capture_window()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L85",
+      "source_location": "L86",
       "id": "platform_iphone_capture_window",
       "community": 3,
       "norm_label": "capture_window()"
@@ -1042,7 +1060,7 @@
       "label": "capture_iphone()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L91",
+      "source_location": "L92",
       "id": "platform_iphone_capture_iphone",
       "community": 3,
       "norm_label": "capture_iphone()"
@@ -1051,7 +1069,7 @@
       "label": "save_capture()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L111",
+      "source_location": "L116",
       "id": "platform_iphone_save_capture",
       "community": 3,
       "norm_label": "save_capture()"
@@ -1170,7 +1188,7 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L9",
       "id": "piggy_push_analysis_movekind",
-      "community": 1,
+      "community": 7,
       "norm_label": "movekind"
     },
     {
@@ -1197,7 +1215,7 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L16",
       "id": "piggy_push_analysis_moveevent",
-      "community": 1,
+      "community": 7,
       "norm_label": "moveevent"
     },
     {
@@ -1359,7 +1377,7 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L36",
       "id": "piggy_push_solver_transition",
-      "community": 1,
+      "community": 5,
       "norm_label": "transition"
     },
     {
@@ -1458,7 +1476,7 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L247",
       "id": "piggy_push_solver_solver_ordered_candidates",
-      "community": 5,
+      "community": 7,
       "norm_label": ".ordered_candidates()"
     },
     {
@@ -1546,7 +1564,7 @@
       "label": "overlay_labels()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L139",
+      "source_location": "L142",
       "id": "piggy_push_vision_overlay_labels",
       "community": 2,
       "norm_label": "overlay_labels()"
@@ -1555,7 +1573,7 @@
       "label": "overlay_visible_detections()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L147",
+      "source_location": "L150",
       "id": "piggy_push_vision_overlay_visible_detections",
       "community": 16,
       "norm_label": "overlay_visible_detections()"
@@ -1564,7 +1582,7 @@
       "label": "write_overlay()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L160",
+      "source_location": "L163",
       "id": "piggy_push_vision_write_overlay",
       "community": 2,
       "norm_label": "write_overlay()"
@@ -1573,16 +1591,52 @@
       "label": "_fit_ellipse()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L219",
+      "source_location": "L222",
       "id": "piggy_push_vision_fit_ellipse",
       "community": 16,
       "norm_label": "_fit_ellipse()"
     },
     {
+      "label": "_field_scale()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L228",
+      "id": "piggy_push_vision_field_scale",
+      "community": 16,
+      "norm_label": "_field_scale()"
+    },
+    {
+      "label": "_morphology_kernel_size()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L233",
+      "id": "piggy_push_vision_morphology_kernel_size",
+      "community": 16,
+      "norm_label": "_morphology_kernel_size()"
+    },
+    {
+      "label": "_min_contour_area()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L237",
+      "id": "piggy_push_vision_min_contour_area",
+      "community": 16,
+      "norm_label": "_min_contour_area()"
+    },
+    {
+      "label": "_confidence_area()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L241",
+      "id": "piggy_push_vision_confidence_area",
+      "community": 16,
+      "norm_label": "_confidence_area()"
+    },
+    {
       "label": "_accepted_detections()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L225",
+      "source_location": "L245",
       "id": "piggy_push_vision_accepted_detections",
       "community": 16,
       "norm_label": "_accepted_detections()"
@@ -1591,7 +1645,7 @@
       "label": "_collision_radius()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L252",
+      "source_location": "L272",
       "id": "piggy_push_vision_collision_radius",
       "community": 16,
       "norm_label": "_collision_radius()"
@@ -1600,7 +1654,7 @@
       "label": "_direction_from_angle()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L274",
+      "source_location": "L294",
       "id": "piggy_push_vision_direction_from_angle",
       "community": 16,
       "norm_label": "_direction_from_angle()"
@@ -1609,7 +1663,7 @@
       "label": "_oriented_angle_from_head()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L293",
+      "source_location": "L313",
       "id": "piggy_push_vision_oriented_angle_from_head",
       "community": 16,
       "norm_label": "_oriented_angle_from_head()"
@@ -1618,7 +1672,7 @@
       "label": "_dark_detail_score()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
-      "source_location": "L322",
+      "source_location": "L342",
       "id": "piggy_push_vision_dark_detail_score",
       "community": 16,
       "norm_label": "_dark_detail_score()"
@@ -2963,9 +3017,9 @@
       "source_file": "tests/test_platform_iphone.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_platform_iphone_py",
-      "target": "tests_test_platform_iphone_test_position_script_only_uses_bottom_right_positioning",
-      "confidence_score": 1.0
+      "target": "tests_test_platform_iphone_test_position_script_only_uses_bottom_right_positioning"
     },
     {
       "relation": "calls",
@@ -3044,9 +3098,9 @@
       "source_file": "tests/test_overlay_server.py",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_overlay_server_py",
-      "target": "tests_test_overlay_server_test_json_responses_disable_browser_cache",
-      "confidence_score": 1.0
+      "target": "tests_test_overlay_server_test_json_responses_disable_browser_cache"
     },
     {
       "relation": "calls",
@@ -3116,9 +3170,19 @@
       "source_file": "tests/test_cli.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_py",
-      "target": "tests_test_cli_test_capture_and_run_accept_manual_actual_size_flag",
-      "confidence_score": 1.0
+      "target": "tests_test_cli_test_capture_and_run_accept_manual_actual_size_flag"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_cli_py",
+      "target": "tests_test_cli_test_run_command_forwards_manual_actual_size_flag"
     },
     {
       "relation": "contains",
@@ -4655,6 +4719,16 @@
       "target": "piggy_push_test_vision_test_overlay_visible_detections_can_show_raw_debug_detections"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "tests_piggy_push_test_vision_py",
+      "target": "piggy_push_test_vision_test_detect_pigs_handles_actual_size_mirroring_scale",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "INFERRED",
@@ -4875,6 +4949,17 @@
       "target": "piggy_push_vision_overlay_visible_detections"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/piggy_push/test_vision.py",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "piggy_push_test_vision_test_detect_pigs_handles_actual_size_mirroring_scale",
+      "target": "piggy_push_vision_detect_pigs"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "examples/simple_state.json",
@@ -4910,9 +4995,9 @@
       "source_file": "scripts/position_iphone_only.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_position_iphone_only_py",
-      "target": "scripts_position_iphone_only_main",
-      "confidence_score": 1.0
+      "target": "scripts_position_iphone_only_main"
     },
     {
       "relation": "calls",
@@ -5516,9 +5601,9 @@
       "source_file": "src/widgetable_solver/platform/iphone.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_platform_iphone_py",
-      "target": "platform_iphone_position_iphone_script",
-      "confidence_score": 1.0
+      "target": "platform_iphone_position_iphone_script"
     },
     {
       "relation": "contains",
@@ -5612,9 +5697,9 @@
       "source_file": "src/widgetable_solver/platform/iphone.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "platform_iphone_move_iphone_mirroring_to_corner",
-      "target": "platform_iphone_position_iphone_script",
-      "confidence_score": 1.0
+      "target": "platform_iphone_position_iphone_script"
     },
     {
       "relation": "calls",
@@ -7446,6 +7531,46 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L228",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_field_scale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_morphology_kernel_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_min_contour_area",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_piggy_push_vision_py",
+      "target": "piggy_push_vision_confidence_area",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
       "source_location": "L212",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7633,6 +7758,39 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "piggy_push_vision_detect_pigs",
+      "target": "piggy_push_vision_morphology_kernel_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "piggy_push_vision_detect_pigs",
+      "target": "piggy_push_vision_min_contour_area",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "piggy_push_vision_detect_pigs",
+      "target": "piggy_push_vision_confidence_area",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
       "source_location": "L93",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7682,6 +7840,39 @@
       "confidence_score": 1.0,
       "source": "piggy_push_vision_write_overlay",
       "target": "piggy_push_vision_overlay_visible_detections"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "piggy_push_vision_morphology_kernel_size",
+      "target": "piggy_push_vision_field_scale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "piggy_push_vision_min_contour_area",
+      "target": "piggy_push_vision_field_scale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/piggy_push/vision.py",
+      "source_location": "L242",
+      "weight": 1.0,
+      "source": "piggy_push_vision_confidence_area",
+      "target": "piggy_push_vision_field_scale",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9534,5 +9725,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a8f9e9c03dc5447a6f379ddade2c09f8d2d83716"
+  "built_at_commit": "0800bdea0b93b75e41abae6fe34a7152b6c2d9f9"
 }
