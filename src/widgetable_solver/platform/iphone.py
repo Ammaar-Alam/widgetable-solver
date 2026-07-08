@@ -65,7 +65,13 @@ def focus_iphone_mirroring() -> None:
 
 
 def move_iphone_mirroring_to_corner() -> WindowBounds | None:
-    script = """
+    subprocess.run(["osascript", "-e", _position_iphone_script()], capture_output=True, check=False)
+    time.sleep(0.7)
+    return find_iphone_mirroring_window()
+
+
+def _position_iphone_script() -> str:
+    return """
     tell application "System Events"
         tell process "iPhone Mirroring"
             set frontmost to true
@@ -74,9 +80,6 @@ def move_iphone_mirroring_to_corner() -> WindowBounds | None:
         end tell
     end tell
     """
-    subprocess.run(["osascript", "-e", script], capture_output=True, check=False)
-    time.sleep(0.5)
-    return find_iphone_mirroring_window()
 
 
 def capture_window(bounds: WindowBounds) -> np.ndarray:
@@ -85,16 +88,33 @@ def capture_window(bounds: WindowBounds) -> np.ndarray:
     return np.array(screenshot)[:, :, :3]
 
 
-def capture_iphone(*, position: bool = True) -> tuple[WindowBounds, np.ndarray]:
+def capture_iphone(
+    *,
+    position: bool = True,
+    manual_actual_size: bool = False,
+) -> tuple[WindowBounds, np.ndarray]:
     bounds = move_iphone_mirroring_to_corner() if position else find_iphone_mirroring_window()
     if bounds is None:
         raise RuntimeError("Could not find iPhone Mirroring window")
+    if manual_actual_size:
+        try:
+            input("Press Command-0 in iPhone Mirroring, then press Enter here to capture...")
+        except EOFError as error:
+            raise RuntimeError("Manual Actual Size confirmation requires an interactive terminal") from error
+        bounds = find_iphone_mirroring_window()
+        if bounds is None:
+            raise RuntimeError("Could not find iPhone Mirroring window")
     focus_iphone_mirroring()
     return bounds, capture_window(bounds)
 
 
-def save_capture(output: Path, *, position: bool = True) -> WindowBounds:
-    bounds, image = capture_iphone(position=position)
+def save_capture(
+    output: Path,
+    *,
+    position: bool = True,
+    manual_actual_size: bool = False,
+) -> WindowBounds:
+    bounds, image = capture_iphone(position=position, manual_actual_size=manual_actual_size)
     output.parent.mkdir(parents=True, exist_ok=True)
     Image.fromarray(image).save(output)
     return bounds

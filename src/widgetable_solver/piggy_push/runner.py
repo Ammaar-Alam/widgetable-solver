@@ -116,8 +116,17 @@ def solve_image(
     return list(result.solution) if result.solution is not None else None
 
 
-def capture_once(output: Path, *, position: bool = True):
-    return save_capture(output, position=position)
+def capture_once(
+    output: Path,
+    *,
+    position: bool = True,
+    manual_actual_size: bool = False,
+):
+    return save_capture(
+        output,
+        position=position,
+        manual_actual_size=manual_actual_size,
+    )
 
 
 def run_once(
@@ -129,8 +138,9 @@ def run_once(
     grid_height: int = DEFAULT_GRID_HEIGHT,
     strategy: SolverStrategy = "hybrid",
     debug_detections: bool = False,
+    manual_actual_size: bool = False,
 ) -> ImageSolveResult:
-    window, image = capture_iphone(position=True)
+    window, image = capture_iphone(position=True, manual_actual_size=manual_actual_size)
     crop = FieldCrop.from_image_shape(image.shape)
     detections = detect_pigs(image, crop=crop)
     board = quantize_detections(

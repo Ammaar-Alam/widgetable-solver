@@ -24,6 +24,7 @@ def build_parser() -> argparse.ArgumentParser:
     capture = subparsers.add_parser("capture")
     capture.add_argument("--output", type=Path, default=Path("captures/current.png"))
     capture.add_argument("--no-position", action="store_true")
+    capture.add_argument("--manual-actual-size", action="store_true")
 
     piggy = subparsers.add_parser("piggy-push")
     piggy_subparsers = piggy.add_subparsers(dest="piggy_command", required=True)
@@ -55,6 +56,7 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--grid-height", type=int, default=DEFAULT_GRID_HEIGHT)
     run.add_argument("--strategy", choices=("exact", "fast", "hybrid"), default="hybrid")
     run.add_argument("--debug-detections", action="store_true")
+    run.add_argument("--manual-actual-size", action="store_true")
 
     return parser
 
@@ -64,7 +66,11 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.command == "capture":
-        bounds = capture_once(args.output, position=not args.no_position)
+        bounds = capture_once(
+            args.output,
+            position=not args.no_position,
+            manual_actual_size=args.manual_actual_size,
+        )
         print(json.dumps({"output": str(args.output), "window": asdict(bounds)}, indent=2))
         return 0
 
@@ -84,6 +90,7 @@ def _run_piggy(args: argparse.Namespace) -> int:
             grid_height=args.grid_height,
             strategy=args.strategy,
             debug_detections=args.debug_detections,
+            manual_actual_size=args.manual_actual_size,
         )
         print(_result_json(result))
         return 0

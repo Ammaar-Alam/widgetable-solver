@@ -4,6 +4,24 @@
   "graph": {},
   "nodes": [
     {
+      "label": "test_platform_iphone.py",
+      "file_type": "code",
+      "source_file": "tests/test_platform_iphone.py",
+      "source_location": "L1",
+      "id": "tests_test_platform_iphone_py",
+      "community": 3,
+      "norm_label": "test_platform_iphone.py"
+    },
+    {
+      "label": "test_position_script_only_uses_bottom_right_positioning()",
+      "file_type": "code",
+      "source_file": "tests/test_platform_iphone.py",
+      "source_location": "L4",
+      "id": "tests_test_platform_iphone_test_position_script_only_uses_bottom_right_positioning",
+      "community": 3,
+      "norm_label": "test_position_script_only_uses_bottom_right_positioning()"
+    },
+    {
       "label": "test_overlay_server.py",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
@@ -16,7 +34,7 @@
       "label": "test_parse_image_data_url_accepts_png_payload()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L11",
+      "source_location": "L14",
       "id": "tests_test_overlay_server_test_parse_image_data_url_accepts_png_payload",
       "community": 15,
       "norm_label": "test_parse_image_data_url_accepts_png_payload()"
@@ -25,7 +43,7 @@
       "label": "test_parse_image_data_url_rejects_non_images()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L19",
+      "source_location": "L22",
       "id": "tests_test_overlay_server_test_parse_image_data_url_rejects_non_images",
       "community": 15,
       "norm_label": "test_parse_image_data_url_rejects_non_images()"
@@ -34,7 +52,7 @@
       "label": "test_index_html_supports_paste_drop_and_file_upload()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L30",
+      "source_location": "L33",
       "id": "tests_test_overlay_server_test_index_html_supports_paste_drop_and_file_upload",
       "community": 15,
       "norm_label": "test_index_html_supports_paste_drop_and_file_upload()"
@@ -43,7 +61,7 @@
       "label": "test_index_html_does_not_expose_internal_grid_controls()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L37",
+      "source_location": "L40",
       "id": "tests_test_overlay_server_test_index_html_does_not_expose_internal_grid_controls",
       "community": 15,
       "norm_label": "test_index_html_does_not_expose_internal_grid_controls()"
@@ -52,7 +70,7 @@
       "label": "test_index_html_defaults_to_fast_strategy_for_live_overlays()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L44",
+      "source_location": "L47",
       "id": "tests_test_overlay_server_test_index_html_defaults_to_fast_strategy_for_live_overlays",
       "community": 15,
       "norm_label": "test_index_html_defaults_to_fast_strategy_for_live_overlays()"
@@ -61,10 +79,19 @@
       "label": "test_overlay_server_uses_daemon_request_threads()",
       "file_type": "code",
       "source_file": "tests/test_overlay_server.py",
-      "source_location": "L48",
+      "source_location": "L51",
       "id": "tests_test_overlay_server_test_overlay_server_uses_daemon_request_threads",
       "community": 15,
       "norm_label": "test_overlay_server_uses_daemon_request_threads()"
+    },
+    {
+      "label": "test_json_responses_disable_browser_cache()",
+      "file_type": "code",
+      "source_file": "tests/test_overlay_server.py",
+      "source_location": "L55",
+      "id": "tests_test_overlay_server_test_json_responses_disable_browser_cache",
+      "community": 15,
+      "norm_label": "test_json_responses_disable_browser_cache()"
     },
     {
       "label": "test_cli.py",
@@ -112,10 +139,19 @@
       "norm_label": "test_overlay_commands_accept_debug_detections_flag()"
     },
     {
-      "label": "test_piggy_push_image_commands_use_fine_grid_defaults()",
+      "label": "test_capture_and_run_accept_manual_actual_size_flag()",
       "file_type": "code",
       "source_file": "tests/test_cli.py",
       "source_location": "L45",
+      "id": "tests_test_cli_test_capture_and_run_accept_manual_actual_size_flag",
+      "community": 2,
+      "norm_label": "test_capture_and_run_accept_manual_actual_size_flag()"
+    },
+    {
+      "label": "test_piggy_push_image_commands_use_fine_grid_defaults()",
+      "file_type": "code",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L55",
       "id": "tests_test_cli_test_piggy_push_image_commands_use_fine_grid_defaults",
       "community": 2,
       "norm_label": "test_piggy_push_image_commands_use_fine_grid_defaults()"
@@ -189,7 +225,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L1",
       "id": "tests_piggy_push_test_fast_solver_py",
-      "community": 17,
+      "community": 1,
       "norm_label": "test_fast_solver.py"
     },
     {
@@ -198,7 +234,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L5",
       "id": "piggy_push_test_fast_solver_test_fast_solver_removes_safe_exits_before_stopper_exits",
-      "community": 17,
+      "community": 1,
       "norm_label": "test_fast_solver_removes_safe_exits_before_stopper_exits()"
     },
     {
@@ -207,7 +243,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L23",
       "id": "piggy_push_test_fast_solver_test_fast_solver_breaks_blocker_cycle_with_collision_move",
-      "community": 17,
+      "community": 1,
       "norm_label": "test_fast_solver_breaks_blocker_cycle_with_collision_move()"
     },
     {
@@ -216,7 +252,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L42",
       "id": "piggy_push_test_fast_solver_test_beam_breakout_returns_collision_plan_that_creates_an_exit",
-      "community": 17,
+      "community": 1,
       "norm_label": "test_beam_breakout_returns_collision_plan_that_creates_an_exit()"
     },
     {
@@ -225,7 +261,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L60",
       "id": "piggy_push_test_fast_solver_test_fast_solver_honors_move_limit",
-      "community": 17,
+      "community": 1,
       "norm_label": "test_fast_solver_honors_move_limit()"
     },
     {
@@ -234,7 +270,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L76",
       "id": "piggy_push_test_fast_solver_collision_tap_count",
-      "community": 17,
+      "community": 1,
       "norm_label": "_collision_tap_count()"
     },
     {
@@ -243,7 +279,7 @@
       "source_file": "tests/piggy_push/test_fast_solver.py",
       "source_location": "L87",
       "id": "piggy_push_test_fast_solver_clears",
-      "community": 17,
+      "community": 1,
       "norm_label": "_clears()"
     },
     {
@@ -252,7 +288,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L1",
       "id": "tests_piggy_push_test_analysis_py",
-      "community": 7,
+      "community": 1,
       "norm_label": "test_analysis.py"
     },
     {
@@ -261,7 +297,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L17",
       "id": "piggy_push_test_analysis_test_move_event_reports_exit_hit_and_zero_displacement",
-      "community": 7,
+      "community": 1,
       "norm_label": "test_move_event_reports_exit_hit_and_zero_displacement()"
     },
     {
@@ -270,7 +306,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L51",
       "id": "piggy_push_test_analysis_test_move_event_uses_radius_for_vision_board_collisions",
-      "community": 7,
+      "community": 1,
       "norm_label": "test_move_event_uses_radius_for_vision_board_collisions()"
     },
     {
@@ -279,7 +315,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L70",
       "id": "piggy_push_test_analysis_test_immediate_blocker_graph_and_counts",
-      "community": 7,
+      "community": 1,
       "norm_label": "test_immediate_blocker_graph_and_counts()"
     },
     {
@@ -288,7 +324,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L87",
       "id": "piggy_push_test_analysis_test_all_blockers_graph_reports_every_collinear_blocker_before_exit",
-      "community": 7,
+      "community": 1,
       "norm_label": "test_all_blockers_graph_reports_every_collinear_blocker_before_exit()"
     },
     {
@@ -315,7 +351,7 @@
       "source_file": "tests/piggy_push/test_analysis.py",
       "source_location": "L138",
       "id": "piggy_push_test_analysis_test_static_zero_peel_residual_keeps_collision_required_cycle",
-      "community": 7,
+      "community": 1,
       "norm_label": "test_static_zero_peel_residual_keeps_collision_required_cycle()"
     },
     {
@@ -652,6 +688,24 @@
       "norm_label": "pigs"
     },
     {
+      "label": "position_iphone_only.py",
+      "file_type": "code",
+      "source_file": "scripts/position_iphone_only.py",
+      "source_location": "L1",
+      "id": "scripts_position_iphone_only_py",
+      "community": 3,
+      "norm_label": "position_iphone_only.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/position_iphone_only.py",
+      "source_location": "L13",
+      "id": "scripts_position_iphone_only_main",
+      "community": 3,
+      "norm_label": "main()"
+    },
+    {
       "label": "__init__.py",
       "file_type": "code",
       "source_file": "src/widgetable_solver/__init__.py",
@@ -691,7 +745,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/cli.py",
-      "source_location": "L62",
+      "source_location": "L64",
       "id": "widgetable_solver_cli_main",
       "community": 2,
       "norm_label": "main()"
@@ -700,7 +754,7 @@
       "label": "_run_piggy()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/cli.py",
-      "source_location": "L78",
+      "source_location": "L84",
       "id": "widgetable_solver_cli_run_piggy",
       "community": 2,
       "norm_label": "_run_piggy()"
@@ -709,7 +763,7 @@
       "label": "_result_json()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/cli.py",
-      "source_location": "L125",
+      "source_location": "L132",
       "id": "widgetable_solver_cli_result_json",
       "community": 2,
       "norm_label": "_result_json()"
@@ -799,7 +853,7 @@
       "label": ".do_POST()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L335",
+      "source_location": "L337",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler_do_post",
       "community": 15,
       "norm_label": ".do_post()"
@@ -808,7 +862,7 @@
       "label": ".log_message()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L359",
+      "source_location": "L361",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler_log_message",
       "community": 15,
       "norm_label": ".log_message()"
@@ -817,7 +871,7 @@
       "label": "._send_json()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L362",
+      "source_location": "L364",
       "id": "widgetable_solver_overlay_server_overlayrequesthandler_send_json",
       "community": 15,
       "norm_label": "._send_json()"
@@ -826,7 +880,7 @@
       "label": "OverlayThreadingHTTPServer",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L371",
+      "source_location": "L375",
       "id": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
       "community": 15,
       "norm_label": "overlaythreadinghttpserver"
@@ -844,7 +898,7 @@
       "label": "serve()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L375",
+      "source_location": "L379",
       "id": "widgetable_solver_overlay_server_serve",
       "community": 15,
       "norm_label": "serve()"
@@ -853,7 +907,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/overlay_server.py",
-      "source_location": "L382",
+      "source_location": "L386",
       "id": "widgetable_solver_overlay_server_main",
       "community": 15,
       "norm_label": "main()"
@@ -967,10 +1021,19 @@
       "norm_label": "move_iphone_mirroring_to_corner()"
     },
     {
+      "label": "_position_iphone_script()",
+      "file_type": "code",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L73",
+      "id": "platform_iphone_position_iphone_script",
+      "community": 3,
+      "norm_label": "_position_iphone_script()"
+    },
+    {
       "label": "capture_window()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L82",
+      "source_location": "L85",
       "id": "platform_iphone_capture_window",
       "community": 3,
       "norm_label": "capture_window()"
@@ -979,7 +1042,7 @@
       "label": "capture_iphone()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L88",
+      "source_location": "L91",
       "id": "platform_iphone_capture_iphone",
       "community": 3,
       "norm_label": "capture_iphone()"
@@ -988,7 +1051,7 @@
       "label": "save_capture()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/platform/iphone.py",
-      "source_location": "L96",
+      "source_location": "L111",
       "id": "platform_iphone_save_capture",
       "community": 3,
       "norm_label": "save_capture()"
@@ -1069,7 +1132,7 @@
       "label": "run_once()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L123",
+      "source_location": "L132",
       "id": "piggy_push_runner_run_once",
       "community": 2,
       "norm_label": "run_once()"
@@ -1078,7 +1141,7 @@
       "label": "next_click_detection()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L184",
+      "source_location": "L194",
       "id": "piggy_push_runner_next_click_detection",
       "community": 2,
       "norm_label": "next_click_detection()"
@@ -1087,7 +1150,7 @@
       "label": "_strategy_from_value()",
       "file_type": "code",
       "source_file": "src/widgetable_solver/piggy_push/runner.py",
-      "source_location": "L196",
+      "source_location": "L206",
       "id": "piggy_push_runner_strategy_from_value",
       "community": 2,
       "norm_label": "_strategy_from_value()"
@@ -1107,7 +1170,7 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L9",
       "id": "piggy_push_analysis_movekind",
-      "community": 5,
+      "community": 1,
       "norm_label": "movekind"
     },
     {
@@ -1125,7 +1188,7 @@
       "source_file": "",
       "source_location": "",
       "id": "enum",
-      "community": 5,
+      "community": 2,
       "norm_label": "enum"
     },
     {
@@ -1134,7 +1197,7 @@
       "source_file": "src/widgetable_solver/piggy_push/analysis.py",
       "source_location": "L16",
       "id": "piggy_push_analysis_moveevent",
-      "community": 7,
+      "community": 1,
       "norm_label": "moveevent"
     },
     {
@@ -1296,7 +1359,7 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L36",
       "id": "piggy_push_solver_transition",
-      "community": 5,
+      "community": 1,
       "norm_label": "transition"
     },
     {
@@ -1395,7 +1458,7 @@
       "source_file": "src/widgetable_solver/piggy_push/solver.py",
       "source_location": "L247",
       "id": "piggy_push_solver_solver_ordered_candidates",
-      "community": 7,
+      "community": 5,
       "norm_label": ".ordered_candidates()"
     },
     {
@@ -1566,7 +1629,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L1",
       "id": "src_widgetable_solver_piggy_push_fast_solver_py",
-      "community": 17,
+      "community": 7,
       "norm_label": "fast_solver.py"
     },
     {
@@ -1575,7 +1638,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L20",
       "id": "piggy_push_fast_solver_fastsearchconfig",
-      "community": 17,
+      "community": 7,
       "norm_label": "fastsearchconfig"
     },
     {
@@ -1584,7 +1647,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L25",
       "id": "piggy_push_fast_solver_solve_fast",
-      "community": 17,
+      "community": 7,
       "norm_label": "solve_fast()"
     },
     {
@@ -1593,7 +1656,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L38",
       "id": "piggy_push_fast_solver_beam_breakout",
-      "community": 17,
+      "community": 7,
       "norm_label": "beam_breakout()"
     },
     {
@@ -1611,7 +1674,7 @@
       "source_file": "src/widgetable_solver/piggy_push/fast_solver.py",
       "source_location": "L50",
       "id": "piggy_push_fast_solver_fastsolver_init",
-      "community": 17,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -1710,7 +1773,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L1",
       "id": "src_widgetable_solver_piggy_push_model_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "model.py"
     },
     {
@@ -1728,7 +1791,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L20",
       "id": "piggy_push_model_vector",
-      "community": 1,
+      "community": 2,
       "norm_label": "vector()"
     },
     {
@@ -1746,7 +1809,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L41",
       "id": "piggy_push_model_cell",
-      "community": 1,
+      "community": 2,
       "norm_label": "cell()"
     },
     {
@@ -1773,7 +1836,7 @@
       "source_file": "src/widgetable_solver/piggy_push/model.py",
       "source_location": "L55",
       "id": "piggy_push_model_board_post_init",
-      "community": 1,
+      "community": 2,
       "norm_label": ".__post_init__()"
     },
     {
@@ -2897,6 +2960,27 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_platform_iphone.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_test_platform_iphone_py",
+      "target": "tests_test_platform_iphone_test_position_script_only_uses_bottom_right_positioning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_platform_iphone.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_test_platform_iphone_test_position_script_only_uses_bottom_right_positioning",
+      "target": "platform_iphone_position_iphone_script"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_overlay_server.py",
       "source_location": "L10",
       "weight": 1.0,
@@ -2940,9 +3024,9 @@
       "source_file": "tests/test_overlay_server.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_overlay_server_py",
-      "target": "tests_test_overlay_server_test_index_html_defaults_to_fast_strategy_for_live_overlays",
-      "confidence_score": 1.0
+      "target": "tests_test_overlay_server_test_index_html_defaults_to_fast_strategy_for_live_overlays"
     },
     {
       "relation": "contains",
@@ -2950,8 +3034,18 @@
       "source_file": "tests/test_overlay_server.py",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_overlay_server_py",
-      "target": "tests_test_overlay_server_test_overlay_server_uses_daemon_request_threads",
+      "target": "tests_test_overlay_server_test_overlay_server_uses_daemon_request_threads"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_overlay_server.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "tests_test_overlay_server_py",
+      "target": "tests_test_overlay_server_test_json_responses_disable_browser_cache",
       "confidence_score": 1.0
     },
     {
@@ -3022,6 +3116,16 @@
       "source_file": "tests/test_cli.py",
       "source_location": "L45",
       "weight": 1.0,
+      "source": "tests_test_cli_py",
+      "target": "tests_test_cli_test_capture_and_run_accept_manual_actual_size_flag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli.py",
+      "source_location": "L45",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_cli_py",
       "target": "tests_test_cli_test_piggy_push_image_commands_use_fine_grid_defaults"
@@ -3068,6 +3172,17 @@
       "source_location": "L34",
       "weight": 1.0,
       "source": "tests_test_cli_test_overlay_commands_accept_debug_detections_flag",
+      "target": "widgetable_solver_cli_build_parser"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_cli.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "tests_test_cli_test_capture_and_run_accept_manual_actual_size_flag",
       "target": "widgetable_solver_cli_build_parser"
     },
     {
@@ -4790,6 +4905,38 @@
       "target": "examples_simple_state_pigs"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/position_iphone_only.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_position_iphone_only_py",
+      "target": "scripts_position_iphone_only_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/position_iphone_only.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "scripts_position_iphone_only_main",
+      "target": "platform_iphone_find_iphone_mirroring_window"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/position_iphone_only.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "scripts_position_iphone_only_main",
+      "target": "platform_iphone_position_iphone_script"
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/__init__.py",
@@ -5006,9 +5153,9 @@
       "source_file": "src/widgetable_solver/overlay_server.py",
       "source_location": "L371",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_widgetable_solver_overlay_server_py",
-      "target": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
-      "confidence_score": 1.0
+      "target": "widgetable_solver_overlay_server_overlaythreadinghttpserver"
     },
     {
       "relation": "contains",
@@ -5155,9 +5302,9 @@
       "source_file": "src/widgetable_solver/overlay_server.py",
       "source_location": "L320",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "widgetable_solver_overlay_server_overlayrequesthandler",
-      "target": "widgetable_solver_overlay_server_overlayrequesthandler_setup",
-      "confidence_score": 1.0
+      "target": "widgetable_solver_overlay_server_overlayrequesthandler_setup"
     },
     {
       "relation": "method",
@@ -5227,9 +5374,9 @@
       "source_file": "src/widgetable_solver/overlay_server.py",
       "source_location": "L371",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
-      "target": "threadinghttpserver",
-      "confidence_score": 1.0
+      "target": "threadinghttpserver"
     },
     {
       "relation": "calls",
@@ -5238,9 +5385,9 @@
       "source_file": "src/widgetable_solver/overlay_server.py",
       "source_location": "L376",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "widgetable_solver_overlay_server_serve",
-      "target": "widgetable_solver_overlay_server_overlaythreadinghttpserver",
-      "confidence_score": 1.0
+      "target": "widgetable_solver_overlay_server_overlaythreadinghttpserver"
     },
     {
       "relation": "calls",
@@ -5367,6 +5514,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "src_widgetable_solver_platform_iphone_py",
+      "target": "platform_iphone_position_iphone_script",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
       "source_location": "L82",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5447,6 +5604,17 @@
       "confidence_score": 1.0,
       "source": "platform_iphone_capture_iphone",
       "target": "platform_iphone_focus_iphone_mirroring"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/widgetable_solver/platform/iphone.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "platform_iphone_move_iphone_mirroring_to_corner",
+      "target": "platform_iphone_position_iphone_script",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9366,5 +9534,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bb0be12ce4eb649bceea2a2320d281181e74f3e8"
+  "built_at_commit": "a8f9e9c03dc5447a6f379ddade2c09f8d2d83716"
 }

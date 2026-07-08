@@ -42,6 +42,16 @@ def test_overlay_commands_accept_debug_detections_flag():
     assert run_args.debug_detections is True
 
 
+def test_capture_and_run_accept_manual_actual_size_flag():
+    parser = build_parser()
+
+    capture_args = parser.parse_args(["capture", "--manual-actual-size"])
+    run_args = parser.parse_args(["piggy-push", "run", "--manual-actual-size"])
+
+    assert capture_args.manual_actual_size is True
+    assert run_args.manual_actual_size is True
+
+
 def test_piggy_push_image_commands_use_fine_grid_defaults():
     parser = build_parser()
 
